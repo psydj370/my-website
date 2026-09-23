@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dojin Lee | Publications</title>
+<style>
+:root{
+  --bg:#fbfaf7;
+  --alt:#f5f7f7;
+  --surface:#ffffff;
+  --ink:#18354d;
+  --body:#4c5c67;
+  --muted:#77848d;
+  --blue:#315f86;
+  --line:#e2e8eb;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+
+/* nav */
+.site-nav{
+  position:sticky;top:0;z-index:100;background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)
+}
+.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:center}
+.nav-links{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
+.nav-links a{
+  text-decoration:none;color:#4c5b65;font-size:14.5px;padding:23px 0 19px;
+  border-bottom:2px solid transparent
+}
+.nav-links a.active,.nav-links a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-links a.future{color:#929ca3}
+
+.section-a{background:#fbfaf7}
+.section-b{background:#f5f7f7}
+.page-header{padding:88px 0 58px}
+.eyebrow{
+  margin-bottom:14px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase
+}
+h1,h2{font-family:var(--serif);font-weight:500;margin:0;color:var(--ink)}
+h1{font-size:clamp(48px,7vw,72px);line-height:1.04;letter-spacing:-.035em}
+h2{font-size:clamp(30px,4vw,40px);line-height:1.18;letter-spacing:-.02em}
+.page-intro{
+  max-width:760px;margin:23px 0 0;color:var(--body);font-size:18px;line-height:1.8
+}
+
+.publications-section{padding:72px 0 84px}
+.section-heading{max-width:820px;margin-bottom:32px}
+.section-heading p{color:var(--body);font-size:16px;margin:10px 0 0}
+
+.pub-index{
+  display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px
+}
+.pub-index a{
+  display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;
+  padding:18px 20px;text-decoration:none;background:rgba(255,255,255,.72);
+  border:1px solid var(--line);border-radius:14px;transition:.18s ease
+}
+.pub-index a:hover{
+  transform:translateY(-1px);background:#fff;
+  box-shadow:0 10px 28px rgba(40,65,82,.06)
+}
+.pub-no{
+  font-family:var(--serif);font-size:23px;color:var(--blue);line-height:1.2
+}
+.pub-mini{
+  color:var(--body);font-size:14px;line-height:1.55
+}
+.pub-mini strong{color:var(--ink)}
+.pub-mini em{font-style:italic}
+
+.pub-details{margin-top:58px;display:grid;gap:18px}
+.pub-card{
+  scroll-margin-top:105px;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:28px 30px
+}
+.pub-card-top{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-start
+}
+.pub-card-number{
+  font-family:var(--serif);font-size:28px;line-height:1;color:var(--blue)
+}
+.pub-year{
+  flex:0 0 auto;padding:5px 9px;border-radius:999px;background:#edf3f6;
+  color:#526f84;font-size:12px;font-weight:700
+}
+.citation{
+  margin:16px 0 0;color:#3f505b;font-size:15.5px;line-height:1.75
+}
+.citation strong{color:#1f3f57}
+.citation em{font-style:italic}
+.doi{
+  display:inline-block;margin-top:13px;color:var(--blue);font-size:13px;
+  text-decoration:none;word-break:break-all
+}
+.doi:hover{text-decoration:underline}
+.future-slot{
+  margin-top:20px;padding-top:16px;border-top:1px dashed #d9e1e5;
+  color:#97a1a7;font-size:12px;letter-spacing:.04em
+}
+
+/* footer */
+footer{padding:38px 0;background:#fff;border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:28px}
+.footer-name{font-family:var(--serif);font-size:20px}
+.footer-role{margin-top:2px;color:var(--muted);font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{text-decoration:none;color:#5b6a74;font-size:13px;word-break:break-all}
+.site-credit{
+  margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:11.5px;line-height:1.6
+}
+
+@media(max-width:760px){
+  .container{width:min(100% - 34px,1120px)}
+  .nav-inner{min-height:auto}.nav-links{gap:17px;padding:13px 0}.nav-links a{padding:5px 0}
+  .page-header{padding:58px 0 38px}
+  .pub-index a{grid-template-columns:40px 1fr;padding:16px}
+  .pub-card{padding:22px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-links{justify-content:flex-start}
+}
+
+/* Publication 06 interactive explainer */
+.drd2-story{
+  margin-top:24px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  color:var(--ink);
+}
+.drd2-grid{
+  display:grid;
+  grid-template-columns:minmax(280px,.82fr) minmax(0,1.45fr);
+  gap:28px;
+  align-items:start;
+}
+.drd2-kicker{
+  margin:0 0 8px;
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.drd2-question{
+  margin:0;
+  font-family:var(--serif);
+  font-size:26px;
+  line-height:1.22;
+  font-weight:500;
+  color:var(--ink);
+}
+.drd2-sub{
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.65;
+}
+.drd2-controls{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+.drd2-controls-title{
+  margin:0 0 12px;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:700;
+}
+.drd2-fieldset{
+  margin:0 0 16px;
+  padding:0;
+  border:0;
+}
+.drd2-fieldset legend{
+  margin-bottom:7px;
+  color:var(--muted);
+  font-size:11px;
+}
+.drd2-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.drd2-option{
+  min-height:44px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#fff;
+  color:var(--ink);
+  font:600 12px var(--sans);
+  cursor:pointer;
+  transition:.16s ease;
+}
+.drd2-option:hover{border-color:#b9c9d4}
+.drd2-option[aria-pressed="true"]{
+  border-color:#a8bed0;
+  background:#edf3f8;
+  color:#244c6e;
+}
+.drd2-option:focus-visible{
+  outline:2px solid #89a9bf;
+  outline-offset:2px;
+}
+.drd2-note{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:10.5px;
+  line-height:1.5;
+}
+.drd2-scenario{
+  margin-top:18px;
+  padding:16px;
+  border-radius:13px;
+  background:#f7f8f8;
+  border:1px solid #eef1f2;
+}
+.drd2-scenario .label{
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.drd2-scenario h4{
+  margin:7px 0 8px;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.3;
+}
+.drd2-scenario p{
+  margin:0;
+  color:var(--body);
+  font-size:13px;
+  line-height:1.65;
+}
+.drd2-panel{
+  padding:20px;
+  border-radius:17px;
+  background:#f7f8f8;
+  border:1px solid #eef1f2;
+}
+.drd2-panel-head{
+  display:flex;
+  gap:14px;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+.drd2-panel h4{
+  margin:3px 0 0;
+  font-size:18px;
+  color:var(--ink);
+}
+.drd2-status{
+  padding:5px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:#51656f;
+  font-size:10.5px;
+  font-weight:700;
+}
+.drd2-viz-wrap{
+  margin-top:18px;
+  overflow-x:auto;
+  padding-bottom:3px;
+}
+.drd2-viz{
+  display:block;
+  min-width:620px;
+  width:100%;
+}
+.drd2-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:10px;
+}
+.drd2-metric{
+  padding-top:11px;
+  border-top:1px solid var(--line);
+}
+.drd2-metric-label{
+  color:var(--muted);
+  font-size:10.5px;
+}
+.drd2-metric-value{
+  margin-top:3px;
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:19px;
+}
+.drd2-metric-sub{
+  color:var(--muted);
+  font-size:10.5px;
+}
+.drd2-bottom{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:14px;
+  margin-top:18px;
+}
+.drd2-callout{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:#fff;
+}
+.drd2-callout h4{
+  margin:0;
+  font-size:13px;
+  color:var(--ink);
+}
+.drd2-callout p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.65;
+}
+@media(max-width:880px){
+  .drd2-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .drd2-options,.drd2-metrics,.drd2-bottom{grid-template-columns:1fr}
+  .drd2-question{font-size:22px}
+}
+
+
+/* Publication 04: network meta-analysis explorer */
+.nma-story{
+  margin-top:24px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.nma-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.nma-kicker{
+  margin:0 0 7px;
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.nma-title{
+  margin:0;
+  font-family:var(--serif);
+  font-size:26px;
+  line-height:1.2;
+  font-weight:500;
+  color:var(--ink);
+}
+.nma-sub{
+  margin:9px 0 0;
+  max-width:760px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.nma-tabs{
+  display:flex;
+  gap:4px;
+  padding:4px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+}
+.nma-tab{
+  min-height:38px;
+  padding:8px 12px;
+  border:0;
+  border-radius:7px;
+  background:transparent;
+  color:#51626d;
+  font:700 11px var(--sans);
+  cursor:pointer;
+}
+.nma-tab[aria-selected="true"]{
+  background:#edf3f8;
+  color:#244c6e;
+}
+.nma-panel{
+  margin-top:18px;
+  border-radius:16px;
+  background:#f8f9f9;
+  border:1px solid #eef1f2;
+  padding:18px;
+}
+.nma-network-wrap{
+  overflow-x:auto;
+}
+.nma-network{
+  width:100%;
+  min-width:720px;
+  display:block;
+}
+.nma-edge{
+  stroke:#9fa7ac;
+  stroke-linecap:round;
+  opacity:.9;
+}
+.nma-node{
+  cursor:pointer;
+  transition:.15s ease;
+  outline:none;
+}
+.nma-node circle{
+  fill:#52b55f;
+  stroke:#52b55f;
+  stroke-width:3;
+}
+.nma-node:hover circle,
+.nma-node:focus-visible circle{
+  stroke:#315f86;
+  stroke-width:4;
+}
+.nma-node.selected circle{
+  stroke:#3276e8;
+  stroke-width:5;
+}
+.nma-label{
+  fill:#142d3f;
+  font:600 15px var(--sans);
+  pointer-events:none;
+}
+.nma-caption{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:11px;
+}
+.nma-selected{
+  margin-top:20px;
+  padding:18px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.nma-selected-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(220px,.7fr);
+  gap:22px;
+  align-items:start;
+}
+.nma-selected h4{
+  margin:3px 0 9px;
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:500;
+  color:var(--ink);
+}
+.nma-selected p{
+  margin:0;
+  color:var(--body);
+  font-size:13px;
+  line-height:1.68;
+}
+.nma-statbox{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+.nma-stat{
+  padding:12px;
+  border-radius:11px;
+  background:#f5f7f7;
+  border:1px solid #e8edef;
+}
+.nma-stat .l{
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+}
+.nma-stat .v{
+  margin-top:3px;
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:20px;
+}
+.nma-top3{
+  margin-top:18px;
+}
+.nma-top3 h4{
+  margin:0 0 11px;
+  font-size:14px;
+  color:var(--ink);
+}
+.nma-ranks{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:11px;
+}
+.nma-rank{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
+.nma-rank .rankno{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.nma-rank strong{
+  display:block;
+  margin-top:5px;
+  color:var(--ink);
+  font-size:13px;
+}
+.nma-rank .sucra{
+  margin-top:5px;
+  font-family:var(--serif);
+  font-size:24px;
+  color:#315f86;
+}
+.nma-rank span{
+  color:var(--muted);
+  font-size:11px;
+}
+.nma-caution{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.55;
+}
+.nma-ranking-view{
+  display:none;
+  padding:12px 2px 4px;
+}
+.nma-ranking-view.active{display:block}
+.nma-network-view.hidden{display:none}
+.nma-bars{display:grid;gap:14px;margin-top:12px}
+.nma-bar-row{
+  display:grid;
+  grid-template-columns:160px 1fr 58px;
+  gap:12px;
+  align-items:center;
+}
+.nma-bar-name{
+  font-size:12px;
+  font-weight:700;
+  color:#344d5f;
+}
+.nma-bar-track{
+  height:22px;
+  border-radius:999px;
+  background:#edf1f3;
+  overflow:hidden;
+}
+.nma-bar-fill{
+  height:100%;
+  border-radius:999px;
+  background:#6f97b4;
+}
+.nma-bar-value{
+  text-align:right;
+  font-family:var(--serif);
+  font-size:18px;
+  color:#315f86;
+}
+@media(max-width:760px){
+  .nma-selected-grid,.nma-ranks{grid-template-columns:1fr}
+  .nma-bar-row{grid-template-columns:120px 1fr 52px}
+}
+
+
+/* Publication 02: CGS × psychological distress explorer */
+.cgs-story{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.cgs-kicker{margin:0 0 7px;color:var(--muted);font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.cgs-title{margin:0;font-family:var(--serif);font-size:26px;line-height:1.2;font-weight:500;color:var(--ink)}
+.cgs-sub{margin:9px 0 0;color:var(--body);font-size:13px;line-height:1.65}
+.cgs-explainer{margin-top:18px;padding:20px;border-radius:15px;background:#f8f9f9;border:1px solid #edf1f2}
+.cgs-explain-grid{display:grid;grid-template-columns:1.15fr auto 1fr auto 1fr;gap:16px;align-items:center}
+.cgs-step-label{margin-bottom:8px;color:#6d7b84;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.cgs-gene-list{display:flex;flex-wrap:wrap;gap:7px}
+.cgs-gene{padding:5px 9px;border-radius:999px;border:1px solid #dbe3e7;background:#fff;color:#294d65;font-size:11px;font-weight:700}
+.cgs-arrow{color:#8ca0ad;font-size:22px}
+.cgs-score{font-family:var(--serif);font-size:23px;color:#315f86}
+.cgs-small{margin-top:5px;color:var(--muted);font-size:11px;line-height:1.5}
+.cgs-groups{display:flex;gap:7px;flex-wrap:wrap}
+.cgs-group{padding:6px 10px;border-radius:999px;background:#edf3f6;color:#3c6179;font-size:11px;font-weight:700}
+.cgs-divider{margin:26px 0 20px;border:0;border-top:1px solid var(--line)}
+.cgs-tabs{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:10px;background:#fff;width:max-content}
+.cgs-tab{min-height:38px;padding:8px 14px;border:0;border-radius:7px;background:transparent;color:#51626d;font:700 11px var(--sans);cursor:pointer}
+.cgs-tab[aria-selected="true"]{background:#edf3f8;color:#244c6e}
+.cgs-highlight{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.cgs-highlight-label{color:var(--muted);font-size:11px;margin-right:2px}
+.cgs-path-btn{min-height:34px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#4e616c;font:600 10.5px var(--sans);cursor:pointer}
+.cgs-path-btn[aria-pressed="true"]{background:#edf3f8;border-color:#b8cad7;color:#244c6e}
+.cgs-time-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.cgs-time-card{border:1px solid #edf1f2;border-radius:15px;background:#f8f9f9;padding:17px}
+.cgs-time-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.cgs-time-top h4{margin:3px 0 0;color:var(--ink);font-size:15px}
+.cgs-badge{padding:5px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);color:#516873;font-size:9.5px;font-weight:700;white-space:nowrap}
+.cgs-svg-wrap{margin-top:12px;overflow-x:auto}
+.cgs-svg{width:100%;min-width:430px;display:block}
+.cgs-box{fill:#fff;stroke:#dfe6ea;stroke-width:1.5}
+.cgs-box-label{fill:#77848d;font:600 10px var(--sans)}
+.cgs-box-main{fill:#18354d;font:700 13px var(--sans)}
+.cgs-edge{fill:none;stroke:#6f93ac;stroke-width:3.6;stroke-linecap:round;transition:.15s ease}
+.cgs-edge.muted{opacity:.2}.cgs-edge.focused{stroke-width:6}.cgs-edge.direct{stroke:#b29b84}.cgs-edge.interaction{stroke:#6f8fbe}
+.cgs-statline{margin-top:10px;color:var(--body);font-size:11.5px;line-height:1.55}.cgs-statline strong{color:var(--ink)}
+.cgs-simple-slopes{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cgs-slope{padding:9px;border-radius:9px;background:#fff;border:1px solid #e4eaed}
+.cgs-slope .l{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.cgs-slope .v{margin-top:3px;font-family:var(--serif);font-size:16px;color:#315f86}
+.cgs-change{margin-top:18px;padding:17px 18px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.cgs-change h4{margin:0 0 7px;color:var(--ink);font-size:14px}.cgs-change p{margin:0;color:var(--body);font-size:12.5px;line-height:1.66}
+.cgs-change .numbers{margin-top:10px;color:var(--muted);font-size:11px}
+@media(max-width:880px){.cgs-explain-grid{grid-template-columns:1fr}.cgs-arrow{transform:rotate(90deg);justify-self:center}.cgs-time-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.cgs-simple-slopes{grid-template-columns:1fr}}
+
+
+/* Publication 05: personalized MI intervention explorer */
+.mi-story{
+  margin-top:24px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.mi-kicker{
+  margin:0 0 7px;
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.mi-title{
+  margin:0;
+  font-family:var(--serif);
+  font-size:26px;
+  line-height:1.2;
+  font-weight:500;
+  color:var(--ink);
+}
+.mi-sub{
+  margin:9px 0 0;
+  color:var(--body);
+  font-size:13px;
+  line-height:1.68;
+}
+.mi-flow{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:9px;
+}
+.mi-step{
+  position:relative;
+  padding:14px 11px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  min-height:92px;
+}
+.mi-step-no{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.mi-step strong{
+  display:block;
+  margin-top:6px;
+  color:var(--ink);
+  font-size:12px;
+  line-height:1.35;
+}
+.mi-step span{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:10.5px;
+  line-height:1.4;
+}
+.mi-step:not(:last-child)::after{
+  content:"→";
+  position:absolute;
+  right:-10px;
+  top:34px;
+  color:#9aabb6;
+  z-index:2;
+}
+.mi-level-box{
+  margin-top:18px;
+  padding:17px;
+  border-radius:14px;
+  background:#f8f9f9;
+  border:1px solid #edf1f2;
+}
+.mi-level-head{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.mi-level-head h4{
+  margin:2px 0 0;
+  color:var(--ink);
+  font-size:15px;
+}
+.mi-level-tabs{
+  display:flex;
+  gap:5px;
+  padding:4px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+}
+.mi-level-btn{
+  min-height:36px;
+  padding:8px 12px;
+  border:0;
+  border-radius:7px;
+  background:transparent;
+  color:#53656f;
+  font:700 10.5px var(--sans);
+  cursor:pointer;
+}
+.mi-level-btn[aria-pressed="true"]{
+  background:#edf3f8;
+  color:#244c6e;
+}
+.mi-level-copy{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.mi-level-card{
+  padding:13px 14px;
+  border:1px solid #e5eaed;
+  border-radius:11px;
+  background:#fff;
+}
+.mi-level-card .label{
+  color:var(--muted);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.mi-level-card strong{
+  display:block;
+  margin-top:4px;
+  color:var(--ink);
+  font-size:12px;
+}
+.mi-level-card p{
+  margin:5px 0 0;
+  color:var(--body);
+  font-size:11px;
+  line-height:1.55;
+}
+.mi-examples{
+  margin-top:22px;
+}
+.mi-example-tabs{
+  display:flex;
+  gap:5px;
+  padding:4px;
+  width:max-content;
+  max-width:100%;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+}
+.mi-example-tab{
+  min-height:38px;
+  padding:8px 13px;
+  border:0;
+  border-radius:7px;
+  background:transparent;
+  color:#53656f;
+  font:700 10.5px var(--sans);
+  cursor:pointer;
+}
+.mi-example-tab[aria-selected="true"]{
+  background:#edf3f8;
+  color:#244c6e;
+}
+.mi-example-panel{
+  display:none;
+  margin-top:13px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#fff;
+}
+.mi-example-panel.active{display:block}
+.mi-feedback-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.mi-feedback-card{
+  overflow:hidden;
+  border:1px solid #dfe6ea;
+  border-radius:12px;
+  background:#fbfcfc;
+}
+.mi-feedback-head{
+  padding:9px 12px;
+  font-size:11px;
+  font-weight:800;
+  color:#244c6e;
+}
+.mi-feedback-head.blue{background:#dcecf8}
+.mi-feedback-head.yellow{background:#fff1a9;color:#66551d}
+.mi-feedback-body{padding:14px}
+.mi-feedback-body h5{
+  margin:0 0 10px;
+  color:var(--ink);
+  font-size:12px;
+}
+.mi-bars{
+  height:110px;
+  display:flex;
+  align-items:flex-end;
+  gap:12px;
+  padding:4px 6px 22px;
+  border-bottom:1px solid #e7ecef;
+}
+.mi-bar{
+  flex:1;
+  position:relative;
+  min-width:22px;
+  border-radius:5px 5px 0 0;
+  background:#6aa7d6;
+}
+.mi-bar span{
+  position:absolute;
+  left:50%;
+  bottom:-20px;
+  transform:translateX(-50%);
+  font-size:8px;
+  color:#7e8a92;
+  white-space:nowrap;
+}
+.mi-rai{
+  margin-top:16px;
+}
+.mi-axis{
+  height:6px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#6b9fc5 0 50%,#d8e4ec 50% 100%);
+  position:relative;
+}
+.mi-axis::after{
+  content:"";
+  position:absolute;
+  width:11px;height:11px;border-radius:50%;
+  background:#ea8b2f;
+  left:46%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 0 3px rgba(234,139,47,.15);
+}
+.mi-axis-labels{
+  display:flex;
+  justify-content:space-between;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:8px;
+}
+.mi-radar{
+  width:145px;height:145px;
+  margin:0 auto;
+  position:relative;
+}
+.mi-radar svg{width:100%;height:100%;display:block}
+.mi-score{
+  margin-top:8px;
+}
+.mi-bell{
+  height:58px;
+  position:relative;
+  overflow:hidden;
+}
+.mi-bell svg{width:100%;height:100%;display:block}
+.mi-example-note{
+  margin:13px 2px 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.55;
+  font-style:italic;
+}
+.mi-chat{
+  max-width:620px;
+  margin:0 auto;
+  padding:14px;
+  border-radius:15px;
+  background:#c7d5df;
+}
+.mi-message{
+  max-width:82%;
+  padding:13px 14px;
+  border-radius:14px;
+  font-size:12px;
+  line-height:1.55;
+  box-shadow:0 1px 0 rgba(0,0,0,.03);
+}
+.mi-message + .mi-message{margin-top:11px}
+.mi-message.counselor{
+  margin-left:auto;
+  background:#ffe600;
+  color:#34320c;
+}
+.mi-message.student{
+  margin-right:auto;
+  background:#fff;
+  color:#394b56;
+}
+.mi-chat-label{
+  margin-top:5px;
+  color:#6c7c86;
+  font-size:9px;
+}
+.mi-outcome{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.mi-outcome-card{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#f8f9f9;
+}
+.mi-outcome-card strong{
+  display:block;
+  color:var(--ink);
+  font-size:12px;
+}
+.mi-outcome-card p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.55;
+}
+@media(max-width:860px){
+  .mi-flow{grid-template-columns:1fr}
+  .mi-step:not(:last-child)::after{
+    content:"↓";
+    right:auto;left:50%;top:auto;bottom:-17px;
+  }
+  .mi-feedback-wrap,.mi-level-copy,.mi-outcome{grid-template-columns:1fr}
+}
+
+
+/* Unified site navigation */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.nav-links{
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#4c5b65;
+  font-size:14.5px;
+  padding:23px 0 19px;
+  border-bottom:2px solid transparent;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue);
+  border-bottom-color:var(--blue);
+}
+@media(max-width:760px){
+  .nav-inner{min-height:auto}
+  .nav-links{gap:17px;padding:13px 0}
+  .nav-links a{padding:5px 0}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+<div class="container nav-inner">
+<div class="nav-links"><a href="/my-website/index.html" target="_self">About</a><a href="/my-website/research-interests.html" target="_self">Research Interests</a><a class="active" href="/my-website/publications.html" target="_self">Publications</a><a href="/my-website/experience.html" target="_self">Experience</a><a href="/my-website/cv.html" target="_self">CV</a></div>
+</div>
+</nav>
+<main>
+<section class="page-header section-a">
+<div class="container">
+<div class="eyebrow">Selected Scholarly Work</div>
+<h1>Publications</h1>
+<p class="page-intro">
+        Peer-reviewed work spanning addiction, longitudinal research, intervention,
+        genetics, and evidence synthesis. Select a publication below to jump to its section.
+      </p>
+</div>
+</section>
+<section class="publications-section section-b"><div class="container">
+<div class="section-heading">
+<div class="eyebrow">Publication List</div>
+<h2>Peer-Reviewed Publications</h2>
+<p>My name is bolded for quick scanning. Full interactive explanations will be added below each publication later.</p>
+</div>
+<div class="pub-index">
+<a href="#pub-1">
+<div class="pub-no">01</div>
+<div class="pub-mini">Song, H., Lee, M., <strong>Lee, D.</strong>, Zaso, M. J., Park, A., &amp; Kim, J. (2026). Cumulative alcohol metabolism genetic score as a moderator of the association between positive drinking consequences and next-day alcohol use: An observational study. <em>International Journal of Psychology, 61</em>(1), e70143.</div>
+</a>
+<a href="#pub-2">
+<div class="pub-no">02</div>
+<div class="pub-mini"><strong>Lee, D.</strong>, Lee, S., &amp; Kim, J. (2024). Interaction effects of cumulative genetic score and psychological distress on excessive gaming: A 2-year longitudinal study. <em>Current Psychology, 43</em>, 16170–16182.</div>
+</a>
+<a href="#pub-3">
+<div class="pub-no">03</div>
+<div class="pub-mini">Kim, J., <strong>Lee, D.</strong>, Lee, S., Kim, E., &amp; Oh, S. (2023). Reciprocal relationships between problematic gaming and aggression or intrusive parenting across five years. <em>Cyberpsychology, Behavior, and Social Networking, 26</em>(2), 106–113.</div>
+</a>
+<a href="#pub-4">
+<div class="pub-no">04</div>
+<div class="pub-mini">Kim, J., Lee, S., <strong>Lee, D.</strong>, Shim, S., Balva, D., Choi, K. H., Chey, J., Shin, S. K., &amp; Ahn, W. Y. (2022). Psychological treatments for excessive gaming: A systematic review and meta-analysis. <em>Scientific Reports, 12</em>(1), 20485.</div>
+</a>
+<a href="#pub-5">
+<div class="pub-no">05</div>
+<div class="pub-mini"><strong>Lee, D.</strong>, Oh, S., Lee, S., &amp; Kim, J. (2022). Development of motivational interviewing online chat counseling to enhance e-learning competency among college students. <em>The Korean Journal of School Psychology, 19</em>(3), 241–265.</div>
+</a>
+<a href="#pub-6">
+<div class="pub-no">06</div>
+<div class="pub-mini">Kim, E., <strong>Lee, D.</strong>, Do, K., &amp; Kim, J. (2022). Interactions effects of DRD2 genetic polymorphism and interpersonal stress on problematic gaming in college students. <em>Genes, 13</em>(3), 449.</div>
+</a>
+<a href="#pub-7">
+<div class="pub-no">07</div>
+<div class="pub-mini"><strong>Lee, D.</strong>, Song, H., &amp; Kim, J. (2022). Effect of parental attachment on adolescent excessive gaming: Mediating role of peer attachment. <em>The Journal of Counseling Psychology Education Welfare, 9</em>(4), 87–104.</div>
+</a>
+</div>
+<div class="pub-details">
+<article class="pub-card" id="pub-1">
+<div class="pub-card-top"><div class="pub-card-number">01</div><div class="pub-year">2026</div></div>
+<p class="citation">Song, H., Lee, M., <strong>Lee, D.</strong>, Zaso, M. J., Park, A., &amp; Kim, J. (2026). Cumulative alcohol metabolism genetic score as a moderator of the association between positive drinking consequences and next-day alcohol use: An observational study. <em>International Journal of Psychology, 61</em>(1), e70143.</p>
+<a class="doi" href="https://doi.org/10.1002/ijop.70143" rel="noopener" target="_blank">https://doi.org/10.1002/ijop.70143</a>
+<div class="future-slot">Interactive explanation will be added here.</div>
+</article>
+<article class="pub-card" id="pub-2">
+<div class="pub-card-top"><div class="pub-card-number">02</div><div class="pub-year">2024</div></div>
+<p class="citation"><strong>Lee, D.</strong>, Lee, S., &amp; Kim, J. (2024). Interaction effects of cumulative genetic score and psychological distress on excessive gaming: A 2-year longitudinal study. <em>Current Psychology, 43</em>, 16170–16182.</p>
+<a class="doi" href="https://doi.org/10.1007/s12144-023-05553-6" rel="noopener" target="_blank">https://doi.org/10.1007/s12144-023-05553-6</a>
+<div class="cgs-story" id="cgs-story">
+<p class="cgs-kicker">First, what is CGS?</p>
+<h3 class="cgs-title">Cumulative Genetic Score</h3>
+<p class="cgs-sub">CGS summarizes genetic vulnerability across <strong>seven monoamine-related genes</strong>. Each gene contributes 0, 1, or 2 risk alleles, which are added together. A higher CGS indicates a greater cumulative number of risk-conferring alleles — not a diagnosis or deterministic prediction.</p>
+<div class="cgs-explainer">
+<div class="cgs-explain-grid">
+<div>
+<div class="cgs-step-label">7 genes</div>
+<div class="cgs-gene-list">
+<span class="cgs-gene">ANKK1</span><span class="cgs-gene">DRD2</span><span class="cgs-gene">DRD4</span>
+<span class="cgs-gene">SLC6A3</span><span class="cgs-gene">COMT</span><span class="cgs-gene">SLC6A4</span><span class="cgs-gene">MAOA</span>
+</div>
+</div>
+<div class="cgs-arrow">→</div>
+<div>
+<div class="cgs-step-label">Risk scoring</div>
+<div class="cgs-score">0 + 1 + 2 ...</div>
+<div class="cgs-small">Risk-allele scores are summed across the seven genes.</div>
+</div>
+<div class="cgs-arrow">→</div>
+<div>
+<div class="cgs-step-label">CGS groups</div>
+<div class="cgs-groups"><span class="cgs-group">Low</span><span class="cgs-group">Middle</span><span class="cgs-group">High</span></div>
+<div class="cgs-small">Possible score range: 0–14</div>
+</div>
+</div>
+</div>
+<hr class="cgs-divider"/>
+<p class="cgs-kicker">Concurrent effects</p>
+<h3 class="cgs-title">How does psychological distress interact with genetic vulnerability?</h3>
+<div aria-label="Psychological distress" class="cgs-tabs" role="tablist">
+<button aria-selected="true" class="cgs-tab" data-distress="depression" type="button">Depression</button>
+<button aria-selected="false" class="cgs-tab" data-distress="anxiety" type="button">Anxiety</button>
+</div>
+<div class="cgs-highlight">
+<span class="cgs-highlight-label">Click a pathway to highlight it:</span>
+<button aria-pressed="false" class="cgs-path-btn" data-path="distress" type="button">Psychological distress</button>
+<button aria-pressed="false" class="cgs-path-btn" data-path="cgs" type="button">CGS</button>
+<button aria-pressed="true" class="cgs-path-btn" data-path="interaction" type="button">Distress × CGS</button>
+</div>
+<div class="cgs-time-grid">
+<section class="cgs-time-card">
+<div class="cgs-time-top"><div><p class="cgs-kicker">Time 1</p><h4 id="cgs-t1-heading">Depression × CGS → Excessive gaming</h4></div><span class="cgs-badge">Significant interaction</span></div>
+<div class="cgs-svg-wrap">
+<svg aria-label="Time 1 path diagram" class="cgs-svg" role="img" viewbox="0 0 520 260">
+<defs><marker id="cgs-arrow-1" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0,0 L8,4 L0,8 Z" fill="#6f93ac"></path></marker></defs>
+<rect class="cgs-box" height="62" rx="12" width="150" x="20" y="40"></rect><text class="cgs-box-label" text-anchor="middle" x="95" y="62">DISTRESS</text><text class="cgs-box-main" id="cgs-t1-distress-label" text-anchor="middle" x="95" y="85">Depression</text>
+<rect class="cgs-box" height="62" rx="12" width="150" x="20" y="158"></rect><text class="cgs-box-label" text-anchor="middle" x="95" y="180">GENETIC VULNERABILITY</text><text class="cgs-box-main" text-anchor="middle" x="95" y="203">CGS</text>
+<circle class="cgs-box" cx="268" cy="130" r="47"></circle><text class="cgs-box-label" text-anchor="middle" x="268" y="124">DISTRESS × CGS</text><text class="cgs-box-main" text-anchor="middle" x="268" y="145">Interaction</text>
+<rect class="cgs-box" height="64" rx="12" width="135" x="365" y="98"></rect><text class="cgs-box-label" text-anchor="middle" x="432" y="121">OUTCOME</text><text class="cgs-box-main" text-anchor="middle" x="432" y="144">Excessive gaming</text>
+<path class="cgs-edge direct cgs-path-distress" d="M170 69 C255 40 323 55 365 108" marker-end="url(#cgs-arrow-1)"></path>
+<path class="cgs-edge direct cgs-path-cgs" d="M170 190 C260 220 330 195 377 160" marker-end="url(#cgs-arrow-1)"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M170 80 C210 88 225 104 232 115"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M170 187 C210 178 228 158 236 148"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M315 130 L365 130" marker-end="url(#cgs-arrow-1)"></path>
+</svg>
+</div>
+<div class="cgs-statline" id="cgs-t1-stat"><strong>Interaction:</strong> b = 0.72, β = 0.24, p = .01</div>
+<div class="cgs-simple-slopes">
+<div class="cgs-slope"><div class="l">Low CGS</div><div class="v" id="cgs-t1-low">b = 0.96</div></div>
+<div class="cgs-slope"><div class="l">Middle CGS</div><div class="v" id="cgs-t1-mid">b = 1.68</div></div>
+<div class="cgs-slope"><div class="l">High CGS</div><div class="v" id="cgs-t1-high">b = 2.39</div></div>
+</div>
+</section>
+<section class="cgs-time-card">
+<div class="cgs-time-top"><div><p class="cgs-kicker">Time 2</p><h4 id="cgs-t2-heading">Depression × CGS → Excessive gaming</h4></div><span class="cgs-badge">Significant interaction</span></div>
+<div class="cgs-svg-wrap">
+<svg aria-label="Time 2 path diagram" class="cgs-svg" role="img" viewbox="0 0 520 260">
+<defs><marker id="cgs-arrow-2" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0,0 L8,4 L0,8 Z" fill="#6f93ac"></path></marker></defs>
+<rect class="cgs-box" height="62" rx="12" width="150" x="20" y="40"></rect><text class="cgs-box-label" text-anchor="middle" x="95" y="62">DISTRESS</text><text class="cgs-box-main" id="cgs-t2-distress-label" text-anchor="middle" x="95" y="85">Depression</text>
+<rect class="cgs-box" height="62" rx="12" width="150" x="20" y="158"></rect><text class="cgs-box-label" text-anchor="middle" x="95" y="180">GENETIC VULNERABILITY</text><text class="cgs-box-main" text-anchor="middle" x="95" y="203">CGS</text>
+<circle class="cgs-box" cx="268" cy="130" r="47"></circle><text class="cgs-box-label" text-anchor="middle" x="268" y="124">DISTRESS × CGS</text><text class="cgs-box-main" text-anchor="middle" x="268" y="145">Interaction</text>
+<rect class="cgs-box" height="64" rx="12" width="135" x="365" y="98"></rect><text class="cgs-box-label" text-anchor="middle" x="432" y="121">OUTCOME</text><text class="cgs-box-main" text-anchor="middle" x="432" y="144">Excessive gaming</text>
+<path class="cgs-edge direct cgs-path-distress" d="M170 69 C255 40 323 55 365 108" marker-end="url(#cgs-arrow-2)"></path>
+<path class="cgs-edge direct cgs-path-cgs" d="M170 190 C260 220 330 195 377 160" marker-end="url(#cgs-arrow-2)"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M170 80 C210 88 225 104 232 115"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M170 187 C210 178 228 158 236 148"></path>
+<path class="cgs-edge interaction cgs-path-interaction focused" d="M315 130 L365 130" marker-end="url(#cgs-arrow-2)"></path>
+</svg>
+</div>
+<div class="cgs-statline" id="cgs-t2-stat"><strong>Interaction:</strong> b = 0.48, β = 0.17, p = .03</div>
+<div class="cgs-simple-slopes">
+<div class="cgs-slope"><div class="l">Low CGS</div><div class="v" id="cgs-t2-low">b = 1.38</div></div>
+<div class="cgs-slope"><div class="l">Middle CGS</div><div class="v" id="cgs-t2-mid">b = 1.84</div></div>
+<div class="cgs-slope"><div class="l">High CGS</div><div class="v" id="cgs-t2-high">b = 2.31</div></div>
+</div>
+</section>
+</div>
+<div class="cgs-change">
+<p class="cgs-kicker">What happened across one year?</p>
+<h4>Concurrent interaction was clearer than longitudinal change.</h4>
+<p id="cgs-change-text">Depression × CGS was significant at both Time 1 and Time 2, but the interaction did not significantly predict one-year change in excessive gaming. This suggests that genetic vulnerability may function more as a concurrent amplifier of distress-related gaming than as a stable predictor of how gaming changes over a year.</p>
+<div class="numbers" id="cgs-change-numbers">1-year change interaction: depression × CGS, p = .21.</div>
+</div>
+</div>
+</article>
+<article class="pub-card" id="pub-3">
+<div class="pub-card-top"><div class="pub-card-number">03</div><div class="pub-year">2023</div></div>
+<p class="citation">Kim, J., <strong>Lee, D.</strong>, Lee, S., Kim, E., &amp; Oh, S. (2023). Reciprocal relationships between problematic gaming and aggression or intrusive parenting across five years. <em>Cyberpsychology, Behavior, and Social Networking, 26</em>(2), 106–113.</p>
+<a class="doi" href="https://doi.org/10.1089/cyber.2022.0101" rel="noopener" target="_blank">https://doi.org/10.1089/cyber.2022.0101</a>
+<div class="future-slot">Interactive explanation will be added here.</div>
+</article>
+<article class="pub-card" id="pub-4">
+<div class="pub-card-top"><div class="pub-card-number">04</div><div class="pub-year">2022</div></div>
+<p class="citation">Kim, J., Lee, S., <strong>Lee, D.</strong>, Shim, S., Balva, D., Choi, K. H., Chey, J., Shin, S. K., &amp; Ahn, W. Y. (2022). Psychological treatments for excessive gaming: A systematic review and meta-analysis. <em>Scientific Reports, 12</em>(1), 20485.</p>
+<a class="doi" href="https://doi.org/10.1038/s41598-022-24523-9" rel="noopener" target="_blank">https://doi.org/10.1038/s41598-022-24523-9</a>
+<div class="nma-story" id="nma-story">
+<div class="nma-head">
+<div>
+<p class="nma-kicker">Network meta-analysis</p>
+<h3 class="nma-title">How were the treatments compared?</h3>
+<p class="nma-sub">
+        Circle size reflects how much evidence involved each condition. Thicker lines indicate more direct comparisons.
+        Click any circle to explore the treatment or control condition.
+      </p>
+</div>
+<div aria-label="Network meta-analysis view" class="nma-tabs" role="tablist">
+<button aria-selected="true" class="nma-tab" data-view="network" role="tab" type="button">Evidence network</button>
+<button aria-selected="false" class="nma-tab" data-view="ranking" role="tab" type="button">Top treatments</button>
+</div>
+</div>
+<div class="nma-panel">
+<div class="nma-network-view" id="nma-network-view">
+<div class="nma-network-wrap">
+<svg aria-labelledby="nmaTitle nmaDesc" class="nma-network" role="img" viewbox="0 0 900 565">
+<title id="nmaTitle">Network of psychological interventions for excessive gaming</title>
+<desc id="nmaDesc">Eleven treatment and control conditions connected by direct comparisons. Node size reflects the amount of evidence and line thickness reflects the number of direct comparison studies.</desc>
+<!-- Direct-comparison network, reconstructed from the published evidence network -->
+<line class="nma-edge" stroke-width="5.2" x1="354" x2="265" y1="96" y2="410"></line>
+<line class="nma-edge" stroke-width="2.2" x1="354" x2="490" y1="96" y2="110"></line>
+<line class="nma-edge" stroke-width="2.0" x1="354" x2="600" y1="96" y2="190"></line>
+<line class="nma-edge" stroke-width="1.8" x1="354" x2="145" y1="96" y2="235"></line>
+<line class="nma-edge" stroke-width="1.8" x1="354" x2="126" y1="96" y2="340"></line>
+<line class="nma-edge" stroke-width="1.8" x1="354" x2="230" y1="96" y2="135"></line>
+<line class="nma-edge" stroke-width="2.1" x1="354" x2="465" y1="96" y2="452"></line>
+<line class="nma-edge" stroke-width="7.2" x1="265" x2="490" y1="410" y2="110"></line>
+<line class="nma-edge" stroke-width="4.0" x1="265" x2="600" y1="410" y2="190"></line>
+<line class="nma-edge" stroke-width="3.0" x1="265" x2="635" y1="410" y2="335"></line>
+<line class="nma-edge" stroke-width="2.4" x1="265" x2="630" y1="410" y2="285"></line>
+<line class="nma-edge" stroke-width="2.0" x1="265" x2="465" y1="410" y2="452"></line>
+<line class="nma-edge" stroke-width="1.8" x1="265" x2="345" y1="410" y2="493"></line>
+<line class="nma-edge" stroke-width="1.8" x1="265" x2="126" y1="410" y2="340"></line>
+<line class="nma-edge" stroke-width="1.8" x1="265" x2="145" y1="410" y2="235"></line>
+<line class="nma-edge" stroke-width="2.2" x1="490" x2="600" y1="110" y2="190"></line>
+<line class="nma-edge" stroke-width="2.0" x1="490" x2="635" y1="110" y2="335"></line>
+<line class="nma-edge" stroke-width="1.8" x1="490" x2="630" y1="110" y2="285"></line>
+<line class="nma-edge" stroke-width="2.0" x1="600" x2="635" y1="190" y2="335"></line>
+<line class="nma-edge" stroke-width="1.8" x1="600" x2="630" y1="190" y2="285"></line>
+<g aria-label="CBT plus Family" class="nma-node" data-node="CBT + Family" role="button" tabindex="0">
+<circle cx="230" cy="135" r="13"></circle>
+<text class="nma-label" x="92" y="128">CBT + Family</text>
+</g>
+<g aria-label="CBT" class="nma-node" data-node="CBT" role="button" tabindex="0">
+<circle cx="354" cy="96" r="39"></circle>
+<text class="nma-label" x="373" y="61">CBT</text>
+</g>
+<g aria-label="BT plus Mindfulness" class="nma-node" data-node="BT + Mindfulness" role="button" tabindex="0">
+<circle cx="490" cy="110" r="27"></circle>
+<text class="nma-label" x="510" y="93">BT + Mindfulness</text>
+</g>
+<g aria-label="BT" class="nma-node" data-node="BT" role="button" tabindex="0">
+<circle cx="600" cy="190" r="31"></circle>
+<text class="nma-label" x="626" y="183">BT</text>
+</g>
+<g aria-label="CBT plus Mindfulness" class="nma-node selected" data-node="CBT + Mindfulness" role="button" tabindex="0">
+<circle cx="630" cy="285" r="15"></circle>
+<text class="nma-label" x="650" y="291">CBT + Mindfulness</text>
+</g>
+<g aria-label="Wait-list control" class="nma-node" data-node="Wait-list control" role="button" tabindex="0">
+<circle cx="565" cy="390" r="27"></circle>
+<text class="nma-label" x="592" y="430">Wait-list control</text>
+</g>
+<g aria-label="Virtual Reality BT" class="nma-node" data-node="Virtual Reality BT" role="button" tabindex="0">
+<circle cx="465" cy="452" r="12"></circle>
+<text class="nma-label" x="488" y="489">Virtual Reality BT</text>
+</g>
+<g aria-label="Treatment as usual" class="nma-node" data-node="TAU" role="button" tabindex="0">
+<circle cx="345" cy="493" r="11"></circle>
+<text class="nma-label" x="327" y="535">TAU</text>
+</g>
+<g aria-label="No Treatment" class="nma-node" data-node="No Treatment" role="button" tabindex="0">
+<circle cx="265" cy="410" r="43"></circle>
+<text class="nma-label" x="120" y="463">No Treatment</text>
+</g>
+<g aria-label="Mindfulness" class="nma-node" data-node="Mindfulness" role="button" tabindex="0">
+<circle cx="126" cy="340" r="12"></circle>
+<text class="nma-label" x="28" y="351">Mindfulness</text>
+</g>
+<g aria-label="Motivational interviewing plus behavioral treatment" class="nma-node" data-node="MI + BT" role="button" tabindex="0">
+<circle cx="145" cy="235" r="13"></circle>
+<text class="nma-label" x="43" y="230">MI + BT</text>
+</g>
+</svg>
+</div>
+<p class="nma-caption">Node size and line thickness reflect the relative volume of evidence in the published network plot.</p>
+</div>
+<div class="nma-ranking-view" id="nma-ranking-view">
+<p class="nma-kicker">Top treatments by SUCRA</p>
+<div class="nma-bars">
+<div class="nma-bar-row">
+<div class="nma-bar-name">CBT + Mindfulness</div>
+<div class="nma-bar-track"><div class="nma-bar-fill" style="width:97.1%"></div></div>
+<div class="nma-bar-value">97.1%</div>
+</div>
+<div class="nma-bar-row">
+<div class="nma-bar-name">CBT + Family</div>
+<div class="nma-bar-track"><div class="nma-bar-fill" style="width:90.2%"></div></div>
+<div class="nma-bar-value">90.2%</div>
+</div>
+<div class="nma-bar-row">
+<div class="nma-bar-name">Mindfulness</div>
+<div class="nma-bar-track"><div class="nma-bar-fill" style="width:82.1%"></div></div>
+<div class="nma-bar-value">82.1%</div>
+</div>
+</div>
+<p class="nma-caution">Higher SUCRA values indicate a greater probability of being among the more effective treatments in the network.</p>
+</div>
+</div>
+<div aria-live="polite" class="nma-selected">
+<p class="nma-kicker">Selected node</p>
+<div class="nma-selected-grid">
+<div>
+<h4 id="nma-selected-title">CBT + Mindfulness</h4>
+<p id="nma-selected-text">
+          Ranked first in the network meta-analysis (SUCRA 97.1%). It showed greater estimated effectiveness than CBT + Family and Mindfulness, although the differences among these top three treatments were not statistically significant.
+        </p>
+</div>
+<div class="nma-statbox">
+<div class="nma-stat">
+<div class="l">Type</div>
+<div class="v" id="nma-selected-type">Treatment</div>
+</div>
+<div class="nma-stat">
+<div class="l">Ranking</div>
+<div class="v" id="nma-selected-rank">#1</div>
+</div>
+</div>
+</div>
+<div class="nma-top3">
+<h4>Top 3 treatments</h4>
+<div class="nma-ranks">
+<div class="nma-rank">
+<div class="rankno">#1</div>
+<strong>CBT + Mindfulness</strong>
+<div class="sucra">97.1%</div>
+<span>SUCRA</span>
+</div>
+<div class="nma-rank">
+<div class="rankno">#2</div>
+<strong>CBT + Family</strong>
+<div class="sucra">90.2%</div>
+<span>SUCRA</span>
+</div>
+<div class="nma-rank">
+<div class="rankno">#3</div>
+<strong>Mindfulness</strong>
+<div class="sucra">82.1%</div>
+<span>SUCRA</span>
+</div>
+</div>
+<p class="nma-caution">
+        These rankings should be interpreted cautiously: the network included 17 studies (N = 745), and the paper describes the findings as preliminary because of the limited evidence base. The three top-ranked treatments did not differ significantly from one another.
+      </p>
+</div>
+</div>
+</div>
+</article>
+<article class="pub-card" id="pub-5">
+<div class="pub-card-top"><div class="pub-card-number">05</div><div class="pub-year">2022</div></div>
+<p class="citation"><strong>Lee, D.</strong>, Oh, S., Lee, S., &amp; Kim, J. (2022). Development of motivational interviewing online chat counseling to enhance e-learning competency among college students. <em>The Korean Journal of School Psychology, 19</em>(3), 241–265.</p>
+<a class="doi" href="https://doi.org/10.16983/kjsp.2022.19.3.241" rel="noopener" target="_blank">https://doi.org/10.16983/kjsp.2022.19.3.241</a>
+<div class="mi-story" id="mi-story">
+<p class="mi-kicker">Personalized digital intervention</p>
+<h3 class="mi-title">How was the three-session chat intervention personalized?</h3>
+<p class="mi-sub">
+    The intervention used three weekly 50-minute motivational interviewing online chat sessions.
+    Participants were assessed before counseling, received visualized individualized feedback,
+    and then received different counseling protocols depending on their levels of academic motivation
+    and academic emotion regulation.
+  </p>
+<div aria-label="Intervention flow" class="mi-flow">
+<div class="mi-step">
+<div class="mi-step-no">Step 01</div>
+<strong>Pre-assessment</strong>
+<span>Motivation, academic emotion regulation, and online-learning status assessed.</span>
+</div>
+<div class="mi-step">
+<div class="mi-step-no">Step 02</div>
+<strong>Session 1</strong>
+<span>Personalized visual feedback and motivational interviewing.</span>
+</div>
+<div class="mi-step">
+<div class="mi-step-no">Step 03</div>
+<strong>Session 2</strong>
+<span>Motivation-level-specific counseling protocol.</span>
+</div>
+<div class="mi-step">
+<div class="mi-step-no">Step 04</div>
+<strong>Session 3</strong>
+<span>Emotion-regulation-level-specific counseling protocol.</span>
+</div>
+<div class="mi-step">
+<div class="mi-step-no">Step 05</div>
+<strong>Post-assessment</strong>
+<span>Outcomes measured again after the intervention.</span>
+</div>
+</div>
+<div class="mi-level-box">
+<div class="mi-level-head">
+<div>
+<p class="mi-kicker">Tailored counseling protocol</p>
+<h4>Explore how the counseling focus changed by participant level</h4>
+</div>
+<div aria-label="Participant level" class="mi-level-tabs" role="group">
+<button aria-pressed="true" class="mi-level-btn" data-level="low" type="button">Low</button>
+<button aria-pressed="false" class="mi-level-btn" data-level="middle" type="button">Middle</button>
+<button aria-pressed="false" class="mi-level-btn" data-level="high" type="button">High</button>
+</div>
+</div>
+<div class="mi-level-copy">
+<div class="mi-level-card">
+<div class="label">Session 2 · Motivation</div>
+<strong id="mi-motivation-title">Strengthen reasons for change</strong>
+<p id="mi-motivation-copy">Use MI strategies to elicit personally meaningful goals, explore ambivalence, and strengthen autonomous reasons for studying.</p>
+</div>
+<div class="mi-level-card">
+<div class="label">Session 3 · Emotion regulation</div>
+<strong id="mi-emotion-title">Build basic emotion-awareness skills</strong>
+<p id="mi-emotion-copy">Help the student identify emotional patterns during learning and practice simple strategies for responding without avoidance.</p>
+</div>
+</div>
+</div>
+<div class="mi-examples">
+<p class="mi-kicker">Two examples from the intervention</p>
+<div aria-label="Intervention examples" class="mi-example-tabs" role="tablist">
+<button aria-selected="true" class="mi-example-tab" data-example="feedback" role="tab" type="button">(A) Personalized feedback</button>
+<button aria-selected="false" class="mi-example-tab" data-example="chat" role="tab" type="button">(B) Session 1 dialogue</button>
+</div>
+<section class="mi-example-panel active" data-panel="feedback">
+<div class="mi-feedback-wrap">
+<div class="mi-feedback-card">
+<div class="mi-feedback-head blue">1. Self-Determination Motivation Level</div>
+<div class="mi-feedback-body">
+<h5>Type-Based Learning Motivation</h5>
+<div aria-hidden="true" class="mi-bars">
+<div class="mi-bar" style="height:52%"><span>External</span></div>
+<div class="mi-bar" style="height:39%"><span>Introjected</span></div>
+<div class="mi-bar" style="height:76%"><span>Identified</span></div>
+<div class="mi-bar" style="height:80%"><span>Intrinsic</span></div>
+</div>
+<div class="mi-rai">
+<h5>Relative Autonomy Index (RAI)</h5>
+<div class="mi-axis"></div>
+<div class="mi-axis-labels"><span>Lower autonomy</span><span>College average: 105</span><span>Higher autonomy</span></div>
+</div>
+</div>
+</div>
+<div class="mi-feedback-card">
+<div class="mi-feedback-head yellow">2. Learning Emotional Regulation Level</div>
+<div class="mi-feedback-body">
+<h5>Type-Based Learning Emotional Regulation</h5>
+<div aria-hidden="true" class="mi-radar">
+<svg viewbox="0 0 160 160">
+<polygon fill="none" points="80,16 144,80 80,144 16,80" stroke="#dfe6ea" stroke-width="2"></polygon>
+<polygon fill="#ffe277" fill-opacity=".72" points="80,33 126,80 80,128 34,80" stroke="#e5b640" stroke-width="2"></polygon>
+<line stroke="#edf1f3" x1="80" x2="80" y1="16" y2="144"></line>
+<line stroke="#edf1f3" x1="16" x2="144" y1="80" y2="80"></line>
+</svg>
+</div>
+<div class="mi-score">
+<h5>Total Emotional Regulation Score</h5>
+<div aria-hidden="true" class="mi-bell">
+<svg preserveaspectratio="none" viewbox="0 0 220 70">
+<path d="M0,62 C36,62 55,54 72,39 C90,22 98,8 110,8 C122,8 130,22 148,39 C165,54 184,62 220,62 L220,70 L0,70 Z" fill="#ffd028"></path>
+<line stroke="#d28f00" stroke-width="2" x1="154" x2="154" y1="12" y2="65"></line>
+<text fill="#745600" font-size="10" x="160" y="23">109</text>
+</svg>
+</div>
+<div class="mi-axis-labels"><span>Lower</span><span>College average: 77</span><span>Higher</span></div>
+</div>
+</div>
+</div>
+</div>
+<p class="mi-example-note"><strong>Note.</strong> (A) Outcomes by level of learning motivation and academic emotion regulation.</p>
+</section>
+<section class="mi-example-panel" data-panel="chat">
+<div class="mi-chat">
+<div class="mi-message counselor">
+          Based on what you shared earlier, it sounds like your motivation is on the lower side right now.
+          Even though things feel really hard right now, you’re still choosing to participate in this program
+          and put in the effort. With that in mind, is there a goal you’re hoping to reach through studying?
+        </div>
+<div class="mi-chat-label" style="text-align:right">Counselor · Session 1</div>
+<div class="mi-message student">
+          Well... I’ve been really overwhelmed lately, so I keep putting things off.
+          But my biggest goal is still to pass the licensing exam and become a real nurse...
+        </div>
+<div class="mi-chat-label">Participant</div>
+</div>
+<p class="mi-example-note"><strong>Note.</strong> (B) Chat-based counseling dialogue. The dialogue was reconstructed and translated from an actual online chat counseling session. Across the intervention, each session used different counseling protocols depending on the student’s level.</p>
+</section>
+</div>
+<div class="mi-outcome">
+<div class="mi-outcome-card">
+<strong>Why the visual feedback mattered</strong>
+<p>Providing visual feedback enabled students to assess their current status and more clearly identify their goals.</p>
+</div>
+<div class="mi-outcome-card">
+<strong>Why chat-based delivery mattered</strong>
+<p>The format offered location independence and anonymity, while the structured protocol helped counselors respond more consistently.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="pub-card" id="pub-6">
+<div class="pub-card-top"><div class="pub-card-number">06</div><div class="pub-year">2022</div></div>
+<p class="citation">Kim, E., <strong>Lee, D.</strong>, Do, K., &amp; Kim, J. (2022). Interactions effects of DRD2 genetic polymorphism and interpersonal stress on problematic gaming in college students. <em>Genes, 13</em>(3), 449.</p>
+<a class="doi" href="https://doi.org/10.3390/genes13030449" rel="noopener" target="_blank">https://doi.org/10.3390/genes13030449</a>
+<div class="drd2-story" id="drd2-story">
+<div class="drd2-grid">
+<section>
+<p class="drd2-kicker">Research question</p>
+<h3 class="drd2-question">Why does interpersonal stress lead to problematic gaming for some people, but not others?</h3>
+<p class="drd2-sub">This study tested whether genetic differences in dopamine-related <em>DRD2</em> variants change how interpersonal stress relates to problematic gaming — and whether avoidant coping helps explain that pathway.</p>
+<div class="drd2-controls">
+<p class="drd2-controls-title">Explore a scenario</p>
+<fieldset class="drd2-fieldset">
+<legend>Genetic profile</legend>
+<div aria-label="Genetic profile" class="drd2-options" role="group">
+<button class="drd2-option gene-btn" data-gene="risk" type="button">Both risk alleles</button>
+<button class="drd2-option gene-btn" data-gene="other" type="button">One or neither</button>
+</div>
+<p class="drd2-note">“Both risk alleles” = <em>DRD2 C957T</em> T allele + <em>DRD2 Taq1</em> A1 allele.</p>
+</fieldset>
+<fieldset class="drd2-fieldset">
+<legend>Interpersonal stress</legend>
+<div aria-label="Interpersonal stress" class="drd2-options" role="group">
+<button class="drd2-option stress-btn" data-stress="low" type="button">Lower stress</button>
+<button class="drd2-option stress-btn" data-stress="high" type="button">Higher stress</button>
+</div>
+</fieldset>
+<div aria-live="polite" class="drd2-scenario">
+<div class="label">What the model suggests</div>
+<h4 id="scenario-title"></h4>
+<p id="scenario-text"></p>
+</div>
+</div>
+</section>
+<section class="drd2-panel">
+<div class="drd2-panel-head">
+<div>
+<p class="drd2-kicker">Mechanism</p>
+<h4>Stress × susceptibility → coping → gaming</h4>
+</div>
+<span class="drd2-status" id="status-pill"></span>
+</div>
+<div class="drd2-viz-wrap">
+<svg aria-labelledby="vizTitle vizDesc" class="drd2-viz" role="img" viewbox="0 0 760 330">
+<title id="vizTitle">Interactive pathway from DRD2 genetic profile and interpersonal stress to avoidant coping and problematic gaming</title>
+<desc id="vizDesc">The pathway becomes visually stronger when both risk alleles and higher interpersonal stress are selected.</desc>
+<defs>
+<marker id="drd2-arrow" markerheight="9" markerwidth="9" orient="auto" refx="8" refy="4.5">
+<path d="M0,0 L9,4.5 L0,9 Z" fill="#607f95"></path>
+</marker>
+</defs>
+<rect fill="#ffffff" height="86" rx="16" stroke="#dfe6ea" width="180" x="24" y="38"></rect>
+<text fill="#77848d" font-size="12" x="44" y="66">GENETIC SUSCEPTIBILITY</text>
+<text fill="#18354d" font-size="17" font-weight="650" id="gene-label" x="44" y="91">Both DRD2 risk alleles</text>
+<text fill="#77848d" font-size="12" id="gene-sub" x="44" y="111">Combined-risk group</text>
+<rect fill="#ffffff" height="86" rx="16" stroke="#dfe6ea" width="180" x="24" y="188"></rect>
+<text fill="#77848d" font-size="12" x="44" y="216">ENVIRONMENT</text>
+<text fill="#18354d" font-size="17" font-weight="650" id="stress-label" x="44" y="241">Higher stress</text>
+<text fill="#77848d" font-size="12" x="44" y="261">Interpersonal stressors</text>
+<circle cx="300" cy="156" fill="#ffffff" r="55" stroke="#dfe6ea"></circle>
+<text fill="#77848d" font-size="12" text-anchor="middle" x="300" y="149">G × G × E</text>
+<text fill="#18354d" font-size="16" font-weight="650" text-anchor="middle" x="300" y="169">Interaction</text>
+<path d="M204 82 C246 82 252 112 268 126" fill="none" id="gene-path" marker-end="url(#drd2-arrow)" stroke="#6f93ac" stroke-width="4"></path>
+<path d="M204 232 C248 232 254 201 270 188" fill="none" id="stress-path" marker-end="url(#drd2-arrow)" stroke="#d0a84d" stroke-width="4"></path>
+<rect fill="#ffffff" height="74" rx="16" stroke="#dfe6ea" width="156" x="398" y="72"></rect>
+<text fill="#77848d" font-size="12" text-anchor="middle" x="476" y="102">COPING RESPONSE</text>
+<text fill="#18354d" font-size="17" font-weight="650" text-anchor="middle" x="476" y="126">Avoidant coping</text>
+<rect fill="#ffffff" height="74" rx="16" stroke="#dfe6ea" width="150" x="590" y="72"></rect>
+<text fill="#77848d" font-size="12" text-anchor="middle" x="665" y="102">OUTCOME</text>
+<text fill="#18354d" font-size="16" font-weight="650" text-anchor="middle" x="665" y="124">Problematic gaming</text>
+<path d="M350 135 C370 124 378 115 398 111" fill="none" id="interaction-coping" marker-end="url(#drd2-arrow)" stroke="#7aa58e" stroke-width="5"></path>
+<path d="M554 109 L590 109" fill="none" id="coping-gaming" marker-end="url(#drd2-arrow)" stroke="#7aa58e" stroke-width="5"></path>
+<path d="M347 179 C440 244 550 226 620 150" fill="none" id="direct-path" marker-end="url(#drd2-arrow)" stroke="#8c6bd9" stroke-dasharray="7 6" stroke-width="3.5"></path>
+<text fill="#18354d" font-size="12" font-weight="600" id="mediation-label" x="442" y="55">Indirect pathway supported</text>
+<text fill="#77848d" font-size="12" x="451" y="254">Direct interaction effect also remained significant</text>
+<g transform="translate(24 300)">
+<circle cx="7" cy="0" fill="#7aa58e" r="5"></circle>
+<text fill="#77848d" font-size="11" x="18" y="4">Stronger line = pathway emphasized in the selected scenario</text>
+</g>
+</svg>
+</div>
+<div class="drd2-metrics">
+<div class="drd2-metric">
+<div class="drd2-metric-label">Sample</div>
+<div class="drd2-metric-value">N = 168</div>
+<div class="drd2-metric-sub">Korean college students</div>
+</div>
+<div class="drd2-metric">
+<div class="drd2-metric-label">Combined G × G × E</div>
+<div class="drd2-metric-value">β = .24</div>
+<div class="drd2-metric-sub">p = .04</div>
+</div>
+<div class="drd2-metric">
+<div class="drd2-metric-label">Mediated interaction</div>
+<div class="drd2-metric-value">β = .05</div>
+<div class="drd2-metric-sub">p = .02</div>
+</div>
+</div>
+</section>
+</div>
+<section class="drd2-bottom">
+<div class="drd2-callout">
+<h4>The main takeaway</h4>
+<p>The study supports a <strong>person × environment</strong> perspective: genetic susceptibility alone did not tell the whole story. Vulnerability became especially visible when susceptibility was combined with interpersonal stress, and avoidant coping helped explain part of that association.</p>
+</div>
+<div class="drd2-callout">
+<h4>Read with caution</h4>
+<p>Only 10 participants carried both selected risk alleles, and the study was cross-sectional. The findings therefore need replication and should not be used as an individual genetic risk test.</p>
+</div>
+</section>
+</div>
+</article>
+<article class="pub-card" id="pub-7">
+<div class="pub-card-top"><div class="pub-card-number">07</div><div class="pub-year">2022</div></div>
+<p class="citation"><strong>Lee, D.</strong>, Song, H., &amp; Kim, J. (2022). Effect of parental attachment on adolescent excessive gaming: Mediating role of peer attachment. <em>The Journal of Counseling Psychology Education Welfare, 9</em>(4), 87–104.</p>
+<a class="doi" href="https://doi.org/10.20496/cpew.2022.9.4.87" rel="noopener" target="_blank">https://doi.org/10.20496/cpew.2022.9.4.87</a>
+<div class="future-slot">Interactive explanation will be added here.</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>
+<div class="footer-name">Dojin Lee</div>
+<div class="footer-role">Clinician &amp; Researcher</div>
+</div>
+<div class="footer-links">
+<a href="mailto:psydj370@gmail.com">psydj370@gmail.com</a>
+<a href="https://www.linkedin.com/in/lee-dojin-psydj370/" rel="noopener" target="_blank">https://www.linkedin.com/in/lee-dojin-psydj370/</a>
+<a href="https://m.site.naver.com/1Xgns" rel="noopener" target="_blank">https://m.site.naver.com/1Xgns</a>
+</div>
+</div>
+<div class="container site-credit">
+    Designed and built by Dojin Lee with ChatGPT and GitHub.
+    For template inquiries or permission to reuse the layout, please contact me by email.
+  </div>
+</footer>
+<script>
+(() => {
+  const root = document.getElementById('drd2-story');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  let gene = 'risk';
+  let stress = 'high';
+
+  const geneButtons = [...root.querySelectorAll('.gene-btn')];
+  const stressButtons = [...root.querySelectorAll('.stress-btn')];
+  const title = root.querySelector('#scenario-title');
+  const scenarioText = root.querySelector('#scenario-text');
+  const pill = root.querySelector('#status-pill');
+  const geneLabel = root.querySelector('#gene-label');
+  const geneSub = root.querySelector('#gene-sub');
+  const stressLabel = root.querySelector('#stress-label');
+  const p1 = root.querySelector('#gene-path');
+  const p2 = root.querySelector('#stress-path');
+  const p3 = root.querySelector('#interaction-coping');
+  const p4 = root.querySelector('#coping-gaming');
+  const p5 = root.querySelector('#direct-path');
+  const mediationLabel = root.querySelector('#mediation-label');
+
+  const scenarios = {
+    'risk-high': {
+      title: 'The clearest vulnerability pattern',
+      text: 'Among students carrying both selected DRD2 alleles, greater interpersonal stress was strongly associated with more problematic gaming (β = .72, p < .001). Avoidant coping significantly carried part of this effect.',
+      pill: 'Pathway supported',
+      widths: [5,5,7,6,4.5],
+      opacity: [1,1,1,1,1]
+    },
+    'risk-low': {
+      title: 'Susceptibility without high stress',
+      text: 'The paper does not support interpreting the genetic profile as a deterministic cause. The key finding is an interaction: vulnerability became more apparent as interpersonal stress increased.',
+      pill: 'Interaction matters',
+      widths: [4,2.5,3,4,2.5],
+      opacity: [.85,.45,.55,.7,.5]
+    },
+    'other-high': {
+      title: 'Stress did not show the same pattern',
+      text: 'Among participants carrying one or neither selected risk allele, the association between interpersonal stress and problematic gaming was not statistically significant (β = .10, p = .13). The indirect effect through avoidant coping was also not significant.',
+      pill: 'Association not significant',
+      widths: [2.5,4,2.2,3,2],
+      opacity: [.45,.8,.38,.55,.35]
+    },
+    'other-low': {
+      title: 'Lower combined vulnerability',
+      text: 'This scenario serves as the lower-vulnerability comparison in the study’s interaction pattern. The results emphasize combinations of biological susceptibility and stressful context rather than a single isolated cause.',
+      pill: 'Comparison condition',
+      widths: [2.5,2.5,2,3,2],
+      opacity: [.45,.45,.35,.5,.35]
+    }
+  };
+
+  function setSelected(buttons, key, value){
+    buttons.forEach(btn => {
+      const selected = btn.dataset[key] === value;
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+  }
+
+  function render(){
+    const s = scenarios[gene + '-' + stress];
+    setSelected(geneButtons, 'gene', gene);
+    setSelected(stressButtons, 'stress', stress);
+
+    title.textContent = s.title;
+    scenarioText.textContent = s.text;
+    pill.textContent = s.pill;
+    geneLabel.textContent = gene === 'risk' ? 'Both DRD2 risk alleles' : 'One or neither allele';
+    geneSub.textContent = gene === 'risk' ? 'Combined-risk group' : 'Comparison group';
+    stressLabel.textContent = stress === 'high' ? 'Higher stress' : 'Lower stress';
+
+    [p1,p2,p3,p4,p5].forEach((el,i)=>{
+      el.style.strokeWidth = s.widths[i];
+      el.style.opacity = s.opacity[i];
+    });
+
+    mediationLabel.textContent =
+      gene === 'risk' && stress === 'high'
+        ? 'Indirect pathway supported'
+        : 'Pathway strength depends on context';
+  }
+
+  geneButtons.forEach(btn => btn.addEventListener('click', () => {
+    gene = btn.dataset.gene;
+    render();
+  }));
+
+  stressButtons.forEach(btn => btn.addEventListener('click', () => {
+    stress = btn.dataset.stress;
+    render();
+  }));
+
+  render();
+})();
+</script>
+<script>
+(() => {
+  const root = document.getElementById('nma-story');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  const nodes = [...root.querySelectorAll('.nma-node')];
+  const tabs = [...root.querySelectorAll('.nma-tab')];
+  const networkView = root.querySelector('#nma-network-view');
+  const rankingView = root.querySelector('#nma-ranking-view');
+  const title = root.querySelector('#nma-selected-title');
+  const detail = root.querySelector('#nma-selected-text');
+  const type = root.querySelector('#nma-selected-type');
+  const rank = root.querySelector('#nma-selected-rank');
+
+  const details = {
+    'CBT + Mindfulness': {
+      type:'Treatment',
+      rank:'#1',
+      text:'Ranked first in the network meta-analysis (SUCRA 97.1%). It showed greater estimated effectiveness than CBT + Family and Mindfulness, although the differences among these top three treatments were not statistically significant.'
+    },
+    'CBT + Family': {
+      type:'Treatment',
+      rank:'#2',
+      text:'Ranked second in the network meta-analysis (SUCRA 90.2%). Together with CBT + Mindfulness and Mindfulness, it belonged to the highest-ranked group of treatments.'
+    },
+    'Mindfulness': {
+      type:'Treatment',
+      rank:'#3',
+      text:'Ranked third in the network meta-analysis (SUCRA 82.1%). The paper found no statistically significant difference among the three highest-ranked treatments.'
+    },
+    'CBT': {
+      type:'Treatment',
+      rank:'Next after top 3',
+      text:'CBT was the next-ranked standalone treatment after the three highest-ranked interventions. The top three treatments were statistically superior to CBT alone.'
+    },
+    'BT + Mindfulness': {
+      type:'Treatment',
+      rank:'—',
+      text:'One of the most frequently studied intervention types in the evidence base. In the network plot, larger nodes and thicker connecting lines indicate greater direct evidence.'
+    },
+    'BT': {
+      type:'Treatment',
+      rank:'—',
+      text:'Behavioral treatment was among the most frequently studied intervention types in the review. Select the Top treatments view to compare the three highest SUCRA rankings.'
+    },
+    'Virtual Reality BT': {
+      type:'Treatment',
+      rank:'—',
+      text:'Virtual Reality behavioral treatment was represented by a single included study in the treatment network.'
+    },
+    'MI + BT': {
+      type:'Treatment',
+      rank:'—',
+      text:'Motivational Interviewing combined with behavioral treatment was represented by a single included study in the treatment network.'
+    },
+    'Wait-list control': {
+      type:'Control',
+      rank:'—',
+      text:'A wait-list control condition used in the evidence network. Four of the included studies used a wait-list control group.'
+    },
+    'No Treatment': {
+      type:'Control',
+      rank:'—',
+      text:'No-treatment control was the most common inactive control condition in the included studies and appears as the largest control node in the network.'
+    },
+    'TAU': {
+      type:'Control',
+      rank:'—',
+      text:'Treatment as usual (TAU) served as a control condition within the connected evidence network.'
+    }
+  };
+
+  function selectNode(name){
+    nodes.forEach(n => n.classList.toggle('selected', n.dataset.node === name));
+    const d = details[name] || {type:'Condition', rank:'—', text:'Included in the network meta-analysis.'};
+    title.textContent = name;
+    detail.textContent = d.text;
+    type.textContent = d.type;
+    rank.textContent = d.rank;
+  }
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => selectNode(node.dataset.node));
+    node.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectNode(node.dataset.node);
+      }
+    });
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const view = tab.dataset.view;
+      tabs.forEach(t => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
+      networkView.classList.toggle('hidden', view !== 'network');
+      rankingView.classList.toggle('active', view === 'ranking');
+    });
+  });
+
+  selectNode('CBT + Mindfulness');
+})();
+</script>
+<script>
+(() => {
+  const root = document.getElementById('cgs-story');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  const tabs = [...root.querySelectorAll('.cgs-tab')];
+  const pathButtons = [...root.querySelectorAll('.cgs-path-btn')];
+  const allEdges = [...root.querySelectorAll('.cgs-edge')];
+
+  const content = {
+    depression:{
+      label:'Depression',
+      t1:{stat:'b = 0.72, β = 0.24, p = .01',low:'b = 0.96',mid:'b = 1.68',high:'b = 2.39'},
+      t2:{stat:'b = 0.48, β = 0.17, p = .03',low:'b = 1.38',mid:'b = 1.84',high:'b = 2.31'},
+      change:'Depression × CGS was significant at both Time 1 and Time 2, but the interaction did not significantly predict one-year change in excessive gaming. This suggests that genetic vulnerability may function more as a concurrent amplifier of distress-related gaming than as a stable predictor of how gaming changes over a year.',
+      changeNumbers:'1-year change interaction: depression × CGS, p = .21.'
+    },
+    anxiety:{
+      label:'Anxiety',
+      t1:{stat:'b = 0.61, β = 0.18, p = .04',low:'b = 0.88',mid:'b = 1.50',high:'b = 2.11'},
+      t2:{stat:'b = 0.60, β = 0.20, p = .01',low:'b = 0.90',mid:'b = 1.49',high:'b = 2.09'},
+      change:'Anxiety × CGS was also significant concurrently at both time points, but it did not significantly predict one-year change in excessive gaming. The pattern again points to genetic vulnerability as something that may intensify the link between distress and gaming in the moment rather than determining a fixed long-term trajectory.',
+      changeNumbers:'1-year change interaction: anxiety × CGS, p = .07.'
+    }
+  };
+
+  let distress='depression';
+  let highlight='interaction';
+
+  function renderDistress(){
+    const d=content[distress];
+    tabs.forEach(t=>t.setAttribute('aria-selected', t.dataset.distress===distress?'true':'false'));
+    root.querySelector('#cgs-t1-heading').textContent=`${d.label} × CGS → Excessive gaming`;
+    root.querySelector('#cgs-t2-heading').textContent=`${d.label} × CGS → Excessive gaming`;
+    root.querySelector('#cgs-t1-distress-label').textContent=d.label;
+    root.querySelector('#cgs-t2-distress-label').textContent=d.label;
+    root.querySelector('#cgs-t1-stat').innerHTML=`<strong>Interaction:</strong> ${d.t1.stat}`;
+    root.querySelector('#cgs-t2-stat').innerHTML=`<strong>Interaction:</strong> ${d.t2.stat}`;
+    root.querySelector('#cgs-t1-low').textContent=d.t1.low;
+    root.querySelector('#cgs-t1-mid').textContent=d.t1.mid;
+    root.querySelector('#cgs-t1-high').textContent=d.t1.high;
+    root.querySelector('#cgs-t2-low').textContent=d.t2.low;
+    root.querySelector('#cgs-t2-mid').textContent=d.t2.mid;
+    root.querySelector('#cgs-t2-high').textContent=d.t2.high;
+    root.querySelector('#cgs-change-text').textContent=d.change;
+    root.querySelector('#cgs-change-numbers').textContent=d.changeNumbers;
+  }
+
+  function renderHighlight(){
+    pathButtons.forEach(b=>b.setAttribute('aria-pressed', b.dataset.path===highlight?'true':'false'));
+    allEdges.forEach(e=>{
+      const match=e.classList.contains(`cgs-path-${highlight}`);
+      e.classList.toggle('focused',match);
+      e.classList.toggle('muted',!match);
+    });
+  }
+
+  tabs.forEach(t=>t.addEventListener('click',()=>{distress=t.dataset.distress;renderDistress()}));
+  pathButtons.forEach(b=>b.addEventListener('click',()=>{highlight=b.dataset.path;renderHighlight()}));
+  renderDistress(); renderHighlight();
+})();
+</script>
+<script>
+(() => {
+  const root = document.getElementById('mi-story');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  const levelButtons = [...root.querySelectorAll('.mi-level-btn')];
+  const exampleTabs = [...root.querySelectorAll('.mi-example-tab')];
+  const examplePanels = [...root.querySelectorAll('.mi-example-panel')];
+
+  const levelContent = {
+    low:{
+      motivationTitle:'Strengthen reasons for change',
+      motivationCopy:'Use MI strategies to elicit personally meaningful goals, explore ambivalence, and strengthen autonomous reasons for studying.',
+      emotionTitle:'Build basic emotion-awareness skills',
+      emotionCopy:'Help the student identify emotional patterns during learning and practice simple strategies for responding without avoidance.'
+    },
+    middle:{
+      motivationTitle:'Consolidate personally meaningful goals',
+      motivationCopy:'Clarify values, reinforce existing motivation, and translate intention into specific academic actions that feel achievable.',
+      emotionTitle:'Practice flexible regulation strategies',
+      emotionCopy:'Identify which strategies are already working and expand the student’s options for managing difficult emotions during learning.'
+    },
+    high:{
+      motivationTitle:'Protect and sustain autonomous motivation',
+      motivationCopy:'Reinforce self-directed reasons for learning and focus on maintaining effort when setbacks or external pressures arise.',
+      emotionTitle:'Refine strategic emotion regulation',
+      emotionCopy:'Strengthen the student’s ability to select regulation strategies intentionally and use them efficiently across academic situations.'
+    }
+  };
+
+  function renderLevel(level){
+    levelButtons.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.level === level ? 'true' : 'false'));
+    const d = levelContent[level];
+    root.querySelector('#mi-motivation-title').textContent = d.motivationTitle;
+    root.querySelector('#mi-motivation-copy').textContent = d.motivationCopy;
+    root.querySelector('#mi-emotion-title').textContent = d.emotionTitle;
+    root.querySelector('#mi-emotion-copy').textContent = d.emotionCopy;
+  }
+
+  levelButtons.forEach(btn => btn.addEventListener('click', () => renderLevel(btn.dataset.level)));
+
+  exampleTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const ex = tab.dataset.example;
+      exampleTabs.forEach(t => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
+      examplePanels.forEach(panel => panel.classList.toggle('active', panel.dataset.panel === ex));
+    });
+  });
+
+  renderLevel('low');
+})();
+</script></body>
+</html>
