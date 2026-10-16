@@ -1,0 +1,16 @@
+Images expected next to beyond-cv.html
+
+People, places & food
+- beyond-galapagos.jpg
+- beyond-suny-fashion.jpg
+- beyond-apa-1.jpg
+- beyond-apa-2.jpg
+- beyond-harvard.jpg
+- beyond-surfing.jpg
+
+Favorites on screen
+- favorite-brooklyn99.jpg
+- favorite-knives-out.jpg
+- favorite-eeaao.jpg
+
+The page automatically crops/fits different original image sizes into consistent frames.
