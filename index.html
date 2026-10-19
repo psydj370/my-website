@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dojin Lee | Home</title>
+<style>
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --soft:#f5f7f7;
+  --ink:#18354d;
+  --body:#4c5c67;
+  --muted:#77848d;
+  --blue:#315f86;
+  --blue2:#769ab6;
+  --blue3:#adc6d7;
+  --sage:#9db4aa;
+  --taupe:#b79c84;
+  --blush:#cda7a2;
+  --line:#e2e8eb;
+  --gold:#d8ba78;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.72;-webkit-font-smoothing:antialiased
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+.site-nav{
+  position:sticky;top:0;z-index:100;background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)
+}
+.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:center}
+.nav-links{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
+.nav-links a{
+  text-decoration:none;color:#4c5b65;font-size:14.5px;padding:23px 0 19px;
+  border-bottom:2px solid transparent
+}
+.nav-links a.active,.nav-links a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-links a.future{color:#929ca3}
+
+.eyebrow{
+  margin-bottom:14px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase
+}
+h1,h2{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0}
+h1{font-size:clamp(52px,7vw,76px);line-height:1.03;letter-spacing:-.04em}
+h2{font-size:clamp(31px,4vw,40px);line-height:1.18;letter-spacing:-.02em;margin-bottom:16px}
+h3{margin:0 0 10px;font-size:20px;line-height:1.35;color:var(--ink)}
+p{margin-top:0}
+.section{padding:80px 0;border-top:1px solid var(--line)}
+.soft{background:var(--soft)}
+.section-heading{max-width:840px;margin-bottom:38px}
+.section-intro{margin-bottom:0;color:var(--body);font-size:18px}
+
+/* HERO */
+.hero{padding:92px 0 84px}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:68px;align-items:center
+}
+.hero-role{margin-top:18px;font-size:25px;font-weight:700;color:#344a5a}
+.hero-sub{margin-top:8px;color:var(--blue);font-size:15.5px;font-weight:700}
+.hero-copy{max-width:690px;margin:28px 0 0;color:var(--body);font-size:18px}
+.hero-copy strong{color:#244c6e}
+.signature{margin-top:26px;color:#657986;font-family:var(--serif);font-size:18px;font-style:italic}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
+.button{
+  display:inline-block;text-decoration:none;padding:11px 18px;border-radius:8px;
+  border:1px solid var(--blue);font-size:14px;font-weight:700
+}
+.button-primary{background:var(--blue);color:#fff}
+.button-secondary{color:var(--blue)}
+
+/* interest wheel */
+.interest-panel{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
+.interest-wheel{
+  position:relative;width:310px;height:310px;border-radius:50%;
+  background:conic-gradient(
+    from -30deg,
+    #dce8f0 0 60deg,#dfe9e3 60deg 120deg,#eadfdc 120deg 180deg,
+    #e5e6ec 180deg 240deg,#d8e8ef 240deg 300deg,#dce9e3 300deg 360deg
+  );
+  box-shadow:0 14px 34px rgba(47,76,96,.08)
+}
+.interest-wheel::before{
+  content:"";position:absolute;inset:64px;border-radius:50%;background:rgba(251,250,247,.98);
+  border:1px solid rgba(70,93,110,.08)
+}
+.interest-wheel::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:
+    radial-gradient(circle at center,transparent 0 48%,rgba(255,255,255,.94) 48.6% 50.5%,transparent 51%),
+    conic-gradient(from -30deg,
+      transparent 0 59.2deg,rgba(255,255,255,.96) 59.2deg 60.8deg,
+      transparent 60.8deg 119.2deg,rgba(255,255,255,.96) 119.2deg 120.8deg,
+      transparent 120.8deg 179.2deg,rgba(255,255,255,.96) 179.2deg 180.8deg,
+      transparent 180.8deg 239.2deg,rgba(255,255,255,.96) 239.2deg 240.8deg,
+      transparent 240.8deg 299.2deg,rgba(255,255,255,.96) 299.2deg 300.8deg,
+      transparent 300.8deg 360deg);
+  pointer-events:none
+}
+.wheel-center{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;z-index:2;padding:96px;font-family:var(--serif);font-size:21px;
+  line-height:1.35;color:#284a66
+}
+.wheel-center small{
+  display:block;margin-top:8px;font-family:var(--sans);font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:#7a8b96
+}
+.interest-label{
+  position:absolute;width:170px;padding:10px 12px;border-radius:12px;
+  background:rgba(255,255,255,.87);border:1px solid rgba(221,229,233,.9);
+  box-shadow:0 8px 22px rgba(42,68,85,.05)
+}
+.interest-label strong{display:block;color:#294d6b;font-size:14px;margin-bottom:2px}
+.interest-label span{display:block;color:#75828b;font-size:12px;line-height:1.4}
+.il1{top:20px;left:4px}.il2{top:20px;right:0}.il3{top:206px;right:-16px}
+.il4{bottom:18px;right:8px}.il5{bottom:18px;left:8px}.il6{top:206px;left:-22px}
+
+/* Research goals mountain */
+.goals-stage{
+  position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,#fbfaf7 0%,#f2f6f8 100%);
+  box-shadow:0 18px 46px rgba(42,67,84,.07)
+}
+.goals-canvas{position:relative;width:100%;aspect-ratio:16/8.3;overflow:hidden}
+.goals-canvas svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.goal-node{
+  position:absolute;z-index:5;width:34px;height:34px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.98);transform:translate(-50%,-50%);
+  cursor:pointer;background:rgba(255,255,255,.4);
+  box-shadow:0 0 0 7px rgba(255,255,255,.22),0 0 0 14px rgba(216,186,120,.12),0 0 28px rgba(216,186,120,.65);
+  transition:.18s ease
+}
+.goal-node::after{
+  content:"";position:absolute;inset:50% auto auto 50%;width:10px;height:10px;
+  transform:translate(-50%,-50%);border-radius:50%;background:#fff8e3
+}
+.goal-node:hover,.goal-node.active{transform:translate(-50%,-50%) scale(1.18)}
+.goal-label{
+  position:absolute;z-index:4;font-family:var(--serif);font-size:17px;line-height:1.12;
+  color:#234d70;text-shadow:0 1px 0 rgba(255,255,255,.9)
+}
+#detect{left:23.5%;top:70%}#respond{left:52%;top:52%}#reach{left:82%;top:25%}
+.gl-detect{left:15%;top:58%}.gl-respond{left:46%;top:39%;color:#7f624e}.gl-reach{left:77%;top:11%}
+.goal-tooltip{
+  position:absolute;z-index:15;width:min(340px,33vw);padding:18px 19px;border-radius:15px;
+  background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 16px 38px rgba(27,53,72,.18);color:#3b4d59;opacity:0;visibility:hidden;
+  pointer-events:none;transform:translateY(8px);transition:.18s ease
+}
+.goal-tooltip.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.goal-tooltip .kicker{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.goal-tooltip h3{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:8px}
+.goal-tooltip p{font-size:14px;line-height:1.62;margin:0}
+#tip-detect{left:7%;top:39%}#tip-respond{left:36%;top:57%}#tip-reach{right:4%;top:31%}
+.goals-hint{
+  position:absolute;left:24px;bottom:20px;z-index:6;padding:8px 11px;border-radius:999px;
+  background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.9);
+  color:#60737f;font-size:12px;font-weight:700
+}
+
+/* Evidence / Where Questions Come From */
+.origin-intro{max-width:870px;margin-bottom:38px}
+.origin-big{font-family:var(--serif);font-size:24px;line-height:1.55;color:#30495c;margin-bottom:0}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.evidence{
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;
+  min-height:100%
+}
+.evidence-label{
+  margin-bottom:12px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.13em;text-transform:uppercase
+}
+.evidence p{margin-bottom:0;color:var(--body);font-size:15px}
+.evidence-note{margin-top:14px;color:var(--muted);font-size:12.5px;line-height:1.5}
+
+/* suicide rate chart */
+.rate-chart{margin:18px 0 18px}
+.chart-row{
+  display:grid;grid-template-columns:82px 1fr 54px;gap:12px;align-items:center;margin:12px 0
+}
+.chart-label{font-size:13px;font-weight:700;color:#516674}
+.chart-track{
+  height:22px;border-radius:999px;background:#eef2f4;overflow:hidden;position:relative
+}
+.chart-bar{height:100%;border-radius:999px}
+.world{width:43.2%;background:#aebfca}
+.usa{width:68.9%;background:#7ea0b9}
+.korea{width:100%;background:#315f86}
+.chart-value{text-align:right;font-family:var(--serif);font-size:18px;color:#294d6b}
+.chart-caption{font-size:11.5px;color:#88939a;margin-top:8px}
+
+/* system strain */
+.strain-visual{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin:18px 0 18px
+}
+.strain-box{
+  border-radius:12px;padding:16px;background:#f2f6f8;border:1px solid #e3e9ec;text-align:center
+}
+.strain-big{font-family:var(--serif);font-size:30px;color:#315f86;line-height:1}
+.strain-small{margin-top:6px;font-size:12px;color:#73828b}
+.strain-arrow{font-size:20px;color:#9aaab4}
+.bridge{
+  margin-top:14px;padding:13px 14px;border-radius:12px;background:#eef3f5;
+  color:#38566a;font-size:13px;font-weight:700
+}
+
+/* broader research */
+.research-map{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0
+}
+.rm{
+  min-height:78px;border-radius:12px;padding:12px 10px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:#f1f5f7;border:1px solid #e3eaee
+}
+.rm strong{font-size:13px;color:#315f86}
+.rm span{font-size:11px;color:#82909a;margin-top:3px}
+
+/* addiction relation */
+.relation-flow{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0
+}
+.relation-pill{
+  padding:9px 11px;border-radius:999px;background:#eef3f5;color:#43677f;font-size:12px;font-weight:700
+}
+.relation-arrow{color:#93a6b2}
+.meta-stat{
+  margin-top:14px;padding:15px;border-radius:12px;background:#f5f1eb;border:1px solid #ebe3d8
+}
+.meta-stat strong{display:block;font-family:var(--serif);font-size:27px;color:#8d6f58;line-height:1.1}
+.meta-stat span{font-size:12px;color:#806f62}
+
+/* snapshot */
+.snapshot-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.snapshot{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 18px;
+  box-shadow:0 8px 24px rgba(37,61,78,.03)
+}
+.snapshot-number{
+  margin-bottom:7px;font-family:var(--serif);font-size:34px;line-height:1;color:var(--ink)
+}
+.snapshot-label{color:var(--muted);font-size:12.5px;line-height:1.5}
+.snapshot-caption{max-width:790px;margin-top:24px;color:var(--body);font-size:14px}
+
+/* direction */
+.vision-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vision{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
+.vision-step{margin-bottom:10px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.vision p{color:var(--body);font-size:15px;margin-bottom:0}
+.closing{max-width:830px;margin-top:30px}
+.closing-statement{margin-bottom:16px;font-family:var(--serif);font-size:24px;line-height:1.56;color:#30495c}
+
+footer{padding:38px 0;background:var(--surface);border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:28px}
+.footer-name{font-family:var(--serif);font-size:20px}
+.footer-role{margin-top:2px;color:var(--muted);font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{text-decoration:none;color:#5b6a74;font-size:13px}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .snapshot-grid{grid-template-columns:repeat(2,1fr)}
+  .interest-panel{min-height:500px}
+}
+@media(max-width:760px){
+  .container{width:min(100% - 34px,1120px)}
+  .nav-inner{min-height:auto}.nav-links{gap:17px;padding:13px 0}.nav-links a{padding:5px 0}
+  .hero{padding-top:60px}
+  .evidence-grid,.vision-flow,.snapshot-grid{grid-template-columns:1fr}
+  .research-map{grid-template-columns:repeat(2,1fr)}
+  .goal-tooltip{width:min(300px,76vw)}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-links{justify-content:flex-start}
+}
+
+/* Profile image area: add profile.jpg to the same folder later */
+.profile-placeholder{
+  width:100%;
+  max-width:390px;
+  aspect-ratio:4/5;
+  justify-self:center;
+  border-radius:22px;
+  background-color:transparent;
+  background-image:url("profile.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+
+.welcome-line{
+  margin-top:26px;
+  margin-bottom:-10px;
+  font-family:var(--serif);
+  font-size:20px;
+  color:#496579;
+  font-style:italic;
+}
+
+
+/* Alternating section backgrounds */
+.section-bg-a{background:#fbfaf7;}
+.section-bg-b{background:#f5f7f7;}
+
+/* Larger profile photo area without side cropping */
+.profile-placeholder{
+  width:100%;
+  max-width:470px;
+  aspect-ratio:1/1.12;
+  background-size:contain !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+}
+@media(max-width:920px){
+  .profile-placeholder{max-width:430px;}
+}
+
+/* Unified navigation */
+.nav-links a{
+  color:var(--blue) !important;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue) !important;
+  border-bottom-color:var(--blue) !important;
+}
+
+
+/* Fulbright recognition badge */
+.fulbright-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-top:14px;
+  padding:7px 12px;
+  border:1px solid rgba(49,95,134,.28);
+  border-radius:999px;
+  background:rgba(49,95,134,.055);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.02em;
+  line-height:1.35;
+}
+
+/* ===== Final shared navigation treatment ===== */
+.site-nav{
+  background:rgba(231,239,244,.98) !important;
+  border-bottom:1px solid #c6d7e2 !important;
+  box-shadow:0 5px 18px rgba(42,67,84,.055);
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#315f86 !important;
+}
+.nav-links a.active{
+  color:#173f5f !important;
+  border-bottom-color:#315f86 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#173f5f !important;
+  border-bottom-color:#769ab6 !important;
+}
+
+/* ===== Final footer links ===== */
+.footer-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-links a,
+.footer-link-button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:0;
+  margin:0;
+  font:inherit;
+  color:#526b7c !important;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .16s ease;
+}
+.footer-links a:hover,
+.footer-link-button:hover{
+  color:#315f86 !important;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* ===== E-mail copy dialog ===== */
+.email-copy-modal[hidden]{display:none}
+.email-copy-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:grid;
+  place-items:center;
+  padding:22px;
+  background:rgba(19,39,54,.32);
+  backdrop-filter:blur(3px);
+}
+.email-copy-dialog{
+  position:relative;
+  width:min(430px,100%);
+  padding:28px;
+  border:1px solid #d8e2e8;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 22px 60px rgba(30,52,68,.18);
+  text-align:left;
+}
+.email-modal-kicker{
+  color:#315f86;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.email-modal-title{
+  margin:6px 0 16px;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#18354d;
+  font-size:25px;
+  font-weight:500;
+}
+.email-value{
+  padding:13px 14px;
+  border:1px solid #dbe4e9;
+  border-radius:10px;
+  background:#f7f9fa;
+  color:#344f61;
+  font-size:14px;
+  word-break:break-all;
+}
+.email-copy-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:16px;
+}
+.email-copy-button{
+  appearance:none;
+  border:1px solid #315f86;
+  border-radius:9px;
+  background:#315f86;
+  color:#fff;
+  padding:10px 15px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+.email-copy-status{
+  color:#607683;
+  font-size:12px;
+}
+.email-modal-close{
+  position:absolute;
+  top:13px;
+  right:15px;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#71818a;
+  font-size:24px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* ===== Home welcome speech bubble ===== */
+.profile-placeholder{
+  position:relative !important;
+  overflow:visible !important;
+}
+.welcome-bubble{
+  position:absolute;
+  z-index:5;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  padding:10px 16px;
+  border:1px solid rgba(49,95,134,.22);
+  border-radius:18px;
+  background:rgba(255,255,255,.94);
+  color:#315f86;
+  box-shadow:0 9px 26px rgba(37,68,88,.13);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  font-style:italic;
+  line-height:1.2;
+  backdrop-filter:blur(5px);
+}
+.welcome-bubble::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-8px;
+  width:14px;
+  height:14px;
+  transform:translateX(-50%) rotate(45deg);
+  border-right:1px solid rgba(49,95,134,.18);
+  border-bottom:1px solid rgba(49,95,134,.18);
+  background:rgba(255,255,255,.94);
+}
+@media(max-width:520px){
+  .welcome-bubble{
+    top:12px;
+    font-size:15px;
+    padding:9px 13px;
+  }
+}
+
+/* ===== Deep navy navigation refinement ===== */
+.site-nav{
+  background:rgba(24,53,77,.98) !important;
+  border-bottom:1px solid #294d67 !important;
+  box-shadow:0 6px 20px rgba(18,38,53,.16) !important;
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#dce7ee !important;
+}
+.nav-links a.active{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+}
+
+/* ===== Larger welcome speech bubble ===== */
+.welcome-bubble{
+  top:20px !important;
+  padding:14px 22px !important;
+  border-radius:22px !important;
+  font-size:20px !important;
+  font-weight:500;
+  letter-spacing:.01em;
+  box-shadow:0 12px 30px rgba(31,63,84,.16) !important;
+}
+.welcome-bubble::after{
+  bottom:-9px !important;
+  width:16px !important;
+  height:16px !important;
+}
+@media(max-width:520px){
+  .welcome-bubble{
+    top:14px !important;
+    padding:12px 17px !important;
+    font-size:17px !important;
+  }
+}
+
+/* Home footer contact alignment */
+.footer-links{
+  margin-left:auto !important;
+  justify-content:flex-end !important;
+  text-align:right;
+}
+@media(max-width:760px){
+  .footer-links{
+    margin-left:0 !important;
+    justify-content:flex-start !important;
+    text-align:left;
+  }
+}
+
+body{font-size:17px;}
+.nav-links a{font-size:15.5px !important;}
+.hero-copy,.page-intro,.section-intro,.section-lead,.origin-big,.evidence p,.story-card p,.cv-toolbar-copy p{
+  font-size:17.5px !important; line-height:1.85 !important;
+}
+.eyebrow{font-size:12px !important;}
+.footer-links a,.footer-link-button{font-size:14px !important;}
+.site-credit{font-size:12px !important;}
+
+.fulbright-note{position:relative;display:inline-block;border-bottom:1px dotted rgba(49,95,134,.6);cursor:help;outline:none}
+.fulbright-note::after{
+  content:"Nomination letter available upon request. Please e-mail me if you would like a copy.";
+  position:absolute;left:0;bottom:calc(100% + 10px);z-index:20;width:280px;
+  padding:10px 12px;border:1px solid #d5e0e7;border-radius:10px;background:#fff;color:#455d6d;
+  box-shadow:0 12px 28px rgba(32,55,70,.14);font-size:12.5px;font-weight:500;line-height:1.5;
+  opacity:0;visibility:hidden;transform:translateY(4px);transition:.16s ease;pointer-events:none
+}
+.fulbright-note:hover::after,.fulbright-note:focus::after{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* ===== Readability refinement: slightly larger typography ===== */
+body{font-size:18px !important;}
+
+.nav-links a{
+  font-size:16px !important;
+}
+
+.hero-role{
+  font-size:17px !important;
+}
+
+.hero-sub{
+  font-size:15.5px !important;
+}
+
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p,
+.publications-section p,
+.research-map-section p{
+  font-size:18.5px !important;
+  line-height:1.88 !important;
+}
+
+.eyebrow{
+  font-size:12.5px !important;
+}
+
+.snapshot-label,
+.value-card p,
+.hobby-card p,
+.pub-mini,
+.pub-card p{
+  font-size:16px !important;
+  line-height:1.75 !important;
+}
+
+.button{
+  font-size:14.5px !important;
+}
+
+.footer-links a,
+.footer-link-button{
+  font-size:14.5px !important;
+}
+
+.footer-role{
+  font-size:14px !important;
+}
+
+.site-credit{
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+}
+
+/* ===== Larger top navigation ===== */
+.nav-links{
+  gap:34px !important;
+}
+.nav-links a{
+  font-size:18px !important;
+  font-weight:600 !important;
+  padding-top:22px !important;
+  padding-bottom:18px !important;
+}
+@media(max-width:820px){
+  .nav-links{
+    gap:20px !important;
+  }
+  .nav-links a{
+    font-size:16.5px !important;
+  }
+}
+@media(max-width:560px){
+  .nav-links{
+    gap:14px !important;
+  }
+  .nav-links a{
+    font-size:15.5px !important;
+  }
+}
+
+/* Remove dotted underline from Fulbright hover area */
+.fulbright-note{
+  border-bottom:none !important;
+  text-decoration:none !important;
+}
+
+/* ===== Global readability increase ===== */
+body{
+  font-size:19px !important;
+}
+.nav-links{
+  gap:36px !important;
+}
+.nav-links a{
+  font-size:19.5px !important;
+  font-weight:600 !important;
+}
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p{
+  font-size:19px !important;
+  line-height:1.9 !important;
+}
+.eyebrow{
+  font-size:13px !important;
+}
+.button{
+  font-size:15.5px !important;
+}
+.footer-links a,
+.footer-link-button{
+  font-size:15.5px !important;
+}
+.footer-role{
+  font-size:14.5px !important;
+}
+.site-credit{
+  font-size:13px !important;
+}
+@media(max-width:820px){
+  .nav-links{gap:20px !important;}
+  .nav-links a{font-size:17px !important;}
+}
+@media(max-width:560px){
+  .nav-links{gap:14px !important;}
+  .nav-links a{font-size:16px !important;}
+  body{font-size:18px !important;}
+}
+
+/* ===== Evidence Behind the Mission: experience-to-foundation flow ===== */
+.evidence-flow-section .section-heading{
+  max-width:900px;
+}
+.evidence-journey{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr) 64px minmax(0,1.15fr);
+  align-items:stretch;
+  margin-top:42px;
+}
+.evidence-stage{
+  position:relative;
+  padding:30px 28px 28px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.84);
+  box-shadow:0 14px 34px rgba(28,52,68,.055);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.evidence-stage:hover{
+  transform:translateY(-3px);
+  border-color:#c8d7df;
+  box-shadow:0 18px 40px rgba(28,52,68,.085);
+}
+.evidence-stage-kicker{
+  margin-bottom:10px;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.evidence-stage h3{
+  margin:0 0 24px;
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:27px;
+  line-height:1.18;
+  font-weight:500;
+}
+.evidence-stat{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:17px 0;
+  border-top:1px solid var(--line);
+}
+.evidence-stat:first-of-type{
+  border-top:0;
+  padding-top:0;
+}
+.evidence-stat-number{
+  color:var(--navy,#18354d);
+  font-family:var(--serif);
+  font-size:40px;
+  line-height:1;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+.evidence-stat-text{
+  color:var(--body);
+  font-size:15px;
+  line-height:1.58;
+}
+.evidence-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#9bb1bf;
+  font-family:var(--serif);
+  font-size:36px;
+  user-select:none;
+}
+.evidence-stage-forward{
+  background:#18354d;
+  border-color:#18354d;
+  color:#fff;
+}
+.evidence-stage-forward:hover{
+  border-color:#18354d;
+  box-shadow:0 20px 44px rgba(24,53,77,.18);
+}
+.evidence-stage-forward .evidence-stage-kicker{
+  color:#b8d0dd;
+}
+.evidence-stage-forward h3{
+  color:#fff;
+}
+.forward-item{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:12px;
+  padding:17px 0;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+.forward-item:first-of-type{
+  border-top:0;
+  padding-top:0;
+}
+.forward-marker{
+  padding-top:3px;
+  color:#9fbdd2;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.forward-item strong{
+  display:block;
+  margin-bottom:5px;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:19px;
+  font-weight:500;
+  line-height:1.25;
+}
+.forward-item p{
+  margin:0;
+  color:#d7e3e9;
+  font-size:14.5px;
+  line-height:1.58;
+}
+.evidence-flow-closing{
+  max-width:760px;
+  margin:28px 0 0 auto;
+  color:#3b5666;
+  font-family:var(--serif);
+  font-size:21px;
+  line-height:1.55;
+  text-align:right;
+}
+@media(max-width:980px){
+  .evidence-journey{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .evidence-arrow{
+    height:34px;
+    transform:rotate(90deg);
+  }
+  .evidence-flow-closing{
+    margin-left:0;
+    text-align:left;
+  }
+}
+@media(max-width:560px){
+  .evidence-stage{
+    padding:25px 21px;
+  }
+  .evidence-stage h3{
+    font-size:24px;
+  }
+  .evidence-stat{
+    grid-template-columns:68px 1fr;
+  }
+  .evidence-stat-number{
+    font-size:36px;
+  }
+}
+
+/* ===== Evidence flow refinement ===== */
+.evidence-stat-number{
+  min-width:76px;
+}
+.evidence-stage-note{
+  margin-top:10px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  color:var(--body);
+  font-size:14px;
+  line-height:1.62;
+}
+.evidence-stage-forward .forward-item p{
+  font-size:14.5px;
+  line-height:1.62;
+}
+@media(max-width:560px){
+  .evidence-stat-number{
+    min-width:68px;
+  }
+}
+
+/* ===== Evidence flow: concise scan-first version ===== */
+.evidence-flow-section .section-intro{
+  max-width:760px;
+}
+.evidence-stage{
+  padding-top:28px;
+  padding-bottom:26px;
+}
+.evidence-stage h3{
+  margin-bottom:20px;
+}
+.evidence-stat{
+  padding:15px 0;
+}
+.forward-item{
+  padding:15px 0;
+}
+.forward-item p{
+  max-width:28ch;
+}
+
+/* ===== Stronger "What I bring forward" hierarchy ===== */
+.evidence-stage-forward h3{
+  max-width:13ch;
+  font-size:29px;
+  line-height:1.14;
+}
+.evidence-stage-forward .forward-item strong{
+  font-size:20px;
+}
+.evidence-stage-forward .forward-item p{
+  max-width:30ch;
+}
+
+/* ===== Public-health implementation emphasis ===== */
+.evidence-stage-forward h3{
+  max-width:14ch;
+}
+.evidence-stage-forward .forward-item p{
+  max-width:34ch;
+}
+
+/* ===== Direct, scan-first research statements ===== */
+.evidence-stage-forward h3{
+  max-width:none;
+  font-size:27px;
+}
+.evidence-stage-forward .forward-item{
+  grid-template-columns:34px 1fr;
+}
+.evidence-stage-forward .forward-item strong{
+  font-size:21px;
+  line-height:1.28;
+}
+.evidence-stage-forward .forward-item p{
+  max-width:38ch;
+  margin-top:6px;
+  color:#d7e3e9;
+}
+
+/* Long-term direction: research-to-practice mission; no repeated framework cards. */
+.longterm-minimal{padding-top:92px;padding-bottom:100px}
+.longterm-minimal-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);
+  column-gap:clamp(38px,7vw,105px);
+  align-items:center;
+}
+.longterm-minimal-heading .eyebrow{margin-bottom:17px}
+.longterm-minimal-heading h2{
+  margin:0;
+  max-width:520px;
+  font-family:var(--serif);
+  font-size:clamp(32px,3.7vw,48px);
+  font-weight:500;
+  line-height:1.17;
+  letter-spacing:-.025em;
+}
+.longterm-minimal-copy{border-left:2px solid #a9c0ce;padding-left:28px}
+.longterm-minimal-copy p{
+  margin:0;
+  max-width:59ch;
+  color:var(--body);
+  font-size:19px;
+  line-height:1.9;
+}
+@media(max-width:760px){
+  .longterm-minimal{padding-top:65px;padding-bottom:73px}
+  .longterm-minimal-grid{grid-template-columns:1fr;row-gap:28px}
+  .longterm-minimal-copy{padding-left:20px}
+  .longterm-minimal-copy p{font-size:17px}
+}
+
+/* Long-term direction: subtle spacing between concise paragraphs. */
+.longterm-minimal-copy p + p { margin-top: 18px; }
+.longterm-minimal-copy strong { color: var(--ink); font-weight: 700; }
+
+/* Long-term direction: concise visual path (clinical → research → implementation) */
+.longterm-visual-flow{
+  width:min(920px, 100%);
+  margin:50px auto 0;
+  padding:24px 8px 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  border-top:1px solid var(--line);
+}
+.longterm-visual-step{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:8px 12px 0;
+}
+.longterm-visual-icon{
+  width:36px;height:36px;
+  display:flex;justify-content:center;align-items:center;
+  margin-bottom:10px;
+  color:#3c647b;
+}
+.longterm-visual-icon svg{width:29px;height:29px;display:block}
+.longterm-visual-step h3{
+  font-family:var(--sans);
+  font-size:16px;
+  font-weight:650;
+  line-height:1.4;
+  color:var(--ink);
+  margin:0 0 5px;
+}
+.longterm-visual-step p{
+  font-size:14.5px;
+  line-height:1.45;
+  color:var(--body);
+  margin:0;
+}
+@media(max-width:560px){
+ .longterm-visual-flow{margin-top:34px;padding:22px 0 0;gap:4px}
+ .longterm-visual-step{padding:4px 2px 0}
+ .longterm-visual-icon{width:30px;height:30px;margin-bottom:9px}
+ .longterm-visual-icon svg{width:24px;height:24px}
+ .longterm-visual-step h3{font-size:13px;line-height:1.33}
+ .longterm-visual-step p{font-size:12px;line-height:1.4}
+}
+
+/* ===== 2026-10: clearer global navigation ===== */
+.site-nav .nav-inner{
+  min-height:82px !important;
+  width:min(100% - 32px, 1440px) !important;
+}
+.site-nav .nav-links{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  column-gap:72px !important;
+  row-gap:12px !important;
+  padding:11px 0 !important;
+}
+.site-nav .nav-links a{
+  position:relative !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:54px !important;
+  padding:10px 13px 16px !important;
+  border:0 !important;
+  border-radius:11px !important;
+  background:transparent !important;
+  color:#e4edf2 !important;
+  text-decoration:none !important;
+  font-size:19.5px !important;
+  font-weight:600 !important;
+  white-space:nowrap;
+  transition:background-color .2s ease,color .2s ease,box-shadow .2s ease !important;
+}
+.site-nav .nav-links a::after{
+  content:"";
+  position:absolute;
+  bottom:6px;
+  left:13px;
+  right:13px;
+  height:2px;
+  border-radius:999px;
+  background:rgba(255,255,255,.66);
+  transition:background-color .2s ease,height .2s ease,box-shadow .2s ease;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible{
+  color:#fff !important;
+  background:rgba(255,255,255,.12) !important;
+}
+.site-nav .nav-links a:hover::after,
+.site-nav .nav-links a:focus-visible::after{
+  height:4px;
+  background:#fff;
+  box-shadow:0 0 10px rgba(255,255,255,.2);
+}
+.site-nav .nav-links a.active,
+.site-nav .nav-links a[aria-current="page"]{
+  color:#18354d !important;
+  background:#fff !important;
+  box-shadow:0 5px 16px rgba(4,22,37,.22) !important;
+  font-weight:750 !important;
+}
+.site-nav .nav-links a.active::after,
+.site-nav .nav-links a[aria-current="page"]::after{
+  height:3px;
+  background:#315f86;
+}
+.site-nav .nav-links a:focus-visible{
+  outline:2px solid #fff !important;
+  outline-offset:2px !important;
+}
+@media(max-width:1150px){
+  .site-nav .nav-links{column-gap:36px !important;row-gap:8px !important;}
+}
+@media(max-width:760px){
+  .site-nav .nav-inner{width:calc(100% - 20px) !important;}
+  .site-nav .nav-links{column-gap:13px !important;row-gap:3px !important;padding:10px 0 !important;}
+  .site-nav .nav-links a{font-size:16.5px !important;min-height:44px !important;padding:9px 10px 13px !important;}
+  .site-nav .nav-links a::after{left:10px;right:10px;bottom:4px;}
+}
+@media(max-width:420px){
+  .site-nav .nav-links{column-gap:7px !important;}
+  .site-nav .nav-links a{font-size:15.5px !important;padding:8px 8px 12px !important;}
+  .site-nav .nav-links a::after{left:8px;right:8px;}
+}
+
+/* ===== Welcome bubble: two phrases, repeating every 5 seconds ===== */
+.hero .hero-sub{margin-top:18px !important;}
+.welcome-bubble{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  column-gap:.24em;
+  row-gap:.02em;
+  top:16px !important;
+  padding:18px 24px !important;
+  border-radius:25px !important;
+  font-size:40px !important;
+  line-height:1.16 !important;
+  font-weight:500 !important;
+  letter-spacing:-.025em;
+  font-style:italic;
+  white-space:normal !important;
+  width:max-content;
+  max-width:calc(100vw - 30px);
+}
+.welcome-bubble .welcome-chunk{
+  display:inline-block;
+  white-space:nowrap;
+  opacity:0;
+  transform:translateY(10px);
+  will-change:opacity,transform;
+  animation-duration:5s;
+  animation-timing-function:ease-out;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.welcome-bubble .welcome-first{animation-name:welcome-first-reveal;}
+.welcome-bubble .welcome-second{animation-name:welcome-second-reveal;}
+@keyframes welcome-first-reveal{
+  0%,3% {opacity:0;transform:translateY(10px);}
+  12%,78% {opacity:1;transform:translateY(0);}
+  90%,100% {opacity:0;transform:translateY(-5px);}
+}
+@keyframes welcome-second-reveal{
+  0%,20% {opacity:0;transform:translateY(10px);}
+  30%,78% {opacity:1;transform:translateY(0);}
+  90%,100% {opacity:0;transform:translateY(-5px);}
+}
+@media(max-width:620px){
+  .welcome-bubble{
+    top:13px !important;
+    padding:14px 14px !important;
+    font-size:clamp(22px,6.3vw,34px) !important;
+    border-radius:19px !important;
+    column-gap:.2em;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .welcome-bubble .welcome-chunk{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    will-change:auto;
+  }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+<div class="container nav-inner">
+<div class="nav-links"><a aria-current="page" class="active" href="/my-website/index.html" target="_self">Home</a><a href="/my-website/research-interests.html" target="_self">Research Interests</a><a href="/my-website/publications.html" target="_self">Publications</a><a href="/my-website/cv.html" target="_self">CV</a><a href="/my-website/beyond-cv.html" target="_self">A little beyond the CV</a></div>
+</div>
+</nav>
+<main id="top">
+<section class="hero section-bg-a">
+<div class="container hero-grid">
+<div>
+<h1>Dojin Lee</h1>
+
+<div class="hero-sub">Suicide Prevention · Public Mental Health · Addiction</div>
+<p class="hero-copy">
+I am a clinician working in a community mental health center in South Korea.
+I was recently selected as a <span class="fulbright-note" tabindex="0"><strong>Fulbright Graduate Student Program Alternate</strong> for the 2027–2028 academic year.</span>
+I earned my MA and BA in Psychology from Chungnam National University, with a minor in Computer Science during my undergraduate studies, where my research examined how psychological, genetic, and environmental factors interact over time to shape behavior.
+My research experience has included longitudinal research, intervention studies, meta-analysis, and intensive daily data.
+<br/><br/>
+My long-term goal is to help reduce suicide deaths by developing systems that can detect when an individual's risk is rising and respond in time.
+I am especially interested in using <strong>machine learning</strong> with intensive longitudinal data, including <strong>ecological momentary assessment (EMA)</strong> and other digital signals, to predict near-term suicide risk and deliver timely, personalized interventions.
+I am also interested in how crisis-response services, such as the U.S. 988 Suicide &amp; Crisis Lifeline, are implemented and evaluated.</p>
+<div class="buttons">
+<a class="button button-primary" href="/my-website/research-interests.html">Research Interests →</a>
+<a class="button button-secondary" href="/my-website/cv.html" target="_self">My CV →</a>
+</div>
+</div>
+<div aria-label="Profile photo" class="profile-placeholder" role="img"><div aria-label="Welcome to my website!" class="welcome-bubble"><span aria-hidden="true" class="welcome-chunk welcome-first">Welcome to</span><span aria-hidden="true" class="welcome-chunk welcome-second">my website!</span></div></div>
+</div>
+</section>
+<section class="section section-bg-b evidence-flow-section">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">Evidence Behind the Mission</div>
+<h2>A foundation across research, clinical practice, and community mental health</h2>
+<p class="section-intro">
+        I want the questions I pursue next to be ambitious, but grounded in the work I have already done.
+      </p>
+</div>
+<div aria-label="Research and clinical experience leading to what I bring forward" class="evidence-journey">
+<article class="evidence-stage">
+<div class="evidence-stage-kicker">Built through</div>
+<h3>Research</h3>
+<div class="evidence-stat">
+<div class="evidence-stat-number">7</div>
+<div class="evidence-stat-text">Peer-reviewed publications</div>
+</div><div class="evidence-stat">
+<div class="evidence-stat-number">5</div>
+<div class="evidence-stat-text">Research projects across addiction, longitudinal methods, intervention, and evidence synthesis</div>
+</div><div class="evidence-stat">
+<div class="evidence-stat-number">3</div>
+<div class="evidence-stat-text">Conference presentations</div>
+</div><div class="evidence-stat">
+<div class="evidence-stat-number">2</div>
+<div class="evidence-stat-text">Academic honors / awards</div>
+</div></article>
+<div aria-hidden="true" class="evidence-arrow">
+<span>→</span>
+</div>
+<article class="evidence-stage">
+<div class="evidence-stage-kicker">Grounded in</div>
+<h3>Clinical &amp; community work</h3>
+<div class="evidence-stat">
+<div class="evidence-stat-number">100+</div>
+<div class="evidence-stat-text">Clients supported through individual and family counseling, including crisis intervention and case management</div>
+</div><div class="evidence-stat">
+<div class="evidence-stat-number">3 years</div>
+<div class="evidence-stat-text">Weekly CRAFT-based family group sessions in an addiction-focused community setting</div>
+</div></article>
+<div aria-hidden="true" class="evidence-arrow">
+<span>→</span>
+</div>
+<article class="evidence-stage evidence-stage-forward">
+<div class="evidence-stage-kicker">What I bring forward</div>
+<h3>From prediction to prevention</h3>
+<div class="forward-item">
+<div class="forward-marker">01</div>
+<div>
+<strong>Predict near-term suicide risk at the individual level</strong>
+<p>Use intensive longitudinal data and machine learning to identify when a person’s risk is rising.</p>
+</div>
+</div><div class="forward-item">
+<div class="forward-marker">02</div>
+<div>
+<strong>Implement timely, personalized intervention in real-world mental health systems</strong>
+<p>Test how risk prediction can be translated into support that reaches people when it is most needed.</p>
+</div>
+</div></article>
+</div>
+</div>
+</section>
+<section class="section section-bg-a longterm-minimal" id="long-term-direction">
+<div class="container longterm-minimal-grid">
+<div class="longterm-minimal-heading">
+<div class="eyebrow">Long-Term Direction</div>
+<h2>Closing the gap between risk and care</h2>
+</div>
+<div class="longterm-minimal-copy">
+<p>Working in community mental health, I have seen how difficult it can be to provide timely support when needs change quickly and services are stretched thin.</p>
+<p>I want to <strong>connect real-time suicide risk prediction with timely intervention</strong> and study how these approaches can be <strong>integrated into everyday mental health care without adding to clinicians’ workload.</strong></p>
+</div>
+</div>
+<div class="container">
+<div aria-label="From clinical experience, through research, to implementation" class="longterm-visual-flow">
+<div class="longterm-visual-step">
+<div aria-hidden="true" class="longterm-visual-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"></path>
+<path d="M3.8 12h4l1.65-3.2 2.8 6.7 1.9-4.1h5.8"></path>
+</svg>
+</div>
+<h3>Clinical experience</h3>
+<p>Needs seen in real-world care</p>
+</div>
+<div class="longterm-visual-step">
+<div aria-hidden="true" class="longterm-visual-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="16" rx="2" width="18" x="3" y="4"></rect>
+<path d="m6.5 15 4-4 3.1 2.9 3.9-5"></path>
+<path d="M15.9 8.9h1.6v1.6"></path>
+</svg>
+</div>
+<h3>Research</h3>
+<p>EMA + machine learning</p>
+</div>
+<div class="longterm-visual-step">
+<div aria-hidden="true" class="longterm-visual-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="5" rx="1" width="5" x="9.5" y="2.8"></rect>
+<rect height="5" rx="1" width="5" x="2.4" y="16.2"></rect>
+<rect height="5" rx="1" width="5" x="16.6" y="16.2"></rect>
+<path d="M12 7.8v4.3M4.9 16.2v-4.1h14.2v4.1"></path>
+</svg>
+</div>
+<h3>Implementation</h3>
+<p>Timely, sustainable care</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>
+<div class="footer-name">Dojin Lee</div>
+<div class="footer-role">Clinician &amp; Researcher</div>
+</div>
+<div class="footer-links"><button class="footer-link-button" data-email-copy="" type="button">E-mail</button><a href="https://www.linkedin.com/in/lee-dojin-psydj370/" rel="noopener" target="_blank">LinkedIn</a><a href="https://m.site.naver.com/1Xgns" rel="noopener" target="_blank">Google Scholar</a></div>
+</div>
+<div class="container" style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);">
+<p style="margin:0;color:var(--muted);font-size:11.5px;line-height:1.6;">
+      Designed and built by Dojin Lee with ChatGPT and GitHub.
+      For template inquiries or permission to reuse the layout, please contact me by email.
+    </p>
+</div>
+</footer>
+<div class="email-copy-modal" hidden="" id="email-copy-modal">
+<div aria-labelledby="email-copy-title" aria-modal="true" class="email-copy-dialog" role="dialog">
+<button aria-label="Close" class="email-modal-close" type="button">×</button>
+<div class="email-modal-kicker">Contact</div>
+<div class="email-modal-title" id="email-copy-title">E-mail</div>
+<div class="email-value" id="email-value">psydj370@gmail.com</div>
+<div class="email-copy-actions">
+<button class="email-copy-button" type="button">Copy e-mail</button>
+<span aria-live="polite" class="email-copy-status" id="email-copy-status"></span>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  const openBtn = document.querySelector('.footer-link-button[data-email-copy]');
+  const modal = document.getElementById('email-copy-modal');
+  if (!openBtn || !modal || modal.dataset.ready === '1') return;
+  modal.dataset.ready = '1';
+
+  const closeBtn = modal.querySelector('.email-modal-close');
+  const copyBtn = modal.querySelector('.email-copy-button');
+  const status = modal.querySelector('#email-copy-status');
+  const email = 'psydj370@gmail.com';
+
+  const openModal = () => {
+    modal.hidden = false;
+    status.textContent = '';
+    copyBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    openBtn.focus();
+  };
+
+  const fallbackCopy = () => {
+    const area = document.createElement('textarea');
+    area.value = email;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand('copy');
+    area.remove();
+  };
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        fallbackCopy();
+      }
+      status.textContent = 'Copied!';
+    } catch (err) {
+      try {
+        fallbackCopy();
+        status.textContent = 'Copied!';
+      } catch (fallbackErr) {
+        status.textContent = 'Select the address above to copy.';
+      }
+    }
+  });
+})();
+</script></body>
+</html>
