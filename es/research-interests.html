@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dojin Lee | Intereses de investigación</title>
+<style>
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --soft:#f5f7f7;
+  --ink:#18354d;
+  --body:#4c5c67;
+  --muted:#77848d;
+  --blue:#315f86;
+  --blue2:#769ab6;
+  --blue3:#adc6d7;
+  --sage:#9db4aa;
+  --taupe:#b79c84;
+  --blush:#cda7a2;
+  --line:#e2e8eb;
+  --gold:#d8ba78;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.72;-webkit-font-smoothing:antialiased
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+.site-nav{
+  position:sticky;top:0;z-index:100;background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)
+}
+.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:center}
+.nav-links{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
+.nav-links a{
+  text-decoration:none;color:#4c5b65;font-size:14.5px;padding:23px 0 19px;
+  border-bottom:2px solid transparent
+}
+.nav-links a.active,.nav-links a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-links a.future{color:#929ca3}
+
+.eyebrow{
+  margin-bottom:14px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase
+}
+h1,h2{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0}
+h1{font-size:clamp(52px,7vw,76px);line-height:1.03;letter-spacing:-.04em}
+h2{font-size:clamp(31px,4vw,40px);line-height:1.18;letter-spacing:-.02em;margin-bottom:16px}
+h3{margin:0 0 10px;font-size:20px;line-height:1.35;color:var(--ink)}
+p{margin-top:0}
+.section{padding:80px 0;border-top:1px solid var(--line)}
+.soft{background:var(--soft)}
+.section-heading{max-width:840px;margin-bottom:38px}
+.section-intro{margin-bottom:0;color:var(--body);font-size:18px}
+
+/* HERO */
+.hero{padding:92px 0 84px}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:68px;align-items:center
+}
+.hero-role{margin-top:18px;font-size:25px;font-weight:700;color:#344a5a}
+.hero-sub{margin-top:8px;color:var(--blue);font-size:15.5px;font-weight:700}
+.hero-copy{max-width:690px;margin:28px 0 0;color:var(--body);font-size:18px}
+.hero-copy strong{color:#244c6e}
+.signature{margin-top:26px;color:#657986;font-family:var(--serif);font-size:18px;font-style:italic}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
+.button{
+  display:inline-block;text-decoration:none;padding:11px 18px;border-radius:8px;
+  border:1px solid var(--blue);font-size:14px;font-weight:700
+}
+.button-primary{background:var(--blue);color:#fff}
+.button-secondary{color:var(--blue)}
+
+/* interest wheel */
+.interest-panel{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
+.interest-wheel{
+  position:relative;width:310px;height:310px;border-radius:50%;
+  background:conic-gradient(
+    from -30deg,
+    #dce8f0 0 60deg,#dfe9e3 60deg 120deg,#eadfdc 120deg 180deg,
+    #e5e6ec 180deg 240deg,#d8e8ef 240deg 300deg,#dce9e3 300deg 360deg
+  );
+  box-shadow:0 14px 34px rgba(47,76,96,.08)
+}
+.interest-wheel::before{
+  content:"";position:absolute;inset:64px;border-radius:50%;background:rgba(251,250,247,.98);
+  border:1px solid rgba(70,93,110,.08)
+}
+.interest-wheel::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:
+    radial-gradient(circle at center,transparent 0 48%,rgba(255,255,255,.94) 48.6% 50.5%,transparent 51%),
+    conic-gradient(from -30deg,
+      transparent 0 59.2deg,rgba(255,255,255,.96) 59.2deg 60.8deg,
+      transparent 60.8deg 119.2deg,rgba(255,255,255,.96) 119.2deg 120.8deg,
+      transparent 120.8deg 179.2deg,rgba(255,255,255,.96) 179.2deg 180.8deg,
+      transparent 180.8deg 239.2deg,rgba(255,255,255,.96) 239.2deg 240.8deg,
+      transparent 240.8deg 299.2deg,rgba(255,255,255,.96) 299.2deg 300.8deg,
+      transparent 300.8deg 360deg);
+  pointer-events:none
+}
+.wheel-center{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;z-index:2;padding:96px;font-family:var(--serif);font-size:21px;
+  line-height:1.35;color:#284a66
+}
+.wheel-center small{
+  display:block;margin-top:8px;font-family:var(--sans);font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:#7a8b96
+}
+.interest-label{
+  position:absolute;width:170px;padding:10px 12px;border-radius:12px;
+  background:rgba(255,255,255,.87);border:1px solid rgba(221,229,233,.9);
+  box-shadow:0 8px 22px rgba(42,68,85,.05)
+}
+.interest-label strong{display:block;color:#294d6b;font-size:14px;margin-bottom:2px}
+.interest-label span{display:block;color:#75828b;font-size:12px;line-height:1.4}
+.il1{top:20px;left:4px}.il2{top:20px;right:0}.il3{top:206px;right:-16px}
+.il4{bottom:18px;right:8px}.il5{bottom:18px;left:8px}.il6{top:206px;left:-22px}
+
+/* Research goals mountain */
+.goals-stage{
+  position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,#fbfaf7 0%,#f2f6f8 100%);
+  box-shadow:0 18px 46px rgba(42,67,84,.07)
+}
+.goals-canvas{position:relative;width:100%;aspect-ratio:16/8.3;overflow:hidden}
+.goals-canvas svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.goal-node{
+  position:absolute;z-index:5;width:34px;height:34px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.98);transform:translate(-50%,-50%);
+  cursor:pointer;background:rgba(255,255,255,.4);
+  box-shadow:0 0 0 7px rgba(255,255,255,.22),0 0 0 14px rgba(216,186,120,.12),0 0 28px rgba(216,186,120,.65);
+  transition:.18s ease
+}
+.goal-node::after{
+  content:"";position:absolute;inset:50% auto auto 50%;width:10px;height:10px;
+  transform:translate(-50%,-50%);border-radius:50%;background:#fff8e3
+}
+.goal-node:hover,.goal-node.active{transform:translate(-50%,-50%) scale(1.18)}
+.goal-label{
+  position:absolute;z-index:4;font-family:var(--serif);font-size:17px;line-height:1.12;
+  color:#234d70;text-shadow:0 1px 0 rgba(255,255,255,.9)
+}
+#detect{left:23.5%;top:70%}#respond{left:52%;top:52%}#reach{left:82%;top:25%}
+.gl-detect{left:15%;top:58%}.gl-respond{left:46%;top:39%;color:#7f624e}.gl-reach{left:77%;top:11%}
+.goal-tooltip{
+  position:absolute;z-index:15;width:min(340px,33vw);padding:18px 19px;border-radius:15px;
+  background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 16px 38px rgba(27,53,72,.18);color:#3b4d59;opacity:0;visibility:hidden;
+  pointer-events:none;transform:translateY(8px);transition:.18s ease
+}
+.goal-tooltip.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.goal-tooltip .kicker{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.goal-tooltip h3{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:8px}
+.goal-tooltip p{font-size:14px;line-height:1.62;margin:0}
+#tip-detect{left:7%;top:39%}#tip-respond{left:36%;top:57%}#tip-reach{right:4%;top:31%}
+.goals-hint{
+  position:absolute;left:24px;bottom:20px;z-index:6;padding:8px 11px;border-radius:999px;
+  background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.9);
+  color:#60737f;font-size:12px;font-weight:700
+}
+
+/* Evidence / Where Questions Come From */
+.origin-intro{max-width:870px;margin-bottom:38px}
+.origin-big{font-family:var(--serif);font-size:24px;line-height:1.55;color:#30495c;margin-bottom:0}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.evidence{
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;
+  min-height:100%
+}
+.evidence-label{
+  margin-bottom:12px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.13em;text-transform:uppercase
+}
+.evidence p{margin-bottom:0;color:var(--body);font-size:15px}
+.evidence-note{margin-top:14px;color:var(--muted);font-size:12.5px;line-height:1.5}
+
+/* suicide rate chart */
+.rate-chart{margin:18px 0 18px}
+.chart-row{
+  display:grid;grid-template-columns:82px 1fr 54px;gap:12px;align-items:center;margin:12px 0
+}
+.chart-label{font-size:13px;font-weight:700;color:#516674}
+.chart-track{
+  height:22px;border-radius:999px;background:#eef2f4;overflow:hidden;position:relative
+}
+.chart-bar{height:100%;border-radius:999px}
+.world{width:43.2%;background:#aebfca}
+.usa{width:68.9%;background:#7ea0b9}
+.korea{width:100%;background:#315f86}
+.chart-value{text-align:right;font-family:var(--serif);font-size:18px;color:#294d6b}
+.chart-caption{font-size:11.5px;color:#88939a;margin-top:8px}
+
+/* system strain */
+.strain-visual{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin:18px 0 18px
+}
+.strain-box{
+  border-radius:12px;padding:16px;background:#f2f6f8;border:1px solid #e3e9ec;text-align:center
+}
+.strain-big{font-family:var(--serif);font-size:30px;color:#315f86;line-height:1}
+.strain-small{margin-top:6px;font-size:12px;color:#73828b}
+.strain-arrow{font-size:20px;color:#9aaab4}
+.bridge{
+  margin-top:14px;padding:13px 14px;border-radius:12px;background:#eef3f5;
+  color:#38566a;font-size:13px;font-weight:700
+}
+
+/* broader research */
+.research-map{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0
+}
+.rm{
+  min-height:78px;border-radius:12px;padding:12px 10px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:#f1f5f7;border:1px solid #e3eaee
+}
+.rm strong{font-size:13px;color:#315f86}
+.rm span{font-size:11px;color:#82909a;margin-top:3px}
+
+/* addiction relation */
+.relation-flow{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0
+}
+.relation-pill{
+  padding:9px 11px;border-radius:999px;background:#eef3f5;color:#43677f;font-size:12px;font-weight:700
+}
+.relation-arrow{color:#93a6b2}
+.meta-stat{
+  margin-top:14px;padding:15px;border-radius:12px;background:#f5f1eb;border:1px solid #ebe3d8
+}
+.meta-stat strong{display:block;font-family:var(--serif);font-size:27px;color:#8d6f58;line-height:1.1}
+.meta-stat span{font-size:12px;color:#806f62}
+
+/* snapshot */
+.snapshot-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.snapshot{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 18px;
+  box-shadow:0 8px 24px rgba(37,61,78,.03)
+}
+.snapshot-number{
+  margin-bottom:7px;font-family:var(--serif);font-size:34px;line-height:1;color:var(--ink)
+}
+.snapshot-label{color:var(--muted);font-size:12.5px;line-height:1.5}
+.snapshot-caption{max-width:790px;margin-top:24px;color:var(--body);font-size:14px}
+
+/* direction */
+.vision-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vision{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
+.vision-step{margin-bottom:10px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.vision p{color:var(--body);font-size:15px;margin-bottom:0}
+.closing{max-width:830px;margin-top:30px}
+.closing-statement{margin-bottom:16px;font-family:var(--serif);font-size:24px;line-height:1.56;color:#30495c}
+
+footer{padding:38px 0;background:var(--surface);border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:28px}
+.footer-name{font-family:var(--serif);font-size:20px}
+.footer-role{margin-top:2px;color:var(--muted);font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{text-decoration:none;color:#5b6a74;font-size:13px}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .snapshot-grid{grid-template-columns:repeat(2,1fr)}
+  .interest-panel{min-height:500px}
+}
+@media(max-width:760px){
+  .container{width:min(100% - 34px,1120px)}
+  .nav-inner{min-height:auto}.nav-links{gap:17px;padding:13px 0}.nav-links a{padding:5px 0}
+  .hero{padding-top:60px}
+  .evidence-grid,.vision-flow,.snapshot-grid{grid-template-columns:1fr}
+  .research-map{grid-template-columns:repeat(2,1fr)}
+  .goal-tooltip{width:min(300px,76vw)}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-links{justify-content:flex-start}
+}
+
+/* Profile image area: add profile.jpg to the same folder later */
+.profile-placeholder{
+  width:100%;
+  max-width:390px;
+  aspect-ratio:4/5;
+  justify-self:center;
+  border-radius:22px;
+  background-color:transparent;
+  background-image:url("../profile.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+
+.welcome-line{
+  margin-top:26px;
+  margin-bottom:-10px;
+  font-family:var(--serif);
+  font-size:20px;
+  color:#496579;
+  font-style:italic;
+}
+
+
+.research-page-header{
+  padding:88px 0 54px;
+}
+.research-page-title{
+  font-size:clamp(48px,7vw,72px);
+  line-height:1.04;
+  letter-spacing:-.035em;
+}
+.research-page-intro{
+  max-width:780px;
+  margin:24px 0 0;
+  color:var(--body);
+  font-size:18px;
+  line-height:1.8;
+}
+@media(max-width:760px){
+  .research-page-header{padding:58px 0 38px;}
+}
+
+/* Alternating section backgrounds */
+.section-bg-a{background:#fbfaf7;}
+.section-bg-b{background:#f5f7f7;}
+
+/* Unified site navigation */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.nav-links{
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#4c5b65;
+  font-size:14.5px;
+  padding:23px 0 19px;
+  border-bottom:2px solid transparent;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue);
+  border-bottom-color:var(--blue);
+}
+@media(max-width:760px){
+  .nav-inner{min-height:auto}
+  .nav-links{gap:17px;padding:13px 0}
+  .nav-links a{padding:5px 0}
+}
+
+/* Unified navigation */
+.nav-links a{
+  color:var(--blue) !important;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue) !important;
+  border-bottom-color:var(--blue) !important;
+}
+
+/* ===== Final shared navigation treatment ===== */
+.site-nav{
+  background:rgba(231,239,244,.98) !important;
+  border-bottom:1px solid #c6d7e2 !important;
+  box-shadow:0 5px 18px rgba(42,67,84,.055);
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#315f86 !important;
+}
+.nav-links a.active{
+  color:#173f5f !important;
+  border-bottom-color:#315f86 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#173f5f !important;
+  border-bottom-color:#769ab6 !important;
+}
+
+/* ===== Final footer links ===== */
+.footer-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-links a,
+.footer-link-button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:0;
+  margin:0;
+  font:inherit;
+  color:#526b7c !important;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .16s ease;
+}
+.footer-links a:hover,
+.footer-link-button:hover{
+  color:#315f86 !important;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* ===== E-mail copy dialog ===== */
+.email-copy-modal[hidden]{display:none}
+.email-copy-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:grid;
+  place-items:center;
+  padding:22px;
+  background:rgba(19,39,54,.32);
+  backdrop-filter:blur(3px);
+}
+.email-copy-dialog{
+  position:relative;
+  width:min(430px,100%);
+  padding:28px;
+  border:1px solid #d8e2e8;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 22px 60px rgba(30,52,68,.18);
+  text-align:left;
+}
+.email-modal-kicker{
+  color:#315f86;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.email-modal-title{
+  margin:6px 0 16px;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#18354d;
+  font-size:25px;
+  font-weight:500;
+}
+.email-value{
+  padding:13px 14px;
+  border:1px solid #dbe4e9;
+  border-radius:10px;
+  background:#f7f9fa;
+  color:#344f61;
+  font-size:14px;
+  word-break:break-all;
+}
+.email-copy-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:16px;
+}
+.email-copy-button{
+  appearance:none;
+  border:1px solid #315f86;
+  border-radius:9px;
+  background:#315f86;
+  color:#fff;
+  padding:10px 15px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+.email-copy-status{
+  color:#607683;
+  font-size:12px;
+}
+.email-modal-close{
+  position:absolute;
+  top:13px;
+  right:15px;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#71818a;
+  font-size:24px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* ===== Deep navy navigation refinement ===== */
+.site-nav{
+  background:rgba(24,53,77,.98) !important;
+  border-bottom:1px solid #294d67 !important;
+  box-shadow:0 6px 20px rgba(18,38,53,.16) !important;
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#dce7ee !important;
+}
+.nav-links a.active{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+}
+
+body{font-size:17px;}
+.nav-links a{font-size:15.5px !important;}
+.hero-copy,.page-intro,.section-intro,.section-lead,.origin-big,.evidence p,.story-card p,.cv-toolbar-copy p{
+  font-size:17.5px !important; line-height:1.85 !important;
+}
+.eyebrow{font-size:12px !important;}
+.footer-links a,.footer-link-button{font-size:14px !important;}
+.site-credit{font-size:12px !important;}
+
+/* ===== Readability refinement: slightly larger typography ===== */
+body{font-size:18px !important;}
+
+.nav-links a{
+  font-size:16px !important;
+}
+
+.hero-role{
+  font-size:17px !important;
+}
+
+.hero-sub{
+  font-size:15.5px !important;
+}
+
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p,
+.publications-section p,
+.research-map-section p{
+  font-size:18.5px !important;
+  line-height:1.88 !important;
+}
+
+.eyebrow{
+  font-size:12.5px !important;
+}
+
+.snapshot-label,
+.value-card p,
+.hobby-card p,
+.pub-mini,
+.pub-card p{
+  font-size:16px !important;
+  line-height:1.75 !important;
+}
+
+.button{
+  font-size:14.5px !important;
+}
+
+.footer-links a,
+.footer-link-button{
+  font-size:14.5px !important;
+}
+
+.footer-role{
+  font-size:14px !important;
+}
+
+.site-credit{
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+}
+
+/* ===== Larger top navigation ===== */
+.nav-links{
+  gap:34px !important;
+}
+.nav-links a{
+  font-size:18px !important;
+  font-weight:600 !important;
+  padding-top:22px !important;
+  padding-bottom:18px !important;
+}
+@media(max-width:820px){
+  .nav-links{
+    gap:20px !important;
+  }
+  .nav-links a{
+    font-size:16.5px !important;
+  }
+}
+@media(max-width:560px){
+  .nav-links{
+    gap:14px !important;
+  }
+  .nav-links a{
+    font-size:15.5px !important;
+  }
+}
+
+/* ===== Global readability increase ===== */
+body{
+  font-size:19px !important;
+}
+.nav-links{
+  gap:36px !important;
+}
+.nav-links a{
+  font-size:19.5px !important;
+  font-weight:600 !important;
+}
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p{
+  font-size:19px !important;
+  line-height:1.9 !important;
+}
+.eyebrow{
+  font-size:13px !important;
+}
+.button{
+  font-size:15.5px !important;
+}
+.footer-links a,
+.footer-link-button{
+  font-size:15.5px !important;
+}
+.footer-role{
+  font-size:14.5px !important;
+}
+.site-credit{
+  font-size:13px !important;
+}
+@media(max-width:820px){
+  .nav-links{gap:20px !important;}
+  .nav-links a{font-size:17px !important;}
+}
+@media(max-width:560px){
+  .nav-links{gap:14px !important;}
+  .nav-links a{font-size:16px !important;}
+  body{font-size:18px !important;}
+}
+
+/* ===== Research Interests: clearer, evidence-oriented page ===== */
+.research-page-header{
+  padding:72px 0 66px;
+}
+.research-page-title{
+  font-size:clamp(45px,6.5vw,70px);
+  margin-bottom:0;
+}
+.research-page-intro{
+  font-size:20px;
+  max-width:845px;
+  line-height:1.78;
+  margin-top:22px;
+}
+.research-page-intro strong{
+  color:var(--ink);
+  font-weight:650;
+}
+#goals{
+  padding-top:75px;
+  padding-bottom:80px;
+}
+#goals .section-heading{
+  max-width:800px;
+  margin-bottom:32px;
+}
+#goals .section-heading h2{
+  margin-bottom:8px;
+}
+#goals .section-heading .section-intro{
+  font-size:17px !important;
+  line-height:1.6 !important;
+  color:var(--muted);
+  margin-top:8px;
+}
+.goals-stage{overflow:hidden;border-radius:21px;}
+.goals-canvas{aspect-ratio:16/7.5;min-height:365px;}
+.goals-canvas svg{pointer-events:none;}
+.goal-label{
+  font-size:clamp(16px,1.85vw,20px);
+  font-weight:500;
+  line-height:1.12;
+}
+.gl-detect{left:15%;top:55%}
+.gl-respond{left:45%;top:36%}
+.gl-reach{left:75%;top:10%}
+.goal-node:focus-visible{
+  outline:3px solid #315f86;
+  outline-offset:8px;
+}
+.goal-node.active{
+  background:rgba(255,255,255,.82);
+  box-shadow:0 0 0 8px rgba(255,255,255,.25),0 0 0 18px rgba(110,154,188,.22),0 0 34px rgba(49,95,134,.65);
+}
+.goals-hint{
+  font-size:12.5px;
+  bottom:15px;
+  left:18px;
+}
+.research-question-panels{
+  background:rgba(255,255,255,.95);
+  border-top:1px solid var(--line);
+  min-height:188px;
+  padding:28px 34px 30px;
+}
+.research-question-panel{
+  display:grid;
+  grid-template-columns:116px minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+}
+.research-question-panel[hidden]{display:none !important;}
+.question-index{
+  color:#9db1be;
+  font-size:14px;
+  font-weight:700;
+  padding-top:8px;
+  letter-spacing:.06em;
+}
+.question-index span{
+  font-family:var(--serif);
+  font-size:40px;
+  line-height:1;
+  color:#315f86;
+  font-weight:400;
+}
+.question-copy h3{
+  font-family:var(--serif);
+  font-size:clamp(24px,2.8vw,31px);
+  font-weight:500;
+  color:var(--ink);
+  line-height:1.21;
+  letter-spacing:-.015em;
+  margin:0 0 9px;
+}
+.question-copy p{
+  font-size:17.5px;
+  line-height:1.77;
+  color:var(--body);
+  margin:0;
+  max-width:810px;
+}
+.question-copy p strong{
+  font-weight:700;
+  color:#244c69;
+}
+.research-evaluation{
+  padding:76px 0 83px;
+}
+.evaluation-heading{
+  margin-bottom:28px;
+}
+.evaluation-heading h2{
+  margin:0;
+}
+.evaluation-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.evaluation-card{
+  padding:27px 25px 28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 8px 28px rgba(37,61,78,.035);
+  min-height:196px;
+}
+.evaluation-index{
+  font-family:var(--serif);
+  font-size:31px;
+  color:#91aabd;
+  line-height:1;
+  margin-bottom:18px;
+}
+.evaluation-card h3{
+  font-family:var(--serif);
+  font-size:24px;
+  font-weight:500;
+  line-height:1.22;
+  letter-spacing:-.015em;
+  margin:0 0 10px;
+}
+.evaluation-card p{
+  color:var(--body);
+  font-size:16.5px;
+  line-height:1.65;
+  margin:0;
+}
+.research-publications-link{
+  display:inline-block;
+  margin-top:28px;
+  color:#315f86;
+  font-size:16px;
+  font-weight:650;
+  text-decoration:none;
+  border-bottom:1px solid #aac0d0;
+  padding-bottom:3px;
+}
+.research-publications-link:hover{color:#18354d;border-bottom-color:#18354d;}
+@media(max-width:860px){
+  .evaluation-grid{grid-template-columns:1fr;gap:12px;}
+  .evaluation-card{min-height:0;padding:23px 24px;}
+}
+@media(max-width:620px){
+  .research-page-header{padding:48px 0 43px;}
+  .research-page-intro{font-size:18px;line-height:1.75;}
+  #goals{padding-top:56px;padding-bottom:60px;}
+  .goals-canvas{min-height:280px;aspect-ratio:5/3;}
+  .goal-node{width:29px;height:29px;}
+  .goal-label{font-size:15px;}
+  .gl-detect{left:6%;top:54%;}
+  .gl-respond{left:42%;top:35%;}
+  .gl-reach{left:70%;top:7%;}
+  .goals-hint{font-size:10px;padding:6px 9px;}
+  .research-question-panels{padding:22px 19px 26px;min-height:235px;}
+  .research-question-panel{grid-template-columns:1fr;gap:9px;}
+  .question-index{padding:0;font-size:12px;}
+  .question-index span{font-size:31px;}
+  .question-copy h3{font-size:25px;}
+  .question-copy p{font-size:16.5px;}
+  .research-evaluation{padding:58px 0 64px;}
+  .evaluation-card h3{font-size:22px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .goal-node{transition:none;}
+}
+
+/* ===== Research Interests · focused A + C layout ===== */
+.ri-hero { padding:88px 0 74px; }
+.ri-hero .research-page-title { margin:0 0 27px; }
+.ri-headline { max-width:870px; margin:0 0 23px; font-family:var(--serif); font-size:clamp(32px,4.3vw,48px); font-weight:400; line-height:1.16; letter-spacing:-.028em; color:#315f86; }
+.ri-lead { max-width:900px; font-size:20px; color:var(--body); line-height:1.8; margin:0; }
+.ri-lead strong { font-weight:650; color:#23465f; }
+.ri-focus { border-top:1px solid var(--line); padding:78px 0 86px; }
+.ri-section-head { margin-bottom:30px; }
+.ri-section-head h2 { margin-bottom:12px; }
+.ri-section-head p { font-size:17px; line-height:1.65; color:var(--body); margin:0; }
+.ri-dual { display:grid; grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr); align-items:stretch; gap:0; }
+.ri-card { appearance:none; -webkit-appearance:none; width:100%; min-width:0; display:flex; flex-direction:column; align-items:stretch; text-align:left; font:inherit; cursor:pointer; border:1px solid #dce5ea; border-radius:20px; background:#fff; color:var(--ink); padding:27px 30px 26px; min-height:352px; box-shadow:0 13px 32px rgba(37,61,78,.05); transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease; }
+.ri-card:hover { transform:translateY(-3px); border-color:#9db8c8; box-shadow:0 18px 38px rgba(37,61,78,.09); }
+.ri-card.is-selected { border-color:#7299b0; box-shadow:0 0 0 2px rgba(49,95,134,.095),0 17px 40px rgba(37,61,78,.075); }
+.ri-card:focus-visible { outline:3px solid #2a80bb; outline-offset:4px; }
+.ri-topline { display:flex; flex-wrap:wrap; align-items:center; gap:13px; }
+.ri-index { font-family:var(--serif); font-size:27px; line-height:1; font-weight:400; color:#315f86; }
+.ri-domain { font-weight:750; font-size:12px; letter-spacing:.10em; text-transform:uppercase; color:#68889b; }
+.ri-art { display:block; height:108px; width:100%; margin:15px 0 15px; border-radius:12px; background:linear-gradient(115deg,#f6f9fa,#ebf1f5); overflow:hidden; }
+.ri-art svg { width:100%; height:100%; }
+.ri-chart-line-faint { fill:none; stroke:#bdcfdb; stroke-width:13; opacity:.24; }
+.ri-chart-line { fill:none; stroke:#628fad; stroke-width:3.5; stroke-linecap:round; }
+.ri-chart-points circle { fill:#fff; stroke:#4e86a5; stroke-width:3; }
+.ri-network-lines path { fill:none; stroke:#97afc0; stroke-width:3; }
+.ri-network-points circle { fill:#e8f1f5; stroke:#4f839f; stroke-width:3; }
+.ri-title { display:block; font-family:var(--serif); font-size:clamp(25px,2.6vw,31px); line-height:1.2; font-weight:400; letter-spacing:-.012em; margin:0 0 11px; }
+.ri-brief { display:block; color:var(--body); font-size:17px; line-height:1.64; margin-bottom:18px; }
+.ri-action { margin-top:auto; display:flex; justify-content:space-between; align-items:center; padding-top:13px; border-top:1px solid #e5ecee; color:#315f86; font-size:13.5px; font-weight:700; }
+.ri-card.is-selected .ri-action { color:#163d5d; }
+.ri-between { display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:31px; color:#8aa6b8; }
+.ri-details { margin-top:21px; border:1px solid #dee8ee; border-radius:17px; background:rgba(255,255,255,.75); padding:27px 31px 26px; min-height:172px; }
+.ri-detail[hidden] { display:none !important; }
+.ri-detail-label { display:flex; justify-content:space-between; gap:20px; color:#5f859d; font-size:12px; text-transform:uppercase; font-weight:750; letter-spacing:.12em; margin-bottom:10px; }
+.ri-detail-label span { color:#8a9faa; }
+.ri-detail p { font-family:var(--serif); font-size:clamp(22px,2.4vw,28px); line-height:1.38; font-weight:400; color:#233f53; max-width:970px; margin:0 0 14px; }
+.ri-detail p strong { font-weight:600; }
+.ri-measures { font-size:15px; color:#516c7b; line-height:1.5; }
+.ri-measures span { font-weight:700; color:#315f86; margin-right:8px; }
+.ri-bridge { border-top:1px solid var(--line); padding:52px 0 64px; }
+.ri-bridge-inner { display:flex; align-items:center; justify-content:space-between; gap:35px; }
+.ri-bridge-inner > div { max-width:780px; }
+.ri-bridge .eyebrow { margin-bottom:12px; }
+.ri-bridge p { margin:0; font-family:var(--serif); font-size:clamp(22px,2.4vw,28px); line-height:1.4; color:#294f69; }
+.ri-pub-link { flex:0 0 auto; text-decoration:none; border-bottom:1px solid #8bb0c6; padding-bottom:6px; font-size:15px; font-weight:700; color:#315f86; }
+.ri-pub-link:hover { color:#18354d; border-bottom-color:#18354d; }
+@media(max-width:900px) {
+  .ri-card { padding:23px 22px; min-height:355px; }
+  .ri-dual { grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr); }
+  .ri-bridge-inner { flex-direction:column; align-items:flex-start; gap:25px; }
+}
+@media(max-width:680px) {
+  .ri-hero { padding:57px 0 50px; }
+  .ri-hero .research-page-title { margin-bottom:23px; }
+  .ri-headline { font-size:clamp(28px,8vw,37px); }
+  .ri-lead { font-size:17.5px; line-height:1.74; }
+  .ri-focus { padding:54px 0 63px; }
+  .ri-section-head p { font-size:16px; }
+  .ri-dual { grid-template-columns:1fr; gap:8px; }
+  .ri-between { height:33px; transform:rotate(90deg); font-size:25px; }
+  .ri-card { min-height:0; padding:24px; }
+  .ri-art { height:92px; margin-top:12px; margin-bottom:16px; }
+  .ri-title { font-size:27px; }
+  .ri-brief { font-size:16px; }
+  .ri-details { padding:23px 22px; min-height:0; }
+  .ri-detail p { font-size:23px; }
+  .ri-measures { font-size:14px; }
+  .ri-bridge { padding:44px 0 53px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ri-card { transition:none; }
+}
+
+/* ===== 2026-10: balanced, equally weighted research areas ===== */
+.ri-balanced{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch;}
+.ri-balanced .ri-card{min-height:408px;padding:29px 30px 26px;}
+.ri-balanced .ri-topline{justify-content:space-between;gap:10px;min-height:22px;}
+.ri-balanced .ri-domain{font-size:12.5px;color:#315f86;font-weight:800;letter-spacing:.105em;}
+.ri-balanced .ri-field{font-size:12.5px;color:#718a9a;font-weight:600;letter-spacing:.015em;}
+.ri-balanced .ri-title{font-size:clamp(26px,2.55vw,32px);line-height:1.2;min-height:2.4em;}
+.ri-balanced .ri-brief{font-size:16.6px;line-height:1.64;}
+.ri-balanced .ri-art{margin:16px 0 18px;}
+.ri-balanced .ri-action{font-size:13px;}
+.ri-details[hidden]{display:none !important;}
+.ri-details:not([hidden]){animation:ri-details-enter .24s ease-out both;}
+.ri-shared-purpose{margin:23px 0 0;text-align:center;font-size:15.5px;line-height:1.55;color:#627c8b;}
+.ri-shared-purpose strong{font-weight:700;color:#315f86;}
+@keyframes ri-details-enter{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:900px){.ri-balanced{gap:16px;}.ri-balanced .ri-card{min-height:446px;padding:25px 22px;}.ri-balanced .ri-field{font-size:11.5px;}.ri-balanced .ri-title{font-size:27px;}}
+@media(max-width:680px){.ri-balanced{grid-template-columns:1fr;gap:15px;}.ri-balanced .ri-card{min-height:0;padding:24px;}.ri-balanced .ri-title{min-height:0;font-size:27px;}.ri-balanced .ri-art{height:92px;}.ri-balanced .ri-field{font-size:12px;}.ri-shared-purpose{font-size:14.5px;margin-top:22px;}}
+@media(prefers-reduced-motion:reduce){.ri-details:not([hidden]){animation:none;}}
+
+/* ===== 2026-10: clearer global navigation ===== */
+.site-nav .nav-inner{
+  min-height:82px !important;
+  width:min(100% - 32px, 1440px) !important;
+}
+.site-nav .nav-links{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  column-gap:72px !important;
+  row-gap:12px !important;
+  padding:11px 0 !important;
+}
+.site-nav .nav-links a{
+  position:relative !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:54px !important;
+  padding:10px 13px 16px !important;
+  border:0 !important;
+  border-radius:11px !important;
+  background:transparent !important;
+  color:#e4edf2 !important;
+  text-decoration:none !important;
+  font-size:19.5px !important;
+  font-weight:600 !important;
+  white-space:nowrap;
+  transition:background-color .2s ease,color .2s ease,box-shadow .2s ease !important;
+}
+.site-nav .nav-links a::after{
+  content:"";
+  position:absolute;
+  bottom:6px;
+  left:13px;
+  right:13px;
+  height:2px;
+  border-radius:999px;
+  background:rgba(255,255,255,.66);
+  transition:background-color .2s ease,height .2s ease,box-shadow .2s ease;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible{
+  color:#fff !important;
+  background:rgba(255,255,255,.12) !important;
+}
+.site-nav .nav-links a:hover::after,
+.site-nav .nav-links a:focus-visible::after{
+  height:4px;
+  background:#fff;
+  box-shadow:0 0 10px rgba(255,255,255,.2);
+}
+.site-nav .nav-links a.active,
+.site-nav .nav-links a[aria-current="page"]{
+  color:#18354d !important;
+  background:#fff !important;
+  box-shadow:0 5px 16px rgba(4,22,37,.22) !important;
+  font-weight:750 !important;
+}
+.site-nav .nav-links a.active::after,
+.site-nav .nav-links a[aria-current="page"]::after{
+  height:3px;
+  background:#315f86;
+}
+.site-nav .nav-links a:focus-visible{
+  outline:2px solid #fff !important;
+  outline-offset:2px !important;
+}
+@media(max-width:1150px){
+  .site-nav .nav-links{column-gap:36px !important;row-gap:8px !important;}
+}
+@media(max-width:760px){
+  .site-nav .nav-inner{width:calc(100% - 20px) !important;}
+  .site-nav .nav-links{column-gap:13px !important;row-gap:3px !important;padding:10px 0 !important;}
+  .site-nav .nav-links a{font-size:16.5px !important;min-height:44px !important;padding:9px 10px 13px !important;}
+  .site-nav .nav-links a::after{left:10px;right:10px;bottom:4px;}
+}
+@media(max-width:420px){
+  .site-nav .nav-links{column-gap:7px !important;}
+  .site-nav .nav-links a{font-size:15.5px !important;padding:8px 8px 12px !important;}
+  .site-nav .nav-links a::after{left:8px;right:8px;}
+}
+
+/* ===== Research focus: two concise, equal-weight, non-interactive panels ===== */
+.ri-focus-static { padding: 68px 0 76px; }
+.ri-focus-static .ri-section-head { margin-bottom: 26px; }
+.ri-focus-static .ri-section-head h2 { margin-bottom: 10px; }
+.ri-focus-static .ri-section-head p { font-size: 16px; line-height: 1.6; }
+.ri-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.ri-summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 184px;
+  padding: 23px 24px 22px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #dce5ea;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(37,61,78,.025);
+}
+.ri-summary-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 8px;
+  color: #527d98;
+}
+.ri-summary-icon svg { width: 38px; height: 38px; display: block; }
+.ri-summary-card h3 {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: #193e5b;
+}
+.ri-summary-card p {
+  max-width: 290px;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #71828e;
+}
+@media (max-width: 680px) {
+  .ri-focus-static { padding: 52px 0 59px; }
+  .ri-summary-grid { gap: 10px; }
+  .ri-summary-card { min-height: 157px; padding: 18px 12px; border-radius: 12px; }
+  .ri-summary-icon { width: 34px; height: 34px; margin-bottom: 5px; }
+  .ri-summary-icon svg { width: 31px; height: 31px; }
+  .ri-summary-card h3 { font-size: 15.5px; margin-bottom: 7px; }
+  .ri-summary-card p { font-size: 11.8px; line-height: 1.48; }
+}
+
+/* ===== Two equally weighted research goals: concise overview + description ===== */
+.ri-focus-static .ri-section-head { max-width: 880px; margin-bottom: 29px; }
+.ri-focus-static .ri-section-head p { color: #536a79; font-size: 17px; }
+.ri-summary-grid { max-width: 1050px; gap: 24px; align-items: stretch; }
+.ri-summary-card {
+  min-height: 330px;
+  justify-content: flex-start;
+  padding: 31px 37px 32px;
+  border-radius: 17px;
+}
+.ri-summary-card h3 { font-size: 21px; margin-bottom: 7px; }
+.ri-summary-card .ri-summary-tags {
+  max-width: none;
+  color: #648094;
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-align: center;
+}
+.ri-summary-card .ri-summary-description {
+  align-self: stretch;
+  width: 100%;
+  max-width: 415px;
+  margin: 22px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #e0e7eb;
+  text-align: left;
+  color: #455f70;
+  font-size: 15.7px;
+  line-height: 1.75;
+}
+.ri-summary-card .ri-summary-description-next {
+  margin-top: 13px;
+  padding-top: 0;
+  border-top: none;
+}
+@media(max-width:760px) {
+  .ri-summary-grid { gap: 14px; }
+  .ri-summary-card { min-height: 350px; padding: 26px 23px 27px; }
+  .ri-summary-card .ri-summary-description { font-size: 14.8px; line-height: 1.66; }
+}
+@media(max-width:680px) {
+  .ri-summary-grid { grid-template-columns: 1fr; max-width: 510px; gap: 15px; }
+  .ri-summary-card { min-height: 0; padding: 27px 27px 29px; }
+  .ri-summary-card h3 { font-size: 20px; }
+  .ri-summary-card .ri-summary-tags { font-size: 13.5px; }
+  .ri-summary-card .ri-summary-description { max-width: none; font-size: 15px; }
+  .ri-focus-static .ri-section-head p { font-size: 16px; }
+}
+
+/* ===== Evidence 02: Korea 109 / U.S. 988 workforce comparison ===== */
+.evidence-workforce h3{margin-bottom:16px}
+.crisis-compare{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0 10px}
+.crisis-country{background:#f4f8fa;border:1px solid #dce8ee;border-radius:14px;padding:17px 17px 13px}
+.crisis-country-us{background:#f8f9fa;border-color:#e4e8ea}
+.crisis-country-head{display:flex;gap:11px;align-items:center;margin-bottom:14px}
+.crisis-flag{width:35px;height:35px;flex:none;border:1px solid #c9d8e3;border-radius:10px;background:#fff;color:#315e7f;display:grid;place-items:center;font-weight:800;font-size:11px;letter-spacing:.05em}
+.crisis-country-head div{display:flex;flex-direction:column;gap:1px}
+.crisis-country-head strong{font-size:15.5px;color:#183c58;line-height:1.2}
+.crisis-country-head div>span{font-size:11.5px;color:#7a8c98;line-height:1.3}
+.crisis-metrics{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.crisis-metric{padding:13px 10px 12px;background:#fff;border:1px solid #e2eaf0;border-radius:10px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.crisis-metric strong{font-family:var(--serif);font-weight:600;font-size:32px;line-height:1;color:#2f6084;font-variant-numeric:lining-nums}
+.crisis-metric span{color:#657986;font-size:11.5px;line-height:1.35}
+.crisis-retention{display:flex;gap:7px;justify-content:space-between;align-items:baseline;padding:12px 2px 4px;flex-wrap:wrap}
+.crisis-retention span{color:#617887;font-size:12px}
+.crisis-retention strong{color:#315e7f;font-size:14px}
+.crisis-mini-note{font-size:10.5px;color:#8795a0;line-height:1.55;margin-top:9px}
+.crisis-source-line{color:#7f8d96;font-size:11px;line-height:1.65;margin:13px 0 15px}
+.crisis-source-line a{color:#326482;text-decoration:underline;text-decoration-color:#a9bdca;text-underline-offset:2px}
+.crisis-source-line a:hover{color:#143e59}
+.evidence p.crisis-reflection{margin-top:16px}
+.crisis-reflection strong{color:#284f6b}
+@media(min-width:1150px){.crisis-metric strong{font-size:34px}}
+@media(max-width:420px){.crisis-country{padding:13px}.crisis-country-head strong{font-size:14.5px}.crisis-metric{padding:10px 8px}.crisis-metric strong{font-size:27px}.crisis-metric span{font-size:10.5px}}
+
+
+/* Evidence 03: high-resolution suicidal-ideation research */
+.evidence-risk-dynamics h3 { margin-bottom:17px; }
+.risk-evidence-stats { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:16px 0 18px; }
+.risk-evidence-stat { display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0;background:#eef4f7;border:1px solid #dbe7ee;border-radius:13px;padding:15px 11px 13px; }
+.risk-evidence-stat strong {font-family:var(--serif);font-size:clamp(22px,2vw,29px);font-weight:650;line-height:1.12;color:#234b68;letter-spacing:-.025em;}
+.risk-evidence-stat span {font-size:11.5px;line-height:1.5;color:#405d70;}
+.risk-evidence-stat small {margin-top:auto;padding-top:7px;border-top:1px solid #dce7ef;font-size:10px;line-height:1.5;color:#698294;}
+.evidence-risk-dynamics p + p {margin-top:12px;}
+.evidence-risk-dynamics p strong {color:#173d59;}
+.risk-evidence-sources {margin-top:17px;padding-top:11px;border-top:1px solid #e0e8ed;color:#637783;font-size:11px;line-height:1.65;}
+.risk-evidence-sources a {color:#315f86;text-underline-offset:2px;}
+.risk-evidence-sources a:hover {color:#143a56;}
+@media (max-width:600px){
+ .risk-evidence-stats{grid-template-columns:1fr;gap:8px;}
+ .risk-evidence-stat{display:grid;grid-template-columns:84px minmax(0,1fr);gap:3px 12px;padding:11px 13px;align-items:start;}
+ .risk-evidence-stat strong{grid-row:1 / span 2;font-size:25px;align-self:center;}
+ .risk-evidence-stat span{font-size:11.8px;}
+ .risk-evidence-stat small{border-top:0;padding:0;margin:0;font-size:9.6px;}
+}
+
+
+/* Evidence 04: suicide motivation first, addiction as a scientific and clinical foundation */
+.evidence-addiction h3 {margin-bottom:16px;}
+.addiction-study-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:20px 0;}
+.addiction-study {min-width:0;display:flex;flex-direction:column;gap:8px;background:#eff5f8;border:1px solid #dbe7ee;border-radius:13px;padding:18px 15px 14px;}
+.addiction-study strong {font-family:var(--serif);font-size:clamp(27px,2.65vw,37px);font-weight:600;letter-spacing:-.025em;line-height:1.05;color:#254f6f;}
+.addiction-study span {font-size:12.5px;line-height:1.6;color:#415d70;}
+.addiction-study small {margin-top:auto;border-top:1px solid #d8e5ec;padding-top:10px;font-size:10.5px;line-height:1.45;color:#718493;}
+.evidence-addiction p.addiction-commitment{margin-top:17px;}
+.addiction-commitment strong{color:#204d6b;}
+.addiction-sources {margin-top:17px;border-top:1px solid #e0e8ed;padding-top:11px;font-size:10.9px;line-height:1.7;color:#647985;}
+.addiction-sources a{color:#315f86;text-decoration:underline;text-underline-offset:2px;}
+.addiction-sources span{display:block;margin-top:4px;color:#82919a;}
+@media (max-width: 620px){.addiction-study-grid{grid-template-columns:1fr;gap:8px;margin:14px 0;}.addiction-study{display:grid;grid-template-columns:90px minmax(0,1fr);gap:4px 10px;align-items:start;padding:13px 12px;}.addiction-study strong{grid-row:1 / span 2;align-self:center;font-size:29px;}.addiction-study span{font-size:11.8px;}.addiction-study small{border-top:0;padding-top:0;font-size:10px;}}
+</style>
+<style>
+/* Locale navigation: self-contained; no external fonts or libraries. */
+.site-nav .nav-inner{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:center!important;max-width:1440px!important;padding-top:7px!important;padding-bottom:3px!important;}
+.site-nav .site-language-switch{display:flex;align-self:flex-end;align-items:center;gap:4px;padding:0 4px 3px;white-space:nowrap;}
+.site-language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:29px;padding:4px 9px;border-radius:7px;border:1px solid rgba(255,255,255,.28);font:700 11.5px/1.1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.6px;color:#eef4f7;text-decoration:none;transition:background .18s ease,border-color .18s ease;}
+.site-language-switch a:hover,.site-language-switch a:focus-visible{background:rgba(255,255,255,.16);border-color:#fff;outline-offset:2px;}
+.site-language-switch a[aria-current="true"]{color:#19374d;background:#fff;border-color:#fff;}
+.site-nav .nav-links{max-width:100%;}
+@media(max-width:650px){.site-nav .site-language-switch{margin:0 1px 1px 0}.site-language-switch a{min-width:35px;font-size:11px;min-height:28px}.site-nav .nav-inner{padding-top:7px!important;}}
+
+/* Language selector: display each language in its own name. */
+.site-language-switch a{font-size:12px!important;letter-spacing:0!important;min-width:0!important;padding:6px 10px!important;font-weight:650!important;}
+@media(max-width:420px){.site-language-switch a{font-size:11.5px!important;padding:5px 8px!important;}}
+</style><link href="https://psydj370.github.io/my-website/research-interests.html" hreflang="en" rel="alternate"/><link href="https://psydj370.github.io/my-website/es/research-interests.html" hreflang="es" rel="alternate"/><link href="https://psydj370.github.io/my-website/ko/research-interests.html" hreflang="ko" rel="alternate"/></head>
+<body>
+<nav class="site-nav">
+<div class="container nav-inner"><div aria-label="Idioma del sitio web" class="site-language-switch" role="group"><a aria-label="Inglés" href="/my-website/research-interests.html" hreflang="en" lang="en" title="Inglés">English</a><a aria-current="true" aria-label="Español" href="/my-website/es/research-interests.html" hreflang="es" lang="es" title="Español">Español</a><a aria-label="Coreano" href="/my-website/ko/research-interests.html" hreflang="ko" lang="ko" title="Coreano">한국어 (KOR)</a></div>
+<div class="nav-links"><a href="/my-website/es/index.html" target="_self">Inicio</a><a aria-current="page" class="active" href="/my-website/es/research-interests.html" target="_self">Intereses de investigación</a><a href="/my-website/es/publications.html" target="_self">Publicaciones</a><a href="/my-website/es/cv.html" target="_self">CV</a><a href="/my-website/es/beyond-cv.html" target="_self">Más allá del CV</a></div>
+</div>
+</nav>
+<main id="top">
+<section aria-labelledby="ri-page-title" class="ri-hero section-bg-a">
+<div class="container">
+<h1 class="research-page-title" id="ri-page-title">Intereses de investigación</h1>
+<p class="ri-lead">Me interesan dos preguntas complementarias: <strong>cuándo aumenta el riesgo suicida dentro de una misma persona</strong>, y <strong>cómo pueden responder a tiempo los servicios de salud mental.</strong></p>
+</div>
+</section>
+<section aria-labelledby="ri-focus-title" class="ri-focus ri-focus-static section-bg-b" id="goals">
+<div class="container">
+<div class="ri-section-head">
+<h2 id="ri-focus-title">Objetivos de investigación</h2>
+<p>Para contribuir a reducir las tasas de suicidio, me propongo dos objetivos de investigación complementarios.</p>
+</div>
+<div aria-label="Individual- and system-level research interests" class="ri-summary-grid">
+<article class="ri-summary-card">
+<div aria-hidden="true" class="ri-summary-icon">
+<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 32V25M15 32V20M23 32V16M31 32V9" stroke="currentColor" stroke-linecap="round" stroke-width="1.65"></path>
+<path d="m7 20 9-7 6 3 10-11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M26 5h6v6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h3>Nivel individual</h3>
+<p class="ri-summary-tags">Dinámica del riesgo · EMA · aprendizaje automático</p>
+<p class="ri-summary-description">¿Cómo pueden la evaluación ecológica momentánea (EMA), los datos longitudinales intensivos y el aprendizaje automático supervisado ayudar a predecir cuándo aumentará el riesgo suicida de una persona?</p>
+</article>
+<article class="ri-summary-card">
+<div aria-hidden="true" class="ri-summary-icon">
+<svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="8" r="3.1" stroke="currentColor" stroke-width="1.8"></circle>
+<circle cx="10" cy="30" r="3.1" stroke="currentColor" stroke-width="1.8"></circle>
+<circle cx="30" cy="30" r="3.1" stroke="currentColor" stroke-width="1.8"></circle>
+<circle cx="20" cy="22" r="3.1" stroke="currentColor" stroke-width="1.8"></circle>
+<path d="M20 11.1V18.9M17.5 24.2 12.2 28M22.5 24.2l5.3 3.8" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h3>Nivel de sistemas</h3>
+<p class="ri-summary-tags">Líneas de ayuda · implementación · costo-efectividad</p>
+<p class="ri-summary-description">¿Cómo pueden las líneas de prevención del suicidio y otros servicios de crisis ofrecer apoyo costo-efectivo a gran escala?</p>
+<p class="ri-summary-description ri-summary-description-next">¿Cómo pueden las intervenciones digitales ofrecer apoyo oportuno y accesible a las personas en riesgo?</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-bg-a" id="evidence">
+<div class="container">
+<div class="origin-intro">
+<div class="eyebrow">Origen de mis intereses de investigación</div>
+<h2>Experiencias y evidencia que sustentan mis objetivos</h2>
+<p class="origin-big">
+        Mi interés por la prevención del suicidio surgió de <strong>vivir en Corea del Sur, donde las tasas de suicidio siguen siendo altas</strong>, <strong>trabajar en un sistema de atención de salud mental con recursos sobrecargados</strong>, y <strong>estudiar cómo cambia el riesgo a lo largo del tiempo</strong>.
+      </p>
+</div>
+<div class="evidence-grid">
+<article class="evidence">
+<div class="evidence-label">01 · Un problema mundial, especialmente urgente en Corea</div>
+<h3>El suicidio es un problema mundial de salud pública; Corea enfrenta una carga especialmente alta</h3>
+<div aria-label="2021 age-standardized suicide rates per 100,000" class="rate-chart">
+<div class="chart-row">
+<div class="chart-label">Mundo</div>
+<div class="chart-track"><div class="chart-bar world"></div></div>
+<div class="chart-value">8.9</div>
+</div>
+<div class="chart-row">
+<div class="chart-label">EE. UU.</div>
+<div class="chart-track"><div class="chart-bar usa"></div></div>
+<div class="chart-value">14.2</div>
+</div>
+<div class="chart-row">
+<div class="chart-label">Corea</div>
+<div class="chart-track"><div class="chart-bar korea"></div></div>
+<div class="chart-value">20.6</div>
+</div>
+<div class="chart-caption">Muertes por suicidio ajustadas por edad, por 100.000 habitantes, ambos sexos, 2021.</div>
+</div>
+<p>
+          Para mí, este problema no ha sido solo una estadística, sino parte de la realidad social de mi entorno. Desde la adolescencia he visto su impacto en Corea: en el debate público, en las personas cercanas y, más tarde, en mi práctica clínica. Esa experiencia se transformó en un compromiso de investigación a largo plazo.
+        </p>
+<div class="evidence-note">
+          Datos comparables del mismo año según las Estimaciones Mundiales de Salud de la OMS (2021): mundo 8,9; Estados Unidos 14,2; República de Corea 20,6 por 100.000.
+        </div>
+</article>
+<article class="evidence evidence-workforce" id="crisis-workforce">
+<div class="evidence-label">02 · Presión sobre los sistemas de respuesta a crisis</div>
+<h3>Cuando crece la demanda, la carga recae en el personal</h3>
+<div aria-label="Workforce and demand challenges in South Korea's 109 hotline and the United States' 988 Lifeline. Measures differ by country and are not directly comparable." class="crisis-compare">
+<div class="crisis-country">
+<div class="crisis-country-head"><span aria-hidden="true" class="crisis-flag">KR</span><div><strong>Corea del Sur · 109</strong><span>Demanda de llamadas y personal · 2026</span></div></div>
+<div class="crisis-metrics">
+<div class="crisis-metric"><strong>1,118</strong><span>llamadas recibidas por día</span></div>
+<div class="crisis-metric"><strong>580</strong><span>capacidad máxima de respuesta diaria</span></div>
+</div>
+<div class="crisis-retention"><span>Antigüedad media del personal</span><strong>Menos de 3 años</strong></div>
+<div class="crisis-mini-note">Llamadas del primer trimestre de 2026; datos de personal publicados en mayo de 2026.</div>
+</div>
+<div class="crisis-country crisis-country-us">
+<div class="crisis-country-head"><span aria-hidden="true" class="crisis-flag">US</span><div><strong>Estados Unidos · 988</strong><span>Encuesta nacional a directivos de centros · 2025</span></div></div>
+<div class="crisis-metrics">
+<div class="crisis-metric"><strong>71%</strong><span>de los centros participantes informaron falta de personal</span></div>
+<div class="crisis-metric"><strong>79%</strong><span>informaron dificultades para retener al personal</span></div>
+</div>
+<div class="crisis-mini-note">Matthews et al. (2026), con Jonathan Purtle como coautor; respondieron 159 centros.</div>
+</div>
+</div>
+<div class="crisis-source-line">Se utilizaron indicadores y diseños distintos. Se comparan <em>presiones sobre el personal</em>, no tasas equivalentes. Fuentes: <a href="https://v.daum.net/v/20260531120226818" rel="noopener noreferrer" target="_blank">Ministerio de Salud y Bienestar de Corea (2026)</a> · <a href="https://doi.org/10.1001/jamanetworkopen.2026.10789" rel="noopener noreferrer" target="_blank">Matthews et al., <em>JAMA Network Open</em> (2026)</a>.</div>
+<p class="crisis-reflection">Trabajar en salud mental comunitaria me ha mostrado cuánta responsabilidad asumen los profesionales cuando la demanda supera la capacidad disponible. Los desafíos de 109 y 988 refuerzan mi convicción de que <strong>la prevención del suicidio también debe mejorar los sistemas que sostienen la atención de primera línea.</strong> Aspiro a investigar y contribuir al desarrollo de enfoques prácticos y sostenibles que <strong>reduzcan la carga del personal</strong> y faciliten el acceso oportuno al apoyo en situaciones de crisis.</p>
+</article>
+<article class="evidence evidence-risk-dynamics" id="why-real-time-risk">
+<div class="evidence-label">03 · Lo que puede escapar a una evaluación puntual</div>
+<h3>Los pensamientos suicidas pueden cambiar en horas, y las trayectorias de riesgo varían entre personas</h3>
+<div aria-label="Evidence from real-time monitoring studies of suicidal ideation" class="risk-evidence-stats">
+<div class="risk-evidence-stat">
+<strong>1–3 h</strong>
+<span>Duración media de pensamientos suicidas intensos en un estudio en tiempo real</span>
+<small>Coppersmith et al., <em>PNAS</em> · 2023</small>
+</div>
+<div class="risk-evidence-stat">
+<strong>35–41%</strong>
+<span>De adolescentes que reportaron ideas suicidas mediante EMA después las negaron retrospectivamente</span>
+<small>Shin et al., <em>JCPP Advances</em> · 2025</small>
+</div>
+<div class="risk-evidence-stat">
+<strong>51,424</strong>
+<span>Observaciones repetidas de dos muestras revelaron trayectorias de riesgo específicas de cada persona</span>
+<small>Coppersmith et al., <em>Behav. Res. Ther.</em> · 2024</small>
+</div>
+</div>
+<p>En la práctica clínica he escuchado a personas expresar deseos de morir y al día siguiente decir que se sienten mejor. Ver este patrón repetidamente me hizo cuestionar lo que una evaluación puntual puede pasar por alto. Los estudios de alta frecuencia muestran que los pensamientos suicidas pueden cambiar en pocas horas y que las trayectorias de riesgo varían entre individuos.</p>
+<p>Mi experiencia investigando adicciones, vulnerabilidad genética y cambios longitudinales —incluido un estudio propio de diario intensivo— me enseñó a mirar más allá de los promedios grupales. <strong>Quiero partir de esa base para identificar cuándo aumenta el riesgo suicida de una persona concreta, sin depender únicamente de estimaciones grupales.</strong> Considero que es una vía prometedora para la prevención en Corea y otros lugares.</p>
+<div class="risk-evidence-sources">Fuentes científicas: <a href="https://doi.org/10.1073/pnas.2215434120" rel="noopener noreferrer" target="_blank">Coppersmith et al. (2023)</a> · <a href="https://doi.org/10.1002/jcv2.70063" rel="noopener noreferrer" target="_blank">Shin, Gratch &amp; Cha (2025)</a> · <a href="https://doi.org/10.1016/j.brat.2024.104574" rel="noopener noreferrer" target="_blank">Coppersmith et al. (2024)</a> · <a href="https://doi.org/10.1038/s44220-024-00335-w" rel="noopener noreferrer" target="_blank">Wang et al. (2024)</a>.</div>
+</article>
+<article class="evidence evidence-addiction" id="suicide-addiction">
+<div class="evidence-label">04 · Por qué investigué las adicciones</div>
+<h3>Comprender el suicidio desde la perspectiva de las adicciones</h3>
+<p>La prevención del suicidio ha sido mi principal interés desde que conocí la elevada tasa de suicidio de Corea del Sur. Elegí investigar las adicciones para comprender mejor la conducta autodestructiva y su relación con el suicidio. La práctica clínica con personas que enfrentaban tanto problemas de adicción como pensamientos suicidas reforzó esa conexión.</p>
+<div aria-label="Evidence connecting alcohol use with suicidal behavior" class="addiction-study-grid">
+<div class="addiction-study">
+<strong>40.3%</strong>
+<span>de las personas que intentaron suicidarse estaban bajo los efectos del alcohol en un estudio de dos hospitales coreanos (<em>n</em> = 347).</span>
+<small>Jin et al. · <em>Mood and Emotion</em> (2013)</small>
+</div>
+<div class="addiction-study">
+<strong>+94%</strong>
+<span>mayor riesgo de muerte por suicidio asociado al consumo de alcohol en un metaanálisis de 33 estudios longitudinales.</span>
+<small>Isaacs et al. · <em>Suicide and Life-Threatening Behavior</em> (2022)</small>
+</div>
+</div>
+<p class="addiction-commitment"><strong>Mi trabajo sobre adicciones, vulnerabilidad genética y cambios longitudinales me ha dado una base para investigar la prevención del suicidio de manera más directa.</strong></p>
+<div class="addiction-sources">Fuentes científicas: <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001817676" rel="noopener noreferrer" target="_blank">Jin et al. (2013; Korea)</a> · <a href="https://doi.org/10.1111/sltb.12846" rel="noopener noreferrer" target="_blank">Isaacs et al. (2022; meta-analysis)</a>. <span>El 40,3 % procede de registros de 2011 de dos servicios de urgencias coreanos, no de una muestra nacional. Ambos hallazgos describen asociaciones, no causalidad.</span></div>
+</article>
+</div>
+</div>
+</section><section class="ri-bridge section-bg-a" id="connection">
+<div class="container ri-bridge-inner">
+<div>
+<div class="eyebrow">Punto de encuentro</div>
+<p>El desafío compartido consiste en transformar información útil sobre el riesgo en atención a la que las personas puedan acceder.</p>
+</div>
+<a class="ri-pub-link" href="/my-website/es/publications.html">Explorar mis publicaciones <span aria-hidden="true">↗</span></a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>
+<div class="footer-name">Dojin Lee</div>
+<div class="footer-role">Profesional clínico e investigador</div>
+</div>
+<div class="footer-links"><button class="footer-link-button" data-email-copy="" type="button">Correo</button><a href="https://www.linkedin.com/in/lee-dojin-psydj370/" rel="noopener" target="_blank">LinkedIn</a><a href="https://m.site.naver.com/1Xgns" rel="noopener" target="_blank">Google Scholar</a></div>
+</div>
+<div class="container" style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);">
+<p style="margin:0;color:var(--muted);font-size:11.5px;line-height:1.6;">
+      Diseñado y desarrollado por Dojin Lee con ChatGPT y GitHub. Para consultas sobre la plantilla o permisos de reutilización, escríbeme por correo.
+    </p>
+</div>
+</footer>
+<div class="email-copy-modal" hidden="" id="email-copy-modal">
+<div aria-labelledby="email-copy-title" aria-modal="true" class="email-copy-dialog" role="dialog">
+<button aria-label="Close" class="email-modal-close" type="button">×</button>
+<div class="email-modal-kicker">Contacto</div>
+<div class="email-modal-title" id="email-copy-title">Correo</div>
+<div class="email-value" id="email-value">psydj370@gmail.com</div>
+<div class="email-copy-actions">
+<button class="email-copy-button" type="button">Copiar correo</button>
+<span aria-live="polite" class="email-copy-status" id="email-copy-status"></span>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  const openBtn = document.querySelector('.footer-link-button[data-email-copy]');
+  const modal = document.getElementById('email-copy-modal');
+  if (!openBtn || !modal || modal.dataset.ready === '1') return;
+  modal.dataset.ready = '1';
+
+  const closeBtn = modal.querySelector('.email-modal-close');
+  const copyBtn = modal.querySelector('.email-copy-button');
+  const status = modal.querySelector('#email-copy-status');
+  const email = 'psydj370@gmail.com';
+
+  const openModal = () => {
+    modal.hidden = false;
+    status.textContent = '';
+    copyBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    openBtn.focus();
+  };
+
+  const fallbackCopy = () => {
+    const area = document.createElement('textarea');
+    area.value = email;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand('copy');
+    area.remove();
+  };
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        fallbackCopy();
+      }
+      status.textContent = 'Copied!';
+    } catch (err) {
+      try {
+        fallbackCopy();
+        status.textContent = 'Copied!';
+      } catch (fallbackErr) {
+        status.textContent = 'Select the address above to copy.';
+      }
+    }
+  });
+})();
+</script><script>(function(){var code='es';document.querySelectorAll('.site-language-switch a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('dojin-site-language',a.lang);}catch(e){}});});if(code==='en'&&/\/my-website\/(?:index\.html)?$/.test(location.pathname)){try{var saved=localStorage.getItem('dojin-site-language');if(saved==='es'||saved==='ko'){location.replace('/my-website/'+saved+'/index.html');}}catch(e){}}})();</script>
+</body>
+</html>
