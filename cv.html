@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dojin Lee | CV</title>
+<style>
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --soft:#f5f7f7;
+  --ink:#18354d;
+  --body:#4c5c67;
+  --muted:#77848d;
+  --blue:#315f86;
+  --line:#e2e8eb;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.72;-webkit-font-smoothing:antialiased
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+
+.site-nav{
+  position:sticky;top:0;z-index:100;background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)
+}
+.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:center}
+.nav-links{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
+.nav-links a{
+  text-decoration:none;color:#4c5b65;font-size:14.5px;padding:23px 0 19px;
+  border-bottom:2px solid transparent
+}
+.nav-links a.active,.nav-links a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+
+.page-header{padding:88px 0 58px;background:var(--bg)}
+.eyebrow{
+  margin-bottom:14px;color:var(--blue);font-size:11px;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase
+}
+h1,h2{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0}
+h1{font-size:clamp(50px,7vw,72px);line-height:1.04;letter-spacing:-.035em}
+h2{font-size:clamp(30px,4vw,40px);line-height:1.18;letter-spacing:-.02em}
+.page-intro{
+  max-width:780px;margin:23px 0 0;color:var(--body);font-size:18px;line-height:1.8
+}
+
+.cv-section{padding:70px 0 86px;background:var(--soft);border-top:1px solid var(--line)}
+.cv-toolbar{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:28px;
+  margin-bottom:26px
+}
+.cv-toolbar-copy{max-width:680px}
+.cv-toolbar-copy p{margin:9px 0 0;color:var(--body);font-size:15px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:10px 16px;border-radius:8px;border:1px solid var(--blue);
+  text-decoration:none;font-size:13.5px;font-weight:700;transition:.16s ease
+}
+.button-primary{background:var(--blue);color:#fff}
+.button-secondary{background:#fff;color:var(--blue)}
+.button:hover{transform:translateY(-1px)}
+
+.document-frame{
+  position:relative;background:#e8ecef;border:1px solid #d9e0e4;
+  border-radius:18px;padding:24px;
+}
+.document-paper{
+  width:min(900px,100%);margin:0 auto;background:#fff;border-radius:4px;
+  overflow:hidden;box-shadow:0 10px 34px rgba(42,60,72,.12)
+}
+.document-paper iframe{
+  display:block;width:100%;height:1500px;border:0;background:#eef1f2
+}
+.cv-note{
+  width:min(900px,100%);margin:14px auto 0;color:var(--muted);
+  font-size:12px;line-height:1.6
+}
+
+footer{padding:38px 0;background:#fff;border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:28px}
+.footer-name{font-family:var(--serif);font-size:20px}
+.footer-role{margin-top:2px;color:var(--muted);font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{text-decoration:none;color:#5b6a74;font-size:13px;word-break:break-all}
+.site-credit{
+  margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:11.5px;line-height:1.6
+}
+
+@media(max-width:820px){
+  .container{width:min(100% - 34px,1120px)}
+  .nav-inner{min-height:auto}
+  .nav-links{gap:17px;padding:13px 0}
+  .nav-links a{padding:5px 0}
+  .page-header{padding:58px 0 38px}
+  .cv-section{padding:48px 0 64px}
+  .cv-toolbar{align-items:flex-start;flex-direction:column}
+  .actions{justify-content:flex-start}
+  .document-frame{padding:10px}
+  .document-paper iframe{height:1050px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-links{justify-content:flex-start}
+}
+
+@media(max-width:520px){
+  .document-paper iframe{height:850px}
+  .actions{width:100%}
+  .button{width:100%}
+}
+
+/* Simplified CV page: one continuous section */
+.cv-page{
+  padding:88px 0 86px;
+  background:var(--bg);
+}
+.cv-page h1{
+  margin:0;
+}
+.cv-actions{
+  margin-top:24px;
+  justify-content:flex-start;
+}
+.cv-page .document-frame{
+  margin-top:28px;
+  background:#eef1f2;
+}
+@media(max-width:820px){
+  .cv-page{padding:58px 0 64px}
+}
+
+.cv-page .eyebrow{margin-bottom:14px}
+
+/* Unified site navigation */
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,250,247,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.nav-links{
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#4c5b65;
+  font-size:14.5px;
+  padding:23px 0 19px;
+  border-bottom:2px solid transparent;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue);
+  border-bottom-color:var(--blue);
+}
+@media(max-width:760px){
+  .nav-inner{min-height:auto}
+  .nav-links{gap:17px;padding:13px 0}
+  .nav-links a{padding:5px 0}
+}
+
+/* Unified navigation */
+.nav-links a{
+  color:var(--blue) !important;
+}
+.nav-links a.active,
+.nav-links a:hover{
+  color:var(--blue) !important;
+  border-bottom-color:var(--blue) !important;
+}
+
+/* ===== Final shared navigation treatment ===== */
+.site-nav{
+  background:rgba(231,239,244,.98) !important;
+  border-bottom:1px solid #c6d7e2 !important;
+  box-shadow:0 5px 18px rgba(42,67,84,.055);
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#315f86 !important;
+}
+.nav-links a.active{
+  color:#173f5f !important;
+  border-bottom-color:#315f86 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#173f5f !important;
+  border-bottom-color:#769ab6 !important;
+}
+
+/* ===== Final footer links ===== */
+.footer-links{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-links a,
+.footer-link-button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:0;
+  margin:0;
+  font:inherit;
+  color:#526b7c !important;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .16s ease;
+}
+.footer-links a:hover,
+.footer-link-button:hover{
+  color:#315f86 !important;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* ===== E-mail copy dialog ===== */
+.email-copy-modal[hidden]{display:none}
+.email-copy-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:grid;
+  place-items:center;
+  padding:22px;
+  background:rgba(19,39,54,.32);
+  backdrop-filter:blur(3px);
+}
+.email-copy-dialog{
+  position:relative;
+  width:min(430px,100%);
+  padding:28px;
+  border:1px solid #d8e2e8;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 22px 60px rgba(30,52,68,.18);
+  text-align:left;
+}
+.email-modal-kicker{
+  color:#315f86;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.email-modal-title{
+  margin:6px 0 16px;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#18354d;
+  font-size:25px;
+  font-weight:500;
+}
+.email-value{
+  padding:13px 14px;
+  border:1px solid #dbe4e9;
+  border-radius:10px;
+  background:#f7f9fa;
+  color:#344f61;
+  font-size:14px;
+  word-break:break-all;
+}
+.email-copy-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:16px;
+}
+.email-copy-button{
+  appearance:none;
+  border:1px solid #315f86;
+  border-radius:9px;
+  background:#315f86;
+  color:#fff;
+  padding:10px 15px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+}
+.email-copy-status{
+  color:#607683;
+  font-size:12px;
+}
+.email-modal-close{
+  position:absolute;
+  top:13px;
+  right:15px;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#71818a;
+  font-size:24px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* ===== Deep navy navigation refinement ===== */
+.site-nav{
+  background:rgba(24,53,77,.98) !important;
+  border-bottom:1px solid #294d67 !important;
+  box-shadow:0 6px 20px rgba(18,38,53,.16) !important;
+  backdrop-filter:blur(10px);
+}
+.nav-links a{
+  color:#dce7ee !important;
+}
+.nav-links a.active{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+  font-weight:700;
+}
+.nav-links a:hover{
+  color:#ffffff !important;
+  border-bottom-color:#9fbdd2 !important;
+}
+
+body{font-size:17px;}
+.nav-links a{font-size:15.5px !important;}
+.hero-copy,.page-intro,.section-intro,.section-lead,.origin-big,.evidence p,.story-card p,.cv-toolbar-copy p{
+  font-size:17.5px !important; line-height:1.85 !important;
+}
+.eyebrow{font-size:12px !important;}
+.footer-links a,.footer-link-button{font-size:14px !important;}
+.site-credit{font-size:12px !important;}
+
+/* ===== Readability refinement: slightly larger typography ===== */
+body{font-size:18px !important;}
+
+.nav-links a{
+  font-size:16px !important;
+}
+
+.hero-role{
+  font-size:17px !important;
+}
+
+.hero-sub{
+  font-size:15.5px !important;
+}
+
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p,
+.publications-section p,
+.research-map-section p{
+  font-size:18.5px !important;
+  line-height:1.88 !important;
+}
+
+.eyebrow{
+  font-size:12.5px !important;
+}
+
+.snapshot-label,
+.value-card p,
+.hobby-card p,
+.pub-mini,
+.pub-card p{
+  font-size:16px !important;
+  line-height:1.75 !important;
+}
+
+.button{
+  font-size:14.5px !important;
+}
+
+.footer-links a,
+.footer-link-button{
+  font-size:14.5px !important;
+}
+
+.footer-role{
+  font-size:14px !important;
+}
+
+.site-credit{
+  font-size:12.5px !important;
+  line-height:1.7 !important;
+}
+
+/* ===== Larger top navigation ===== */
+.nav-links{
+  gap:34px !important;
+}
+.nav-links a{
+  font-size:18px !important;
+  font-weight:600 !important;
+  padding-top:22px !important;
+  padding-bottom:18px !important;
+}
+@media(max-width:820px){
+  .nav-links{
+    gap:20px !important;
+  }
+  .nav-links a{
+    font-size:16.5px !important;
+  }
+}
+@media(max-width:560px){
+  .nav-links{
+    gap:14px !important;
+  }
+  .nav-links a{
+    font-size:15.5px !important;
+  }
+}
+
+/* ===== Global readability increase ===== */
+body{
+  font-size:19px !important;
+}
+.nav-links{
+  gap:36px !important;
+}
+.nav-links a{
+  font-size:19.5px !important;
+  font-weight:600 !important;
+}
+.hero-copy,
+.page-intro,
+.section-intro,
+.section-lead,
+.origin-big,
+.evidence p,
+.story-card p,
+.cv-toolbar-copy p{
+  font-size:19px !important;
+  line-height:1.9 !important;
+}
+.eyebrow{
+  font-size:13px !important;
+}
+.button{
+  font-size:15.5px !important;
+}
+.footer-links a,
+.footer-link-button{
+  font-size:15.5px !important;
+}
+.footer-role{
+  font-size:14.5px !important;
+}
+.site-credit{
+  font-size:13px !important;
+}
+@media(max-width:820px){
+  .nav-links{gap:20px !important;}
+  .nav-links a{font-size:17px !important;}
+}
+@media(max-width:560px){
+  .nav-links{gap:14px !important;}
+  .nav-links a{font-size:16px !important;}
+  body{font-size:18px !important;}
+}
+
+/* ===== 2026-10: clearer global navigation ===== */
+.site-nav .nav-inner{
+  min-height:82px !important;
+  width:min(100% - 32px, 1440px) !important;
+}
+.site-nav .nav-links{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  column-gap:72px !important;
+  row-gap:12px !important;
+  padding:11px 0 !important;
+}
+.site-nav .nav-links a{
+  position:relative !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:54px !important;
+  padding:10px 13px 16px !important;
+  border:0 !important;
+  border-radius:11px !important;
+  background:transparent !important;
+  color:#e4edf2 !important;
+  text-decoration:none !important;
+  font-size:19.5px !important;
+  font-weight:600 !important;
+  white-space:nowrap;
+  transition:background-color .2s ease,color .2s ease,box-shadow .2s ease !important;
+}
+.site-nav .nav-links a::after{
+  content:"";
+  position:absolute;
+  bottom:6px;
+  left:13px;
+  right:13px;
+  height:2px;
+  border-radius:999px;
+  background:rgba(255,255,255,.66);
+  transition:background-color .2s ease,height .2s ease,box-shadow .2s ease;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible{
+  color:#fff !important;
+  background:rgba(255,255,255,.12) !important;
+}
+.site-nav .nav-links a:hover::after,
+.site-nav .nav-links a:focus-visible::after{
+  height:4px;
+  background:#fff;
+  box-shadow:0 0 10px rgba(255,255,255,.2);
+}
+.site-nav .nav-links a.active,
+.site-nav .nav-links a[aria-current="page"]{
+  color:#18354d !important;
+  background:#fff !important;
+  box-shadow:0 5px 16px rgba(4,22,37,.22) !important;
+  font-weight:750 !important;
+}
+.site-nav .nav-links a.active::after,
+.site-nav .nav-links a[aria-current="page"]::after{
+  height:3px;
+  background:#315f86;
+}
+.site-nav .nav-links a:focus-visible{
+  outline:2px solid #fff !important;
+  outline-offset:2px !important;
+}
+@media(max-width:1150px){
+  .site-nav .nav-links{column-gap:36px !important;row-gap:8px !important;}
+}
+@media(max-width:760px){
+  .site-nav .nav-inner{width:calc(100% - 20px) !important;}
+  .site-nav .nav-links{column-gap:13px !important;row-gap:3px !important;padding:10px 0 !important;}
+  .site-nav .nav-links a{font-size:16.5px !important;min-height:44px !important;padding:9px 10px 13px !important;}
+  .site-nav .nav-links a::after{left:10px;right:10px;bottom:4px;}
+}
+@media(max-width:420px){
+  .site-nav .nav-links{column-gap:7px !important;}
+  .site-nav .nav-links a{font-size:15.5px !important;padding:8px 8px 12px !important;}
+  .site-nav .nav-links a::after{left:8px;right:8px;}
+}
+
+/* Institution-friendly offline-from-Google fallback */
+.cv-actions{align-items:center;gap:12px;row-gap:10px;}
+.cv-actions .button-institution{
+  border-color:#9eafba;
+  background:#e8eff3;
+  color:#18354d;
+  font-weight:700;
+}
+.cv-actions .button-institution:hover,
+.cv-actions .button-institution:focus-visible{
+  background:#dce9f0;
+  border-color:#315f86;
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+<div class="container nav-inner">
+<div class="nav-links"><a href="/my-website/index.html" target="_self">Home</a><a href="/my-website/research-interests.html" target="_self">Research Interests</a><a href="/my-website/publications.html" target="_self">Publications</a><a aria-current="page" class="active" href="/my-website/cv.html" target="_self">CV</a><a href="/my-website/beyond-cv.html" target="_self">A little beyond the CV</a></div>
+</div>
+</nav>
+<main><section class="cv-page"><div class="container"><div class="eyebrow">Curriculum Vitae</div><h1>CV</h1><div class="actions cv-actions"><a class="button button-primary" download="Dojin_Lee_CV.pdf" href="cv.pdf" rel="noopener" target="_blank">Download CV (PDF) ↓</a><a class="button button-secondary" href="https://docs.google.com/document/d/16_NuvWWbNeWrBwwGzl6Yj0iOpQr2VLSaCWu7hb9FeZY" rel="noopener" target="_blank">Open in Google Docs ↗</a><a class="button button-institution" href="cv.pdf" rel="noopener" target="_blank">Google Docs blocked? View PDF ↗</a></div><div class="document-frame"><div class="document-paper"><iframe loading="eager" src="https://docs.google.com/document/d/16_NuvWWbNeWrBwwGzl6Yj0iOpQr2VLSaCWu7hb9FeZY/preview" title="Dojin Lee Curriculum Vitae"></iframe></div></div></div></section></main>
+<footer>
+<div class="container footer-inner">
+<div>
+<div class="footer-name">Dojin Lee</div>
+<div class="footer-role">Clinician &amp; Researcher</div>
+</div>
+<div class="footer-links"><button class="footer-link-button" data-email-copy="" type="button">E-mail</button><a href="https://www.linkedin.com/in/lee-dojin-psydj370/" rel="noopener" target="_blank">LinkedIn</a><a href="https://m.site.naver.com/1Xgns" rel="noopener" target="_blank">Google Scholar</a></div>
+</div>
+<div class="container site-credit">
+    Designed and built by Dojin Lee with ChatGPT and GitHub.
+    For template inquiries or permission to reuse the layout, please contact me by email.
+  </div>
+</footer>
+<div class="email-copy-modal" hidden="" id="email-copy-modal">
+<div aria-labelledby="email-copy-title" aria-modal="true" class="email-copy-dialog" role="dialog">
+<button aria-label="Close" class="email-modal-close" type="button">×</button>
+<div class="email-modal-kicker">Contact</div>
+<div class="email-modal-title" id="email-copy-title">E-mail</div>
+<div class="email-value" id="email-value">psydj370@gmail.com</div>
+<div class="email-copy-actions">
+<button class="email-copy-button" type="button">Copy e-mail</button>
+<span aria-live="polite" class="email-copy-status" id="email-copy-status"></span>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  const openBtn = document.querySelector('.footer-link-button[data-email-copy]');
+  const modal = document.getElementById('email-copy-modal');
+  if (!openBtn || !modal || modal.dataset.ready === '1') return;
+  modal.dataset.ready = '1';
+
+  const closeBtn = modal.querySelector('.email-modal-close');
+  const copyBtn = modal.querySelector('.email-copy-button');
+  const status = modal.querySelector('#email-copy-status');
+  const email = 'psydj370@gmail.com';
+
+  const openModal = () => {
+    modal.hidden = false;
+    status.textContent = '';
+    copyBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    openBtn.focus();
+  };
+
+  const fallbackCopy = () => {
+    const area = document.createElement('textarea');
+    area.value = email;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand('copy');
+    area.remove();
+  };
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        fallbackCopy();
+      }
+      status.textContent = 'Copied!';
+    } catch (err) {
+      try {
+        fallbackCopy();
+        status.textContent = 'Copied!';
+      } catch (fallbackErr) {
+        status.textContent = 'Select the address above to copy.';
+      }
+    }
+  });
+})();
+</script></body>
+</html>

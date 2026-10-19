@@ -1,0 +1,42 @@
+name: Sync CV from Google Docs
+
+on:
+  schedule:
+    # Roughly every 15 minutes; GitHub's scheduler may be delayed.
+    - cron: '3,18,33,48 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-cv
+  cancel-in-progress: false
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF tools
+        run: python -m pip install --disable-pip-version-check 'requests>=2.31,<3' 'pypdf>=5,<7' 'pymupdf>=1.24,<2'
+      - name: Export CV and compare to current PDF
+        run: python scripts/sync_cv.py
+      - name: Publish PDF only if it changed
+        run: |
+          git add cv.pdf
+          if git diff --cached --quiet; then
+            echo 'No CV changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Automatically update CV PDF'
+          git push
