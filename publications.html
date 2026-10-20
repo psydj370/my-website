@@ -2595,17 +2595,17 @@ body{
 </div>
 <div class="research-map-panel">
 <div aria-label="Research map view" class="research-map-tabs" role="tablist">
-<button aria-selected="true" class="active" data-map-view="theme" type="button">By Research Theme</button>
-<button aria-selected="false" data-map-view="method" type="button">By Method</button>
+<button aria-selected="true" class="active" data-map-view="method" type="button">By Method</button>
+<button aria-selected="false" data-map-view="theme" type="button">By Research Theme</button>
 </div>
 <div class="research-map-body">
 <div aria-label="Research categories" class="research-map-categories" id="research-map-categories"></div>
 <div aria-live="polite" class="research-map-results">
 <div class="research-map-result-head">
-<span class="research-map-result-kicker" id="research-map-result-kicker">Research Theme</span>
-<h3 id="research-map-result-title">Intervention &amp; Digital Mental Health</h3>
+<span class="research-map-result-kicker" id="research-map-result-kicker">Method</span>
+<h3 id="research-map-result-title">Daily Diary &amp; Multilevel Modeling</h3>
 <p id="research-map-result-description">
-              Evidence synthesis and intervention development focused on what works and how support can be delivered more effectively.
+              Repeated daily observations nested within individuals to model short-term, within-person processes.
             </p>
 </div>
 <div class="research-map-study-list" id="research-map-study-list"></div>
@@ -2925,10 +2925,10 @@ body{
 <div class="spiral-head">
 <div>
 <p class="spiral-kicker">Five-wave longitudinal study</p>
-<h3 class="spiral-title">When does gaming behavior become part of a reinforcing cycle?</h3>
+<h3 class="spiral-title">When does gaming become part of a reinforcing cycle?</h3>
 <p class="spiral-sub">
         The study followed <strong>801 Korean adolescents</strong> across five annual waves and tested
-        prospective links between gaming behavior and two potential reinforcing factors:
+        prospective links between gaming and two potential reinforcing factors:
         <strong>aggression</strong> and <strong>intrusive parenting</strong>.
       </p>
 </div>
@@ -2944,10 +2944,10 @@ body{
 <p class="spiral-kicker">Choose a relationship</p>
 <div aria-label="Relationship" class="spiral-tabs" role="tablist">
 <button aria-selected="true" class="active" data-relation="aggression" type="button">
-            Aggression ↔ Gaming behavior
+            Aggression ↔ Gaming
           </button>
 <button aria-selected="false" data-relation="parenting" type="button">
-            Intrusive parenting ↔ Gaming behavior
+            Intrusive parenting ↔ Gaming
           </button>
 </div>
 </div>
@@ -2963,7 +2963,7 @@ body{
 <span class="spiral-summary-label" id="spiral-summary-label">Key pattern</span>
 <strong id="spiral-summary-title">A reinforcing aggression–gaming cycle appeared across adolescence.</strong>
 <p id="spiral-summary-text">
-        Among male adolescents, significant cross-lagged paths repeatedly linked gaming behavior and later aggression,
+        Among male adolescents, significant cross-lagged paths repeatedly linked gaming and later aggression,
         with aggression also predicting later gaming at selected waves. The pattern was not observed in female adolescents.
       </p>
 </div>
@@ -2977,7 +2977,7 @@ body{
 <span>T1</span><span>T2</span><span>T3</span><span>T4</span><span>T5</span>
 </div>
 <div class="spiral-row top-row">
-<div class="spiral-variable-label">Gaming behavior</div>
+<div class="spiral-variable-label">Gaming</div>
 <div class="spiral-node">T1</div>
 <div class="spiral-node">T2</div>
 <div class="spiral-node">T3</div>
@@ -3016,7 +3016,7 @@ body{
 <div>
 <strong>Aggression</strong>
 <p>
-          The reinforcing spiral was concentrated in male adolescents. The authors note that gaming behavior was
+          The reinforcing spiral was concentrated in male adolescents. The authors note that gaming was
           a more consistent prospective predictor of aggression than the reverse direction.
         </p>
 </div>
@@ -4102,7 +4102,7 @@ body{
       label:'Aggression',
       male:{
         title:'A reinforcing aggression–gaming cycle appeared across adolescence.',
-        text:'Among male adolescents, gaming behavior repeatedly predicted later aggression, while aggression predicted later gaming at selected waves. This created a reinforcing spiral across the four-year period.',
+        text:'Among male adolescents, gaming repeatedly predicted later aggression, while aggression predicted later gaming at selected waves. This created a reinforcing spiral across the four-year period.',
         intervals:[
           {g:'.11*', gSig:true,  o:'.12*',  oSig:true},
           {g:'.16**',gSig:true,  o:'.03',    oSig:false},
@@ -4112,7 +4112,7 @@ body{
       },
       female:{
         title:'The reinforcing spiral was not observed in female adolescents.',
-        text:'Most cross-lagged paths were nonsignificant. One isolated path showed aggression at T2 predicting gaming behavior at T3, but the broader reciprocal cycle did not emerge.',
+        text:'Most cross-lagged paths were nonsignificant. One isolated path showed aggression at T2 predicting gaming at T3, but the broader reciprocal cycle did not emerge.',
         intervals:[
           {g:'.09',  gSig:false, o:'.04',    oSig:false},
           {g:'.11',  gSig:false, o:'.11*',   oSig:true},
@@ -4124,7 +4124,7 @@ body{
     parenting:{
       label:'Intrusive parenting',
       male:{
-        title:'Gaming behavior and intrusive parenting reinforced one another most clearly in earlier adolescence.',
+        title:'Gaming and intrusive parenting reinforced one another most clearly in earlier adolescence.',
         text:'Among male adolescents, reciprocal prospective links appeared early, weakened in the middle period, and reappeared at the final interval. The paper emphasizes that the sustained reinforcing pattern was strongest in early-to-middle adolescence.',
         intervals:[
           {g:'.15**',gSig:true,  o:'.19*',   oSig:true},
@@ -4135,7 +4135,7 @@ body{
       },
       female:{
         title:'A short early-adolescent feedback chain appeared in female adolescents.',
-        text:'Gaming behavior at T1 predicted more intrusive parenting at T2, which then predicted more gaming behavior at T3. Later cross-lagged paths were nonsignificant.',
+        text:'Gaming at T1 predicted more intrusive parenting at T2, which then predicted more gaming at T3. Later cross-lagged paths were nonsignificant.',
         intervals:[
           {g:'.14**',gSig:true,  o:'.02',    oSig:false},
           {g:'.01',  gSig:false, o:'.12**',  oSig:true},
@@ -4247,7 +4247,7 @@ body{
   const studies = {
     1:'Cumulative alcohol metabolism genetic score × next-day alcohol use',
     2:'Cumulative genetic score × psychological distress in excessive gaming',
-    3:'Gaming behavior, aggression, and intrusive parenting across five waves',
+    3:'Gaming, aggression, and intrusive parenting across five waves',
     4:'Psychological treatments for excessive gaming: systematic review and meta-analysis',
     5:'Motivational interviewing online chat counseling',
     6:'DRD2 × interpersonal stress in problematic gaming',
@@ -4345,7 +4345,7 @@ body{
     }
   };
 
-  let view = 'theme';
+  let view = 'method';
   let activeCategory = 0;
 
   function renderCategories(){
@@ -4392,8 +4392,50 @@ body{
     renderResult();
   }));
 
+  // Keep both Research Map views and every category the same physical size.
+  // Measure the tallest category column and detail column across both views;
+  // recompute on viewport changes to avoid blank or clipped mobile content.
+  const mapBody = root.querySelector('.research-map-body');
+  const resultWrap = root.querySelector('.research-map-results');
+  function stabilizeResearchMapLayout() {
+    if (!mapBody || !resultWrap) return;
+    const savedView = view;
+    const savedCategory = activeCategory;
+    categoryWrap.style.minHeight = '0px';
+    resultWrap.style.minHeight = '0px';
+    mapBody.style.minHeight = '0px';
+    let tallestCategories = 0;
+    let tallestResult = 0;
+    for (const nextView of ['method', 'theme']) {
+      view = nextView;
+      for (let i = 0; i < maps[nextView].categories.length; i++) {
+        activeCategory = i;
+        renderCategories();
+        renderResult();
+        tallestCategories = Math.max(tallestCategories, categoryWrap.scrollHeight);
+        tallestResult = Math.max(tallestResult, resultWrap.scrollHeight);
+      }
+    }
+    view = savedView;
+    activeCategory = savedCategory;
+    renderCategories();
+    renderResult();
+    categoryWrap.style.minHeight = (Math.ceil(tallestCategories) + 2) + 'px';
+    resultWrap.style.minHeight = (Math.ceil(tallestResult) + 2) + 'px';
+  }
   renderCategories();
   renderResult();
+  stabilizeResearchMapLayout();
+  let resizeFrame = null;
+  window.addEventListener('resize', () => {
+    if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
+    resizeFrame = window.requestAnimationFrame(() => {
+      resizeFrame = null;
+      stabilizeResearchMapLayout();
+    });
+  });
+  window.addEventListener('load', stabilizeResearchMapLayout, {once:true});
+  if (document.fonts?.ready) document.fonts.ready.then(stabilizeResearchMapLayout);
 })();
 </script><script>
 (() => {
@@ -4488,7 +4530,7 @@ body{
 </script><div aria-label="Publication quick navigation" class="study-dock" id="study-dock">
 <nav aria-hidden="true" aria-label="Jump to interactive study" class="study-fan" id="study-fan">
 <div class="study-fan-header"><span>JUMP TO A STUDY</span><button aria-label="Close study menu" class="study-fan-close" type="button">×</button></div>
-<div class="study-fan-list"><a class="study-fan-link" data-study="1" href="#pub-1" tabindex="-1"><span class="study-fan-number">01</span><span class="study-fan-title">Cumulative alcohol metabolism genetic score × next-day alcohol use</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="2" href="#pub-2" tabindex="-1"><span class="study-fan-number">02</span><span class="study-fan-title">Cumulative genetic score × psychological distress in excessive gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="3" href="#pub-3" tabindex="-1"><span class="study-fan-number">03</span><span class="study-fan-title">Gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="4" href="#pub-4" tabindex="-1"><span class="study-fan-number">04</span><span class="study-fan-title">Psychological treatments for excessive gaming: systematic review and meta-analysis</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="5" href="#pub-5" tabindex="-1"><span class="study-fan-number">05</span><span class="study-fan-title">Motivational interviewing online chat counseling</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="6" href="#pub-6" tabindex="-1"><span class="study-fan-number">06</span><span class="study-fan-title">DRD2 × interpersonal stress in problematic gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="7" href="#pub-7" tabindex="-1"><span class="study-fan-number">07</span><span class="study-fan-title">Parental attachment → peer attachment → excessive gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a></div>
+<div class="study-fan-list"><a class="study-fan-link" data-study="1" href="#pub-1" tabindex="-1"><span class="study-fan-number">01</span><span class="study-fan-title">Cumulative alcohol metabolism genetic score × next-day alcohol use</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="2" href="#pub-2" tabindex="-1"><span class="study-fan-number">02</span><span class="study-fan-title">Cumulative genetic score × psychological distress in excessive gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="3" href="#pub-3" tabindex="-1"><span class="study-fan-number">03</span><span class="study-fan-title">Gaming, aggression, and intrusive parenting across five waves</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="4" href="#pub-4" tabindex="-1"><span class="study-fan-number">04</span><span class="study-fan-title">Psychological treatments for excessive gaming: systematic review and meta-analysis</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="5" href="#pub-5" tabindex="-1"><span class="study-fan-number">05</span><span class="study-fan-title">Motivational interviewing online chat counseling</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="6" href="#pub-6" tabindex="-1"><span class="study-fan-number">06</span><span class="study-fan-title">DRD2 × interpersonal stress in problematic gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a><a class="study-fan-link" data-study="7" href="#pub-7" tabindex="-1"><span class="study-fan-number">07</span><span class="study-fan-title">Parental attachment → peer attachment → excessive gaming</span><span aria-hidden="true" class="study-fan-chevron">↗</span></a></div>
 </nav>
 <button aria-controls="study-fan" aria-expanded="false" class="study-fan-open" id="study-fan-open" type="button">Jump to a study <span aria-hidden="true">⌃</span></button>
 <a aria-label="Back to publication list" class="publication-return-arrow" href="#publication-list" id="publication-return-arrow" title="Back to publication list"><span aria-hidden="true">↑</span></a>
